@@ -1,5 +1,6 @@
--- Procedimiento almacendo para buscar categorias
+-- PROCEDIMIENTOS PARA CATEGORIAS
 
+-- Procedimiento almacendo para buscar categorias
 create proc SP_BuscarCategoria
 @Buscar nvarchar(20)
 as 
@@ -32,3 +33,37 @@ as
 delete Categoria 
 where IdCategoria = @IdCategoria
 select @@servername
+
+
+
+-- PROCEDIMIENTOS PARA MARCAS
+
+-- Procedimiento almacenado para buscar en Marcas
+create proc SP_BuscarMarca
+@Buscar varchar (30)
+as 
+select * from Marcas
+where Nombre like @Buscar + '%'
+
+-- Procedimiento almacenado para Insertar en marcas
+create proc SP_InsertarMarca
+@Nombre varchar (30),
+@Descripcion varchar (256)
+as 
+insert into Marcas values(@Nombre, @Descripcion)
+
+-- Procedimiento almacenado para editar en Marcas
+create proc SP_EditarMarca
+@IdMarca int,
+@Nombre varchar (30),
+@Descripcion varchar (256)
+as 
+update Marcas set Nombre=@Nombre, Descripcion = @Descripcion
+where IdMarca = @IdMarca
+
+-- Procedimiento almacenado para eliminar Marcas
+create proc SP_EliminarMarca
+@IdMarca int
+as 
+delete Marca
+where IdMarca = @IdMarca 

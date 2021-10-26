@@ -11,3 +11,11 @@ create table Categoria(
 )
 SELECT * FROM Categoria
 insert into Categoria values('PINTURERIA','LAS MEJORES PINTURAS PARA TU CASA')
+
+-- Creando Tablas: Marcas
+create table Marcas(
+	IdMarca int identity (1,1) primary key not null,
+	Codigo as ('MR' + RIGHT('00'+CONVERT(VARCHAR, IdMarca),(2))),
+	Nombre nvarchar (30) not null,
+	Descripcion nvarchar (256) null
+)
