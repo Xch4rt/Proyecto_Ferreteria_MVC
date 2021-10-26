@@ -80,7 +80,6 @@ namespace Datos
 
         }
 
-
         public void EliminarCategoria(E_Categorias Categoria)
         {
             SqlCommand cmd = new SqlCommand("SP_EliminarCategoria", conexion);
