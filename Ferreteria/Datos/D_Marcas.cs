@@ -69,7 +69,7 @@ namespace Datos
             conexion.Open();
 
 
-            cmd.Parameters.AddWithValue("@IdCategoria", Marca.IdMarca1);
+            cmd.Parameters.AddWithValue("@IdMarca", Marca.IdMarca1);
             cmd.Parameters.AddWithValue("@Nombre", Marca.NombreMarca1);
             cmd.Parameters.AddWithValue("@Descripcion", Marca.DescripcionMarca1);
 
@@ -85,8 +85,8 @@ namespace Datos
             cmd.CommandType = CommandType.StoredProcedure;
             conexion.Open();
 
-            cmd.Parameters.AddWithValue("@IdCategoria", Marca.IdMarca1);
-            cmd.ExecuteNonQuery();
+            cmd.Parameters.AddWithValue("@IdMarca", Marca.IdMarca1);
+            cmd.ExecuteNonQuery(); // error aqui
 
             conexion.Close();
         }

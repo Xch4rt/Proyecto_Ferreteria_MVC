@@ -34,7 +34,7 @@ namespace Presentacion
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.MsjLabel = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.timeout = new System.Windows.Forms.Timer(this.components);
             this.show = new System.Windows.Forms.Timer(this.components);
@@ -63,20 +63,20 @@ namespace Presentacion
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // bunifuLabel1
+            // MsjLabel
             // 
-            this.bunifuLabel1.AllowParentOverrides = false;
-            this.bunifuLabel1.AutoEllipsis = false;
-            this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bunifuLabel1.Location = new System.Drawing.Point(168, 78);
-            this.bunifuLabel1.Name = "bunifuLabel1";
-            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(63, 15);
-            this.bunifuLabel1.TabIndex = 1;
-            this.bunifuLabel1.Text = "ALGO PASA ";
-            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.MsjLabel.AllowParentOverrides = false;
+            this.MsjLabel.AutoEllipsis = false;
+            this.MsjLabel.Cursor = System.Windows.Forms.Cursors.Default;
+            this.MsjLabel.CursorType = System.Windows.Forms.Cursors.Default;
+            this.MsjLabel.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.MsjLabel.Location = new System.Drawing.Point(133, 93);
+            this.MsjLabel.Name = "MsjLabel";
+            this.MsjLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.MsjLabel.Size = new System.Drawing.Size(0, 0);
+            this.MsjLabel.TabIndex = 1;
+            this.MsjLabel.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.MsjLabel.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // bunifuDragControl1
             // 
@@ -103,8 +103,8 @@ namespace Presentacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(356, 193);
-            this.Controls.Add(this.bunifuLabel1);
+            this.ClientSize = new System.Drawing.Size(383, 193);
+            this.Controls.Add(this.MsjLabel);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmSuccess";
@@ -120,7 +120,7 @@ namespace Presentacion
         #endregion
 
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
+        private Bunifu.UI.WinForms.BunifuLabel MsjLabel;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ImageList imageList1;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;

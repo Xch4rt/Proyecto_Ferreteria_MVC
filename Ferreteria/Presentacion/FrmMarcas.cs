@@ -62,6 +62,7 @@ namespace Presentacion
             txtDescription.Text = "";
         }
 
+        // BUTTONS ACTIONS
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             LimpiarCajas();
@@ -98,7 +99,8 @@ namespace Presentacion
 
                     objNegocio.InsertarMarca(objEntidad);
 
-                    MessageBox.Show("Se ha guardado el registro!");
+                    //MessageBox.Show("Se ha guardado el registro!");
+                    FrmSuccess.showFormAlert("Se ha guardado exitosamente!", FrmSuccess.AlertType.success);
                     MostrarBuscarTable("");
                     Editarse = false;
                     LimpiarCajas();

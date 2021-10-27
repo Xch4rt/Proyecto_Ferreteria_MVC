@@ -15,9 +15,9 @@ namespace Presentacion
         public FrmSuccess(string message, AlertType type)
         {
             InitializeComponent();
-
-           /* switch (type)
-            {
+            MsjLabel.Text = message;
+           switch (type)
+           {
                 case AlertType.success:
                     this.BackColor = Color.SeaGreen; break;
                 case AlertType.info:
@@ -26,12 +26,12 @@ namespace Presentacion
                     this.BackColor = Color.Crimson; break;
                 case AlertType.error:
                     this.BackColor = Color.FromArgb(255,128,0); break;
-            }*/
+           }
 
         }
         public static void showFormAlert(string message, AlertType type)
         {
-            FrmSuccess frm = new FrmSuccess(mensaje, type);
+            FrmSuccess frm = new FrmSuccess(message, type);
             frm.ShowDialog();
         }
 
