@@ -73,19 +73,19 @@ where IdMarca = @IdMarca
 
 -- Procedimiento para Listar Productos
 
-create proc SP_ListarProductos
+/*create*/alter proc SP_ListarProductos
 as 
 select top 100
-p.IdProducto,
-p.Codigo,
-p.Producto,
-p.IdCategoria,
+p.IdProducto as [ID PRODUCTO],
+p.Codigo as [CODIGO],
+p.Producto as [PRODUCTO],
+p.IdCategoria as [ID CATEGORIA],
 c.Nombre as CATEGORIA,
-p.IdMarca,
+p.IdMarca as [ID MARCA],
 m.Nombre as MARCA,
-p.Precio_Compra,
-p.Precio_Venta,
-p.Stock
+p.Precio_Compra as [PRECIO COMPRA],
+p.Precio_Venta as [PRECIO VENTA],
+p.Stock as STOCK
 from Productos p
 inner join Categoria c 
 on p.IdCategoria = c.IdCategoria
