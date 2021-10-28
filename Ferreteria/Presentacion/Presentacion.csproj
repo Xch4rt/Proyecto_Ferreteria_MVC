@@ -251,6 +251,30 @@
     <Compile Include="FrmCategoria.Designer.cs">
       <DependentUpon>FrmCategoria.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmClientes.Designer.cs">
+      <DependentUpon>FrmClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCompras.Designer.cs">
+      <DependentUpon>FrmCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDashboard.Designer.cs">
+      <DependentUpon>FrmDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmGanancias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGanancias.Designer.cs">
+      <DependentUpon>FrmGanancias.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmMarcas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -263,11 +287,35 @@
     <Compile Include="FrmPrincipal.Designer.cs">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmProductos.Designer.cs">
+      <DependentUpon>FrmProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmProveedores.Designer.cs">
+      <DependentUpon>FrmProveedores.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmSuccess.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmSuccess.Designer.cs">
       <DependentUpon>FrmSuccess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTrabajadores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTrabajadores.Designer.cs">
+      <DependentUpon>FrmTrabajadores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmVentas.Designer.cs">
+      <DependentUpon>FrmVentas.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -279,6 +327,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmProductos.resx">
+      <DependentUpon>FrmProductos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSuccess.resx">
       <DependentUpon>FrmSuccess.cs</DependentUpon>
