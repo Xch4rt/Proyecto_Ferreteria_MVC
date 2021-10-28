@@ -62,8 +62,39 @@ update Marcas set Nombre=@Nombre, Descripcion = @Descripcion
 where IdMarca = @IdMarca
 
 -- Procedimiento almacenado para eliminar Marcas
-create proc SP_EliminarMarca
+create/*alter*/ proc SP_EliminarMarca
 @IdMarca int
 as 
-delete Marca
+delete Marcas
 where IdMarca = @IdMarca 
+
+
+-- PROCEDIMIENTOS PARA PRODUCTOS
+
+-- Procedimiento para Listar Productos
+
+create proc SP_ListarProductos
+as 
+select top 100
+p.IdProducto,
+p.Codigo,
+p.Producto,
+p.IdCategoria,
+c.Nombre as CATEGORIA,
+p.IdMarca,
+m.Nombre as MARCA,
+p.Precio_Compra,
+p.Precio_Venta,
+p.Stock
+from Productos p
+inner join Categoria c 
+on p.IdCategoria = c.IdCategoria
+inner join Marcas m
+on p.IdMarca = m.IdMarca
+order by IdProducto asc
+
+exec SP_ListarProductos
+
+
+
+
