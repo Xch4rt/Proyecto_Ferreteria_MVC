@@ -31,5 +31,68 @@ namespace Datos
 
             return table;
         }
+
+        public DataTable BuscarProductos(E_Productos product)
+        {
+            DataTable table = new DataTable();
+            SqlCommand cmd = new SqlCommand("SP_BuscarProductos", conexion);
+            cmd.CommandType = CommandType.StoredProcedure;
+            conexion.Open();
+
+            cmd.Parameters.AddWithValue("@Buscar", product.Search1);
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            sda.Fill(table);
+
+            conexion.Close();
+            return table;
+
+        }
+
+        public void EliminarProducto(int id)
+        {
+            SqlCommand cmd = new SqlCommand("SP_EliminarProductos", conexion);
+            cmd.CommandType = CommandType.StoredProcedure;
+            conexion.Open();
+
+            cmd.Parameters.AddWithValue("@IdProducto", id);
+
+            cmd.ExecuteNonQuery();
+            conexion.Close();
+        }
+
+        public void CrearProducto(E_Productos product)
+        {
+            SqlCommand cmd = new SqlCommand("SP_CrearProducto", conexion);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            conexion.Open();
+
+            cmd.Parameters.AddWithValue("@Producto", product.Producto1);
+            cmd.Parameters.AddWithValue("@Precio_Compra", product.PrecioCompra1);
+            cmd.Parameters.AddWithValue("@Precio_Venta", product.PrecioVenta1);
+            cmd.Parameters.AddWithValue("@Stock", product.Stock1);
+            cmd.Parameters.AddWithValue("@IdCategoria", product.IdCategoria1);
+            cmd.Parameters.AddWithValue("@IdMarca", product.IdMarca1);
+
+            cmd.ExecuteNonQuery();
+            conexion.Close();
+        }
+        public void ActualizarProducto(E_Productos product)
+        {
+            SqlCommand cmd = new SqlCommand("SP_ActualizarProducto", conexion);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            conexion.Open();
+            cmd.Parameters.AddWithValue("@IdProducto", product.IdProducto1);
+            cmd.Parameters.AddWithValue("@Producto", product.Producto1);
+            cmd.Parameters.AddWithValue("@Precio_Compra", product.PrecioCompra1);
+            cmd.Parameters.AddWithValue("@Precio_Venta", product.PrecioVenta1);
+            cmd.Parameters.AddWithValue("@Stock", product.Stock1);
+            cmd.Parameters.AddWithValue("@IdCategoria", product.IdCategoria1);
+            cmd.Parameters.AddWithValue("@IdMarca", product.IdMarca1);
+
+            cmd.ExecuteNonQuery();
+            conexion.Close();
+        }
     }
 }

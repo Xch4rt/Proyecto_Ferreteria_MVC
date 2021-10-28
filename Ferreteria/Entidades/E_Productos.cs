@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    class E_Productos
+    public class E_Productos
     {
         private int IdProducto;
         private string CodigoProducto;
@@ -16,6 +16,7 @@ namespace Entidades
         private decimal PrecioCompra;
         private decimal PrecioVenta;
         private int Stock;
+        private string Search;
 
         public int IdProducto1 { get => IdProducto; set => IdProducto = value; }
         public string CodigoProducto1 { get => CodigoProducto; set => CodigoProducto = value; }
@@ -25,5 +26,7 @@ namespace Entidades
         public decimal PrecioCompra1 { get => PrecioCompra; set => PrecioCompra = value; }
         public decimal PrecioVenta1 { get => PrecioVenta; set => PrecioVenta = value; }
         public int Stock1 { get => Stock; set => Stock = value; }
+
+        public string Search1 { get => Search; set => Search = value; }
     }
 }
