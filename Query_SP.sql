@@ -95,6 +95,66 @@ order by IdProducto asc
 
 exec SP_ListarProductos
 
+-- Procedimiento para buscar en productos
+create proc SP_BuscarProductos
+@Buscar nvarchar (20)
+as
+select top 100
+p.IdProducto as [ID PRODUCTO],
+p.Codigo as [CODIGO],
+p.Producto as [PRODUCTO],
+p.IdCategoria as [ID CATEGORIA],
+c.Nombre as CATEGORIA,
+p.IdMarca as [ID MARCA],
+m.Nombre as MARCA,
+p.Precio_Compra as [PRECIO COMPRA],
+p.Precio_Venta as [PRECIO VENTA],
+p.Stock as STOCK
+from Productos p
+inner join Categoria c 
+on p.IdCategoria = c.IdCategoria
+inner join Marcas m
+on p.IdMarca = m.IdMarca
+where Producto like @Buscar + '%'
+order by p.IdProducto asc
+
+-- Procedimiento para crear Productos
+create proc SP_CrearProducto
+@Producto nvarchar (30),
+@Precio_Compra decimal (18,2),
+@Precio_Venta decimal (18,2),
+@Stock int,
+@IdCategoria int,
+@IdMarca int
+as
+insert into Productos values (@Producto, @Precio_Compra, @Precio_Venta, @Stock, @IdCategoria, @IdMarca)
+
+-- Procedimiento para actualizar un producto
+create proc SP_ActualizarProducto
+@IdProducto int,
+@Producto nvarchar (30),
+@Precio_Compra decimal (18,2),
+@Precio_Venta decimal (18,2),
+@Stock int,
+@IdCategoria int,
+@IdMarca int
+as
+update Productos set Producto = @Producto,
+					 Precio_Compra = @Precio_Compra,
+					 Precio_Venta = @Precio_Venta,
+					 Stock = @Stock,
+					 IdCategoria = @IdCategoria,
+					 IdMarca = @IdMarca
+where IdProducto = @IdProducto
+
+
+-- Procedimiento para eliminar productos
+create proc SP_EliminarProducto
+@IdProducto int
+as
+delete Productos
+where IdProducto = @IdProducto
+
 
 
 
