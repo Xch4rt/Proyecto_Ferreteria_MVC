@@ -44,41 +44,49 @@ namespace Presentacion
         {
             // Instanciamos el metodo para abrir los forms
             OpenFormWrapper(new FrmDashboard());
+            PanelName.Text = "DASHBOARD";
         }
 
         private void btnGanancias_Click(object sender, EventArgs e)
         {
             OpenFormWrapper(new FrmGanancias());
+            PanelName.Text = "GANANCIAS";
         }
 
         private void btnVentas_Click(object sender, EventArgs e)
         {
             OpenFormWrapper(new FrmVentas());
+            PanelName.Text = "VENTAS";
         }
 
         private void btnCompras_Click(object sender, EventArgs e)
         {
             OpenFormWrapper(new FrmCompras());
+            PanelName.Text = "COMPRAS";
         }
 
         private void btnTrabajadores_Click(object sender, EventArgs e)
         {
             OpenFormWrapper(new FrmTrabajadores());
+            PanelName.Text = "TRABAJADORES";
         }
 
         private void btnClientes_Click(object sender, EventArgs e)
         {
             OpenFormWrapper(new FrmClientes());
+            PanelName.Text = "CLIENTES";
         }
 
         private void btnProveedores_Click(object sender, EventArgs e)
         {
             OpenFormWrapper(new FrmProveedores());
+            PanelName.Text = "PROVEEDORES";
         }
 
         private void btnProductos_Click(object sender, EventArgs e)
         {
             OpenFormWrapper(new FrmProductos());
+            PanelName.Text = " PRODUCTOS";
         }
 
         private Form formActivate = null;

@@ -68,6 +68,7 @@ namespace Presentacion
             frmProd.ShowDialog();
             frmProd.Update = false;
             MostrarDatos(); // para que se refresque
+            ShowTotal();
         }
 
         private void dgvProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
