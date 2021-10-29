@@ -20,6 +20,7 @@ namespace Presentacion
             InitializeComponent();
             MostrarDatos();
             HidenMoveColumns();
+            ShowTotal();
         }
 
         public void MostrarDatos()
@@ -77,6 +78,7 @@ namespace Presentacion
                 objNegocio.EliminarProducto(indexDel);
 
                 MostrarDatos();
+                ShowTotal();
             }
             else if (dgvProductos.Rows[e.RowIndex].Cells["EDITAR"].Selected)
             {
@@ -95,6 +97,7 @@ namespace Presentacion
 
                 frmP.ShowDialog();
                 MostrarDatos();
+                ShowTotal();
             }
         }
 
@@ -102,12 +105,25 @@ namespace Presentacion
         {
             FrmCategoria frmC = new FrmCategoria();
             frmC.ShowDialog();
+            ShowTotal();
         }
 
         private void btnMarcas_Click(object sender, EventArgs e)
         {
             FrmMarcas frmM = new FrmMarcas();
             frmM.ShowDialog();
+            ShowTotal();
+        }
+        public void ShowTotal()
+        {
+            E_Productos ePro = new E_Productos();
+            N_Productos nPro = new N_Productos();
+
+            nPro.ShowingTotales(ePro);
+            lblCategorias.Text = ePro.TotalCategorias;
+            lblMarcas.Text = ePro.TotalMarcas;
+            lblProd.Text = ePro.TotalProductos;
+            lblTotales.Text = ePro.TotalStock;
         }
     }
 }

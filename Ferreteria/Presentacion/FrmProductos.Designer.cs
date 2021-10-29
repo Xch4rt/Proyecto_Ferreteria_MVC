@@ -46,26 +46,24 @@ namespace Presentacion
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.bunifuLabel4 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lblCategorias = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel5 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuSeparator3 = new Bunifu.UI.WinForms.BunifuSeparator();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.bunifuLabel6 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lblMarcas = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel7 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuSeparator4 = new Bunifu.UI.WinForms.BunifuSeparator();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.bunifuLabel8 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lblTotales = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel9 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuSeparator5 = new Bunifu.UI.WinForms.BunifuSeparator();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.dgvProductos = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.EDITAR = new System.Windows.Forms.DataGridViewImageColumn();
-            this.ELIMINAR = new System.Windows.Forms.DataGridViewImageColumn();
             this.txtSearch = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuSeparator6 = new Bunifu.UI.WinForms.BunifuSeparator();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
@@ -80,6 +78,8 @@ namespace Presentacion
             this.bunifuSeparator1 = new Bunifu.UI.WinForms.BunifuSeparator();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.EDITAR = new System.Windows.Forms.DataGridViewImageColumn();
+            this.ELIMINAR = new System.Windows.Forms.DataGridViewImageColumn();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -143,12 +143,11 @@ namespace Presentacion
             this.lblProd.AutoSize = false;
             this.lblProd.CursorType = null;
             this.lblProd.Font = new System.Drawing.Font("Segoe UI", 24F);
-            this.lblProd.Location = new System.Drawing.Point(180, 22);
+            this.lblProd.Location = new System.Drawing.Point(149, 22);
             this.lblProd.Name = "lblProd";
             this.lblProd.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblProd.Size = new System.Drawing.Size(38, 45);
+            this.lblProd.Size = new System.Drawing.Size(55, 45);
             this.lblProd.TabIndex = 3;
-            this.lblProd.Text = "5";
             this.lblProd.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblProd.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -205,7 +204,7 @@ namespace Presentacion
             this.panel6.BackColor = System.Drawing.Color.Transparent;
             this.panel6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel6.BackgroundImage")));
             this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel6.Controls.Add(this.bunifuLabel4);
+            this.panel6.Controls.Add(this.lblCategorias);
             this.panel6.Controls.Add(this.bunifuLabel5);
             this.panel6.Controls.Add(this.bunifuSeparator3);
             this.panel6.Controls.Add(this.pictureBox3);
@@ -214,21 +213,20 @@ namespace Presentacion
             this.panel6.Size = new System.Drawing.Size(232, 111);
             this.panel6.TabIndex = 2;
             // 
-            // bunifuLabel4
+            // lblCategorias
             // 
-            this.bunifuLabel4.AllowParentOverrides = false;
-            this.bunifuLabel4.AutoEllipsis = false;
-            this.bunifuLabel4.AutoSize = false;
-            this.bunifuLabel4.CursorType = null;
-            this.bunifuLabel4.Font = new System.Drawing.Font("Segoe UI", 24F);
-            this.bunifuLabel4.Location = new System.Drawing.Point(181, 18);
-            this.bunifuLabel4.Name = "bunifuLabel4";
-            this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel4.Size = new System.Drawing.Size(38, 45);
-            this.bunifuLabel4.TabIndex = 7;
-            this.bunifuLabel4.Text = "5";
-            this.bunifuLabel4.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel4.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.lblCategorias.AllowParentOverrides = false;
+            this.lblCategorias.AutoEllipsis = false;
+            this.lblCategorias.AutoSize = false;
+            this.lblCategorias.CursorType = null;
+            this.lblCategorias.Font = new System.Drawing.Font("Segoe UI", 24F);
+            this.lblCategorias.Location = new System.Drawing.Point(150, 18);
+            this.lblCategorias.Name = "lblCategorias";
+            this.lblCategorias.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblCategorias.Size = new System.Drawing.Size(55, 45);
+            this.lblCategorias.TabIndex = 7;
+            this.lblCategorias.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lblCategorias.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // bunifuLabel5
             // 
@@ -282,7 +280,7 @@ namespace Presentacion
             this.panel9.BackColor = System.Drawing.Color.Transparent;
             this.panel9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel9.BackgroundImage")));
             this.panel9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel9.Controls.Add(this.bunifuLabel6);
+            this.panel9.Controls.Add(this.lblMarcas);
             this.panel9.Controls.Add(this.bunifuLabel7);
             this.panel9.Controls.Add(this.bunifuSeparator4);
             this.panel9.Controls.Add(this.pictureBox4);
@@ -291,21 +289,20 @@ namespace Presentacion
             this.panel9.Size = new System.Drawing.Size(232, 111);
             this.panel9.TabIndex = 2;
             // 
-            // bunifuLabel6
+            // lblMarcas
             // 
-            this.bunifuLabel6.AllowParentOverrides = false;
-            this.bunifuLabel6.AutoEllipsis = false;
-            this.bunifuLabel6.AutoSize = false;
-            this.bunifuLabel6.CursorType = null;
-            this.bunifuLabel6.Font = new System.Drawing.Font("Segoe UI", 24F);
-            this.bunifuLabel6.Location = new System.Drawing.Point(181, 18);
-            this.bunifuLabel6.Name = "bunifuLabel6";
-            this.bunifuLabel6.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel6.Size = new System.Drawing.Size(38, 45);
-            this.bunifuLabel6.TabIndex = 7;
-            this.bunifuLabel6.Text = "5";
-            this.bunifuLabel6.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel6.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.lblMarcas.AllowParentOverrides = false;
+            this.lblMarcas.AutoEllipsis = false;
+            this.lblMarcas.AutoSize = false;
+            this.lblMarcas.CursorType = null;
+            this.lblMarcas.Font = new System.Drawing.Font("Segoe UI", 24F);
+            this.lblMarcas.Location = new System.Drawing.Point(150, 18);
+            this.lblMarcas.Name = "lblMarcas";
+            this.lblMarcas.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblMarcas.Size = new System.Drawing.Size(55, 45);
+            this.lblMarcas.TabIndex = 7;
+            this.lblMarcas.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lblMarcas.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // bunifuLabel7
             // 
@@ -359,7 +356,7 @@ namespace Presentacion
             this.panel10.BackColor = System.Drawing.Color.Transparent;
             this.panel10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel10.BackgroundImage")));
             this.panel10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel10.Controls.Add(this.bunifuLabel8);
+            this.panel10.Controls.Add(this.lblTotales);
             this.panel10.Controls.Add(this.bunifuLabel9);
             this.panel10.Controls.Add(this.bunifuSeparator5);
             this.panel10.Controls.Add(this.pictureBox5);
@@ -368,21 +365,20 @@ namespace Presentacion
             this.panel10.Size = new System.Drawing.Size(232, 111);
             this.panel10.TabIndex = 2;
             // 
-            // bunifuLabel8
+            // lblTotales
             // 
-            this.bunifuLabel8.AllowParentOverrides = false;
-            this.bunifuLabel8.AutoEllipsis = false;
-            this.bunifuLabel8.AutoSize = false;
-            this.bunifuLabel8.CursorType = null;
-            this.bunifuLabel8.Font = new System.Drawing.Font("Segoe UI", 24F);
-            this.bunifuLabel8.Location = new System.Drawing.Point(181, 18);
-            this.bunifuLabel8.Name = "bunifuLabel8";
-            this.bunifuLabel8.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel8.Size = new System.Drawing.Size(38, 45);
-            this.bunifuLabel8.TabIndex = 7;
-            this.bunifuLabel8.Text = "5";
-            this.bunifuLabel8.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel8.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.lblTotales.AllowParentOverrides = false;
+            this.lblTotales.AutoEllipsis = false;
+            this.lblTotales.AutoSize = false;
+            this.lblTotales.CursorType = null;
+            this.lblTotales.Font = new System.Drawing.Font("Segoe UI", 24F);
+            this.lblTotales.Location = new System.Drawing.Point(164, 18);
+            this.lblTotales.Name = "lblTotales";
+            this.lblTotales.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblTotales.Size = new System.Drawing.Size(55, 45);
+            this.lblTotales.TabIndex = 7;
+            this.lblTotales.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lblTotales.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // bunifuLabel9
             // 
@@ -514,22 +510,6 @@ namespace Presentacion
             this.dgvProductos.TabIndex = 8;
             this.dgvProductos.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             this.dgvProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductos_CellContentClick);
-            // 
-            // EDITAR
-            // 
-            this.EDITAR.HeaderText = "EDITAR";
-            this.EDITAR.Image = ((System.Drawing.Image)(resources.GetObject("EDITAR.Image")));
-            this.EDITAR.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.EDITAR.Name = "EDITAR";
-            this.EDITAR.ReadOnly = true;
-            // 
-            // ELIMINAR
-            // 
-            this.ELIMINAR.HeaderText = "ELIMINAR";
-            this.ELIMINAR.Image = ((System.Drawing.Image)(resources.GetObject("ELIMINAR.Image")));
-            this.ELIMINAR.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.ELIMINAR.Name = "ELIMINAR";
-            this.ELIMINAR.ReadOnly = true;
             // 
             // txtSearch
             // 
@@ -840,6 +820,22 @@ namespace Presentacion
             this.panel8.Size = new System.Drawing.Size(405, 128);
             this.panel8.TabIndex = 4;
             // 
+            // EDITAR
+            // 
+            this.EDITAR.HeaderText = "EDITAR";
+            this.EDITAR.Image = ((System.Drawing.Image)(resources.GetObject("EDITAR.Image")));
+            this.EDITAR.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.EDITAR.Name = "EDITAR";
+            this.EDITAR.ReadOnly = true;
+            // 
+            // ELIMINAR
+            // 
+            this.ELIMINAR.HeaderText = "ELIMINAR";
+            this.ELIMINAR.Image = ((System.Drawing.Image)(resources.GetObject("ELIMINAR.Image")));
+            this.ELIMINAR.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.ELIMINAR.Name = "ELIMINAR";
+            this.ELIMINAR.ReadOnly = true;
+            // 
             // FrmProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -894,19 +890,19 @@ namespace Presentacion
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel6;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel4;
+        private Bunifu.UI.WinForms.BunifuLabel lblCategorias;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel5;
         private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator3;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel9;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel6;
+        private Bunifu.UI.WinForms.BunifuLabel lblMarcas;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel7;
         private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator4;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel10;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel8;
+        private Bunifu.UI.WinForms.BunifuLabel lblTotales;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel9;
         private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator5;
         private System.Windows.Forms.PictureBox pictureBox5;

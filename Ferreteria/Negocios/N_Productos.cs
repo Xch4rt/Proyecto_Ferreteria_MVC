@@ -36,5 +36,10 @@ namespace Negocios
         {
             objData.EliminarProducto(id);
         }
+        public void ShowingTotales(E_Productos products)
+        {
+            objData.ShowTotals(products);
+        }
+
     }
 }

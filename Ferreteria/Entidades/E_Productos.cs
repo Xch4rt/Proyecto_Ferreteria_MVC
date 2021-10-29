@@ -18,6 +18,11 @@ namespace Entidades
         private int Stock;
         private string Search;
 
+        private string totalCategorias;
+        private string totalMarcas;
+        private string totalProductos;
+        private string totalStock;
+
         public int IdProducto1 { get => IdProducto; set => IdProducto = value; }
         public string CodigoProducto1 { get => CodigoProducto; set => CodigoProducto = value; }
         public string Producto1 { get => Producto; set => Producto = value; }
@@ -28,5 +33,9 @@ namespace Entidades
         public int Stock1 { get => Stock; set => Stock = value; }
 
         public string Search1 { get => Search; set => Search = value; }
+        public string TotalCategorias { get => totalCategorias; set => totalCategorias = value; }
+        public string TotalMarcas { get => totalMarcas; set => totalMarcas = value; }
+        public string TotalProductos { get => totalProductos; set => totalProductos = value; }
+        public string TotalStock { get => totalStock; set => totalStock = value; }
     }
 }

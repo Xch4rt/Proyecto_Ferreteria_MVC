@@ -94,5 +94,42 @@ namespace Datos
             cmd.ExecuteNonQuery();
             conexion.Close();
         }
+
+        public void ShowTotals(E_Productos product)
+        {
+            SqlCommand cmd = new SqlCommand("summaryProducts", conexion);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            SqlParameter totalCategorias = new SqlParameter("@totalCategory", 0);
+            totalCategorias.Direction = ParameterDirection.Output;
+
+            SqlParameter totalMarcas = new SqlParameter("@totalBrand", 0);
+            totalMarcas.Direction = ParameterDirection.Output;
+
+            SqlParameter totalProductos = new SqlParameter("@totalProduct", 0);
+            totalProductos.Direction = ParameterDirection.Output;
+
+            SqlParameter totalStock = new SqlParameter("@totalStock", 0);
+            totalStock.Direction = ParameterDirection.Output;
+
+
+            cmd.Parameters.Add(totalCategorias);
+            cmd.Parameters.Add(totalMarcas);
+            cmd.Parameters.Add(totalProductos);
+            cmd.Parameters.Add(totalStock);
+
+            conexion.Open();
+
+            cmd.ExecuteNonQuery();
+
+            product.TotalCategorias = cmd.Parameters["@totalCategory"].Value.ToString();
+            product.TotalMarcas = cmd.Parameters["@totalBrand"].Value.ToString();
+            product.TotalProductos = cmd.Parameters["@totalProduct"].Value.ToString();
+            product.TotalStock = cmd.Parameters["@totalStock"].Value.ToString();
+
+            conexion.Close();
+
+        }
+
     }
 }
