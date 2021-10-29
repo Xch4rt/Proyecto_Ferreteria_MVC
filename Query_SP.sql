@@ -158,3 +158,16 @@ where IdProducto = @IdProducto
 
 
 
+-- Procedimiento para obtener la suma de los ids
+create proc summaryProducts
+@totalCategory int output,
+@totalBrand int output,
+@totalProduct int output,
+@totalStock int output
+as
+set @totalCategory = (select count(IdCategoria) as Categories from Categoria)
+set @totalBrand = (select count(IdMarca) as Brands from Marcas)
+set @totalProduct = (select count(IdProducto) as Products from Productos)
+set @totalStock = (select sum(stock) as [Productos Totales] from Productos)
+
+exec summaryProducts
