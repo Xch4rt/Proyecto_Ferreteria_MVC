@@ -30,7 +30,7 @@ namespace Presentacion
 
         private void ClosePic_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Close();
         }
 
         private void FrmCategoria_Load(object sender, EventArgs e)

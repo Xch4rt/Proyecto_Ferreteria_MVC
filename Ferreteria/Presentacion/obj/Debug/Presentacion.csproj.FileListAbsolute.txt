@@ -140,3 +140,4 @@ C:\Users\Pablo\Desktop\Bases_De_Datos_1\Practicando-MVC-C#\Proyecto_Ferreteria_M
 C:\Users\Pablo\Desktop\Bases_De_Datos_1\Practicando-MVC-C#\Proyecto_Ferreteria_MVC\Ferreteria\Presentacion\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\Pablo\Desktop\Bases_De_Datos_1\Practicando-MVC-C#\Proyecto_Ferreteria_MVC\Ferreteria\Presentacion\bin\Debug\System.ValueTuple.xml
 C:\Users\Pablo\Desktop\Bases_De_Datos_1\Practicando-MVC-C#\Proyecto_Ferreteria_MVC\Ferreteria\Presentacion\obj\Debug\Presentacion.FrmProductos.resources
+C:\Users\Pablo\Desktop\Bases_De_Datos_1\Practicando-MVC-C#\Proyecto_Ferreteria_MVC\Ferreteria\Presentacion\obj\Debug\Presentacion.FrmProducto.resources

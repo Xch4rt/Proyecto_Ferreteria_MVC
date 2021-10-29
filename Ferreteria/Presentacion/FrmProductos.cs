@@ -43,10 +43,71 @@ namespace Presentacion
             dgvProductos.Columns[0].DisplayIndex = 11;
             dgvProductos.Columns[1].DisplayIndex = 11;
         }
+        // metodo para buscar productos
+        public void BuscarProductos(string search)
+        {
+            N_Productos nProducto = new N_Productos();
+            dgvProductos.DataSource = nProducto.BuscarProductos(search);
+        }
 
+        
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void txtSearch_TextChange(object sender, EventArgs e)
+        {
+            BuscarProductos(txtSearch.Text);
+        }
+
+        private void bunifuThinButton21_Click(object sender, EventArgs e)
+        {
+            FrmProducto frmProd = new FrmProducto();
+            frmProd.ShowDialog();
+            frmProd.Update = false;
+            MostrarDatos(); // para que se refresque
+        }
+
+        private void dgvProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvProductos.Rows[e.RowIndex].Cells["ELIMINAR"].Selected)
+            {
+                int indexDel = Convert.ToInt32(dgvProductos.Rows[e.RowIndex].Cells[2].Value.ToString());
+                objNegocio.EliminarProducto(indexDel);
+
+                MostrarDatos();
+            }
+            else if (dgvProductos.Rows[e.RowIndex].Cells["EDITAR"].Selected)
+            {
+                FrmProducto frmP = new FrmProducto();
+                frmP.Update = true;
+
+                // procedemos a cargar el formulario del FrmProducto
+                frmP.txtId.Text = dgvProductos.Rows[e.RowIndex].Cells["ID PRODUCTO"].Value.ToString();
+                frmP.txtCod.Text = dgvProductos.Rows[e.RowIndex].Cells["CODIGO"].Value.ToString();
+                frmP.txtNombreProducto.Text = dgvProductos.Rows[e.RowIndex].Cells["PRODUCTO"].Value.ToString();
+                frmP.txtPrecioCompra.Text = dgvProductos.Rows[e.RowIndex].Cells["PRECIO COMPRA"].Value.ToString();
+                frmP.txtPrecioVenta.Text = dgvProductos.Rows[e.RowIndex].Cells["PRECIO VENTA"].Value.ToString();
+                frmP.txtStock.Text = dgvProductos.Rows[e.RowIndex].Cells["STOCK"].Value.ToString();
+                frmP.cmbBrand.Text = dgvProductos.Rows[e.RowIndex].Cells["CATEGORIA"].Value.ToString();
+                frmP.cmbCategory.Text = dgvProductos.Rows[e.RowIndex].Cells["MARCA"].Value.ToString();
+
+                frmP.ShowDialog();
+                MostrarDatos();
+            }
+        }
+
+        private void btnCategorias_Click(object sender, EventArgs e)
+        {
+            FrmCategoria frmC = new FrmCategoria();
+            frmC.ShowDialog();
+        }
+
+        private void btnMarcas_Click(object sender, EventArgs e)
+        {
+            FrmMarcas frmM = new FrmMarcas();
+            frmM.ShowDialog();
         }
     }
 }
