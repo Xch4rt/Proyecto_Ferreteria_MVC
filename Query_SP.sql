@@ -170,4 +170,3 @@ set @totalBrand = (select count(IdMarca) as Brands from Marcas)
 set @totalProduct = (select count(IdProducto) as Products from Productos)
 set @totalStock = (select sum(stock) as [Productos Totales] from Productos)
 
-exec summaryProducts
