@@ -24,10 +24,18 @@ namespace Presentacion
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            string PrimerNombre = txtNombre.Text;
+            string Nombre = txtNombre.Text;
+            string[] NombreC = Nombre.Split(' ');
             DateTime fecha = dateContratacion.Value;
-            
-            MessageBox.Show(PrimerNombre, fecha.ToShortDateString().ToString());
+            // Para Guardar como date en sql
+            var v = Convert.ToDateTime(dateContratacion.Text.Trim()).ToShortDateString();
+
+            MessageBox.Show($"{NombreC[0]}", v);
+        }
+
+        private void ClosePic_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

@@ -143,3 +143,4 @@ C:\Users\Pablo\Desktop\Bases_De_Datos_1\Practicando-MVC-C#\Proyecto_Ferreteria_M
 C:\Users\Pablo\Desktop\Bases_De_Datos_1\Practicando-MVC-C#\Proyecto_Ferreteria_MVC\Ferreteria\Presentacion\obj\Debug\Presentacion.csproj.CopyComplete
 C:\Users\Pablo\Desktop\Bases_De_Datos_1\Practicando-MVC-C#\Proyecto_Ferreteria_MVC\Ferreteria\Presentacion\obj\Debug\Presentacion.exe
 C:\Users\Pablo\Desktop\Bases_De_Datos_1\Practicando-MVC-C#\Proyecto_Ferreteria_MVC\Ferreteria\Presentacion\obj\Debug\Presentacion.pdb
+C:\Users\Pablo\Desktop\Bases_De_Datos_1\Practicando-MVC-C#\Proyecto_Ferreteria_MVC\Ferreteria\Presentacion\obj\Debug\Presentacion.FrmCliente.resources

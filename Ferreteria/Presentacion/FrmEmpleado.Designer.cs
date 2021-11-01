@@ -99,6 +99,7 @@ namespace Presentacion
             this.ClosePic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ClosePic.TabIndex = 2;
             this.ClosePic.TabStop = false;
+            this.ClosePic.Click += new System.EventHandler(this.ClosePic_Click);
             // 
             // label1
             // 
@@ -731,6 +732,7 @@ namespace Presentacion
             this.RolEmpleadoDd.Name = "RolEmpleadoDd";
             this.RolEmpleadoDd.Size = new System.Drawing.Size(260, 32);
             this.RolEmpleadoDd.TabIndex = 20;
+            this.RolEmpleadoDd.Text = null;
             this.RolEmpleadoDd.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
             this.RolEmpleadoDd.TextLeftMargin = 5;
             // 
@@ -853,6 +855,7 @@ namespace Presentacion
             this.dateContratacion.DisabledColor = System.Drawing.Color.Gray;
             this.dateContratacion.DisplayWeekNumbers = false;
             this.dateContratacion.DPHeight = 0;
+            this.dateContratacion.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
             this.dateContratacion.FillDatePicker = false;
             this.dateContratacion.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dateContratacion.ForeColor = System.Drawing.Color.Black;
@@ -862,9 +865,9 @@ namespace Presentacion
             this.dateContratacion.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.dateContratacion.LeftTextMargin = 5;
             this.dateContratacion.Location = new System.Drawing.Point(535, 211);
-            this.dateContratacion.MinimumSize = new System.Drawing.Size(0, 32);
+            this.dateContratacion.MinimumSize = new System.Drawing.Size(4, 32);
             this.dateContratacion.Name = "dateContratacion";
-            this.dateContratacion.Size = new System.Drawing.Size(220, 32);
+            this.dateContratacion.Size = new System.Drawing.Size(260, 32);
             this.dateContratacion.TabIndex = 27;
             // 
             // bunifuLabel6
