@@ -9,3 +9,14 @@ C:\Users\Pablo\Desktop\Bases_De_Datos_1\Practicando-MVC-C#\Proyecto_Ferreteria_M
 C:\Users\Pablo\Desktop\Bases_De_Datos_1\Practicando-MVC-C#\Proyecto_Ferreteria_MVC\Ferreteria\Negocios\obj\Debug\Negocios.csproj.CopyComplete
 C:\Users\Pablo\Desktop\Bases_De_Datos_1\Practicando-MVC-C#\Proyecto_Ferreteria_MVC\Ferreteria\Negocios\obj\Debug\Negocios.dll
 C:\Users\Pablo\Desktop\Bases_De_Datos_1\Practicando-MVC-C#\Proyecto_Ferreteria_MVC\Ferreteria\Negocios\obj\Debug\Negocios.pdb
+D:\Ariel\Base de datos I\Trabajo duo\Proyecto_Ferreteria_MVC\Ferreteria\Negocios\bin\Debug\Negocios.dll
+D:\Ariel\Base de datos I\Trabajo duo\Proyecto_Ferreteria_MVC\Ferreteria\Negocios\bin\Debug\Negocios.pdb
+D:\Ariel\Base de datos I\Trabajo duo\Proyecto_Ferreteria_MVC\Ferreteria\Negocios\bin\Debug\Datos.dll
+D:\Ariel\Base de datos I\Trabajo duo\Proyecto_Ferreteria_MVC\Ferreteria\Negocios\bin\Debug\Entidades.dll
+D:\Ariel\Base de datos I\Trabajo duo\Proyecto_Ferreteria_MVC\Ferreteria\Negocios\bin\Debug\Datos.pdb
+D:\Ariel\Base de datos I\Trabajo duo\Proyecto_Ferreteria_MVC\Ferreteria\Negocios\bin\Debug\Entidades.pdb
+D:\Ariel\Base de datos I\Trabajo duo\Proyecto_Ferreteria_MVC\Ferreteria\Negocios\obj\Debug\Negocios.csprojAssemblyReference.cache
+D:\Ariel\Base de datos I\Trabajo duo\Proyecto_Ferreteria_MVC\Ferreteria\Negocios\obj\Debug\Negocios.csproj.CoreCompileInputs.cache
+D:\Ariel\Base de datos I\Trabajo duo\Proyecto_Ferreteria_MVC\Ferreteria\Negocios\obj\Debug\Negocios.csproj.CopyComplete
+D:\Ariel\Base de datos I\Trabajo duo\Proyecto_Ferreteria_MVC\Ferreteria\Negocios\obj\Debug\Negocios.dll
+D:\Ariel\Base de datos I\Trabajo duo\Proyecto_Ferreteria_MVC\Ferreteria\Negocios\obj\Debug\Negocios.pdb

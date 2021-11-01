@@ -7,3 +7,12 @@ C:\Users\Pablo\Desktop\Bases_De_Datos_1\Practicando-MVC-C#\Proyecto_Ferreteria_M
 C:\Users\Pablo\Desktop\Bases_De_Datos_1\Practicando-MVC-C#\Proyecto_Ferreteria_MVC\Ferreteria\Datos\obj\Debug\Datos.csproj.CopyComplete
 C:\Users\Pablo\Desktop\Bases_De_Datos_1\Practicando-MVC-C#\Proyecto_Ferreteria_MVC\Ferreteria\Datos\obj\Debug\Datos.dll
 C:\Users\Pablo\Desktop\Bases_De_Datos_1\Practicando-MVC-C#\Proyecto_Ferreteria_MVC\Ferreteria\Datos\obj\Debug\Datos.pdb
+D:\Ariel\Base de datos I\Trabajo duo\Proyecto_Ferreteria_MVC\Ferreteria\Datos\bin\Debug\Datos.dll
+D:\Ariel\Base de datos I\Trabajo duo\Proyecto_Ferreteria_MVC\Ferreteria\Datos\bin\Debug\Datos.pdb
+D:\Ariel\Base de datos I\Trabajo duo\Proyecto_Ferreteria_MVC\Ferreteria\Datos\bin\Debug\Entidades.dll
+D:\Ariel\Base de datos I\Trabajo duo\Proyecto_Ferreteria_MVC\Ferreteria\Datos\bin\Debug\Entidades.pdb
+D:\Ariel\Base de datos I\Trabajo duo\Proyecto_Ferreteria_MVC\Ferreteria\Datos\obj\Debug\Datos.csprojAssemblyReference.cache
+D:\Ariel\Base de datos I\Trabajo duo\Proyecto_Ferreteria_MVC\Ferreteria\Datos\obj\Debug\Datos.csproj.CoreCompileInputs.cache
+D:\Ariel\Base de datos I\Trabajo duo\Proyecto_Ferreteria_MVC\Ferreteria\Datos\obj\Debug\Datos.csproj.CopyComplete
+D:\Ariel\Base de datos I\Trabajo duo\Proyecto_Ferreteria_MVC\Ferreteria\Datos\obj\Debug\Datos.dll
+D:\Ariel\Base de datos I\Trabajo duo\Proyecto_Ferreteria_MVC\Ferreteria\Datos\obj\Debug\Datos.pdb

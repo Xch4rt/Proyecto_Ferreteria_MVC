@@ -4,3 +4,9 @@ C:\Users\Pablo\Desktop\Bases_De_Datos_1\Practicando-MVC-C#\Proyecto_Ferreteria_M
 C:\Users\Pablo\Desktop\Bases_De_Datos_1\Practicando-MVC-C#\Proyecto_Ferreteria_MVC\Ferreteria\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
 C:\Users\Pablo\Desktop\Bases_De_Datos_1\Practicando-MVC-C#\Proyecto_Ferreteria_MVC\Ferreteria\Entidades\obj\Debug\Entidades.dll
 C:\Users\Pablo\Desktop\Bases_De_Datos_1\Practicando-MVC-C#\Proyecto_Ferreteria_MVC\Ferreteria\Entidades\obj\Debug\Entidades.pdb
+D:\Ariel\Base de datos I\Trabajo duo\Proyecto_Ferreteria_MVC\Ferreteria\Entidades\bin\Debug\Entidades.dll
+D:\Ariel\Base de datos I\Trabajo duo\Proyecto_Ferreteria_MVC\Ferreteria\Entidades\bin\Debug\Entidades.pdb
+D:\Ariel\Base de datos I\Trabajo duo\Proyecto_Ferreteria_MVC\Ferreteria\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
+D:\Ariel\Base de datos I\Trabajo duo\Proyecto_Ferreteria_MVC\Ferreteria\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+D:\Ariel\Base de datos I\Trabajo duo\Proyecto_Ferreteria_MVC\Ferreteria\Entidades\obj\Debug\Entidades.dll
+D:\Ariel\Base de datos I\Trabajo duo\Proyecto_Ferreteria_MVC\Ferreteria\Entidades\obj\Debug\Entidades.pdb
