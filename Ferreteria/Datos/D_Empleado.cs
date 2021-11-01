@@ -11,7 +11,7 @@ using System.Data;
 
 namespace Datos
 {
-    public class E_Empleado
+    public class D_Empleado
     {
     }
 }

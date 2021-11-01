@@ -38,15 +38,21 @@ insert into Productos values ('TALADRO',12.50,20,100,1,1),
 							 ('SERRUCHO',8.32,12,12,1,1)
 
 -- Creando tabla Empleados
-create table Empleados(
+alter table Empleados(
 	IdEmpleado int identity (1,1) primary key not null,
 	CodigoEm as ('EM'+RIGHT('00'+CONVERT(VARCHAR,IdEmpleado),(2))),
 	Puesto nvarchar(25) not null,
 	PrimerNombre nvarchar(25) not null,
 	PrimerApellido nvarchar (25) not null,
-	FechaContrato datetime not null,
-	Salario decimal (18,2) not null
+	FechaContrato date not null,
+	Salario decimal (18,2) not null,
 )
+
+alter table Empleados
+alter column FechaContrato date 
+	-- Fks
+	add IdUsuario int not null foreign key references Usuario(IdUsuario)
+
 
 -- Creando tabla Clientes
 create table Clientes(
