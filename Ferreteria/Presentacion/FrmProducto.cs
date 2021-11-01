@@ -15,7 +15,7 @@ namespace Presentacion
 {
     public partial class FrmProducto : Form
     {
-        public bool Update = false;
+        public bool Updates = false;
         E_Productos eProducto = new E_Productos();
         N_Productos nProducto = new N_Productos();
         public FrmProducto()
@@ -48,7 +48,7 @@ namespace Presentacion
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (!Update)
+            if (!Updates)
             {
                 try
                 {
@@ -68,7 +68,7 @@ namespace Presentacion
                     MessageBox.Show("No se pudo guardar la categoria " + ex);
                 }
             }
-            if (Update)
+            if (Updates)
             {
                 try
                 {

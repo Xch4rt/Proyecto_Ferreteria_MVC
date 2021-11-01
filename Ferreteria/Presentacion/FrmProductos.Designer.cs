@@ -497,7 +497,7 @@ namespace Presentacion
             this.dgvProductos.EnableHeadersVisualStyles = false;
             this.dgvProductos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.dgvProductos.HeaderBackColor = System.Drawing.Color.DodgerBlue;
-            this.dgvProductos.HeaderBgColor = System.Drawing.Color.Empty;
+           // this.dgvProductos.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvProductos.HeaderForeColor = System.Drawing.Color.White;
             this.dgvProductos.Location = new System.Drawing.Point(21, 169);
             this.dgvProductos.Name = "dgvProductos";

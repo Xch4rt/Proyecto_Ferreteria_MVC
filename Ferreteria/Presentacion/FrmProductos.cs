@@ -66,7 +66,7 @@ namespace Presentacion
         {
             FrmProducto frmProd = new FrmProducto();
             frmProd.ShowDialog();
-            frmProd.Update = false;
+            frmProd.Updates = false;
             MostrarDatos(); // para que se refresque
             ShowTotal();
         }
@@ -84,7 +84,7 @@ namespace Presentacion
             else if (dgvProductos.Rows[e.RowIndex].Cells["EDITAR"].Selected)
             {
                 FrmProducto frmP = new FrmProducto();
-                frmP.Update = true;
+                frmP.Updates = true;
 
                 // procedemos a cargar el formulario del FrmProducto
                 frmP.txtId.Text = dgvProductos.Rows[e.RowIndex].Cells["ID PRODUCTO"].Value.ToString();
