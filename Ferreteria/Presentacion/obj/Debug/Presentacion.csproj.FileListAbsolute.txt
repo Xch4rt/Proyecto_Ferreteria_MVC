@@ -142,6 +142,7 @@ C:\Users\Pablo\Desktop\Bases_De_Datos_1\Practicando-MVC-C#\Proyecto_Ferreteria_M
 C:\Users\Pablo\Desktop\Bases_De_Datos_1\Practicando-MVC-C#\Proyecto_Ferreteria_MVC\Ferreteria\Presentacion\obj\Debug\Presentacion.FrmProductos.resources
 C:\Users\Pablo\Desktop\Bases_De_Datos_1\Practicando-MVC-C#\Proyecto_Ferreteria_MVC\Ferreteria\Presentacion\obj\Debug\Presentacion.FrmProducto.resources
 C:\Users\Pablo\Desktop\Bases_De_Datos_1\Practicando-MVC-C#\Proyecto_Ferreteria_MVC\Ferreteria\Presentacion\obj\Debug\Presentacion.FrmLogin.resources
+<<<<<<< Updated upstream
 D:\Ariel\Base de datos I\Trabajo duo\Proyecto_Ferreteria_MVC\Ferreteria\Presentacion\bin\Debug\Presentacion.exe.config
 D:\Ariel\Base de datos I\Trabajo duo\Proyecto_Ferreteria_MVC\Ferreteria\Presentacion\bin\Debug\Presentacion.exe
 D:\Ariel\Base de datos I\Trabajo duo\Proyecto_Ferreteria_MVC\Ferreteria\Presentacion\bin\Debug\Presentacion.pdb
@@ -286,3 +287,6 @@ D:\Ariel\Base de datos I\Trabajo duo\Proyecto_Ferreteria_MVC\Ferreteria\Presenta
 D:\Ariel\Base de datos I\Trabajo duo\Proyecto_Ferreteria_MVC\Ferreteria\Presentacion\obj\Debug\Presentacion.csproj.CopyComplete
 D:\Ariel\Base de datos I\Trabajo duo\Proyecto_Ferreteria_MVC\Ferreteria\Presentacion\obj\Debug\Presentacion.exe
 D:\Ariel\Base de datos I\Trabajo duo\Proyecto_Ferreteria_MVC\Ferreteria\Presentacion\obj\Debug\Presentacion.pdb
+=======
+C:\Users\Pablo\Desktop\Bases_De_Datos_1\Practicando-MVC-C#\Proyecto_Ferreteria_MVC\Ferreteria\Presentacion\obj\Debug\Presentacion.FrmEmpleado.resources
+>>>>>>> Stashed changes
