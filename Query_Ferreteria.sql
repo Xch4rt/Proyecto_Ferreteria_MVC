@@ -52,7 +52,9 @@ alter table Empleados
 alter column FechaContrato date 
 	-- Fks
 	add IdUsuario int not null foreign key references Usuario(IdUsuario)
-
+alter table Empleados	
+	add SegundoNombre nvarchar(25) not null,
+		SegundoApellido nvarchar (25) not null
 
 -- Creando tabla Clientes
 create table Clientes(

@@ -170,3 +170,74 @@ set @totalBrand = (select count(IdMarca) as Brands from Marcas)
 set @totalProduct = (select count(IdProducto) as Products from Productos)
 set @totalStock = (select sum(stock) as [Productos Totales] from Productos)
 
+
+-- Procedimientos para la tabla Empleado
+
+-- Procedimiento para insertar empleado
+create proc InsertarEmpleado
+@Puesto nvarchar(25),
+@PrimerNombre nvarchar(25),
+@PrimerApellido nvarchar(25),
+@SegundoNombre nvarchar (25),
+@SegundoApellido nvarchar (25),
+@FechaContrato date,
+@Salario decimal (18,2),
+@IdUsuario int
+as
+insert into Empleados values(@Puesto, @PrimerNombre,@PrimerApellido,@FechaContrato,@Salario,@IdUsuario,@SegundoNombre,@SegundoApellido)
+
+-- Procedimiento para actualizar Empleado
+create proc SP_ActualizarEmpleado
+@IdEmpleado int,
+@Puesto nvarchar(25),
+@PrimerNombre nvarchar(25),
+@PrimerApellido nvarchar(25),
+@SegundoNombre nvarchar (25),
+@SegundoApellido nvarchar (25),
+@FechaContrato date,
+@Salario decimal (18,2),
+@IdUsuario int
+as
+update Empleados set Puesto = @Puesto,
+					 PrimerNombre = @PrimerNombre,
+					 PrimerApellido = @PrimerApellido,
+					 SegundoNombre = @SegundoNombre,
+					 SegundoApellido = @SegundoApellido,
+					 FechaContrato = @FechaContrato,
+					 Salario = @Salario,
+					 IdUsuario = @IdUsuario
+where IdEmpleado = @IdEmpleado
+
+-- Procedimiento para eliminar Empleado
+create proc SP_EliminarEmpleado
+@IdEmpleado int
+as
+delete Empleados
+where IdEmpleado = @IdEmpleado
+
+-- Procedimiento para buscar Empleados
+create proc SP_BuscarEmpleado
+@Buscar nvarchar (20)
+as
+select top 100
+e.IdEmpleado as [ID EMPLEADO],
+e.CodigoEm as [CODIGO],
+e.PrimerNombre as [PRIMER NOMBRE],
+e.SegundoNombre as [SEGUNDO NOMBRE],
+e.PrimerApellido as [PRIMER APELLIDO],
+e.SegundoApellido as [SEGUNDO APELLIDO],
+e.FechaContrato as [FECHA CONTRATO],
+e.Puesto as [PUESTO],
+e.Salario as [SALARIO],
+e.IdUsuario as [ID USUARIO],
+u.usuario as [USUARIO]
+from Empleados e
+inner join Usuario u
+on e.IdUsuario = u.IdUsuario
+where PrimerNombre like @Buscar + '%'
+or PrimerApellido like @Buscar + '%'
+or SegundoNombre like @Buscar + '%'
+or SegundoApellido like @Buscar + '%'
+or Puesto like @Buscar + '%'
+or usuario like @Buscar + '%'
+order by e.IdEmpleado asc

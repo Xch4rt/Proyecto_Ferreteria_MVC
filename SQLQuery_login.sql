@@ -40,6 +40,7 @@ Alter table Usuario
 
  Execute dbo.Insertar_Usuario 'Ariel', 'ariel123', 'Administrador'
  Select * from Usuario
+ Select * from Colaborador
  update Usuario set estado = 'Habilitado' where IdUsuario = 1
 
 
@@ -47,17 +48,17 @@ Alter table Usuario
 
 
 
-create procedure [dbo].[Validar_Acceso]
+alter /*create*/ procedure [dbo].[Validar_Acceso]
 @usuario varchar(50),
 @contraseña varchar(50)
 as
 if exists (Select usuario from Usuario
             where  cast (DECRYPTBYPASSPHRASE(@contraseña, contraseña) as Varchar(100)) = @contraseña
 			 and usuario = @Usuario and Estado = 'Habilitado' )
-			 select 'Acceso Exitoso' as Resultado, c.primernombre +' '+c.primerapellido, rol
+			 select 'Acceso Exitoso' as Resultado, e.PrimerNombre +' '+ e.PrimerApellido, rol
 			 from Usuario u
-			 inner join Colaborador c
-			 on c.IdColaborador = u.IdColaborador
+			 inner join Empleados e
+			 on e.IdEmpleado = u.IdColaborador
 			  where  cast (DECRYPTBYPASSPHRASE(@contraseña, u.contraseña) as Varchar(100)) = @contraseña
 			 and u.usuario = @Usuario and u.Estado = 'Habilitado'
 
