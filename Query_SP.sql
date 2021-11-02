@@ -241,3 +241,23 @@ or SegundoApellido like @Buscar + '%'
 or Puesto like @Buscar + '%'
 or usuario like @Buscar + '%'
 order by e.IdEmpleado asc
+
+-- Procedimiento para mostrar los empleados
+create proc SP_ListarEmpleados
+as
+select top 100
+e.IdEmpleado as [ID EMPLEADO],
+e.CodigoEm as [CODIGO],
+e.PrimerNombre as [PRIMER NOMBRE],
+e.SegundoNombre as [SEGUNDO NOMBRE],
+e.PrimerApellido as [PRIMER APELLIDO],
+e.SegundoApellido as [SEGUNDO APELLIDO],
+e.FechaContrato as [FECHA CONTRATO],
+e.Puesto as [PUESTO],
+e.Salario as [SALARIO],
+e.IdUsuario as [ID USUARIO],
+u.usuario as [USUARIO]
+from Empleados e
+inner join Usuario u
+on e.IdUsuario = u.IdUsuario
+order by e.IdEmpleado asc

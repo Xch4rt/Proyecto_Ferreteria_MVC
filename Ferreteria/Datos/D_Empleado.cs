@@ -83,5 +83,23 @@ namespace Datos
             conexion.Close();
             return table;
         }
+        public DataTable ListarEmpleados()
+        {
+            DataTable table = new DataTable();
+            SqlDataReader leerFilas;
+            SqlCommand cmd = new SqlCommand("SP_ListarProductos", conexion);
+
+            cmd.CommandType = CommandType.StoredProcedure;
+            conexion.Open();
+
+            leerFilas = cmd.ExecuteReader();
+            table.Load(leerFilas);
+
+            leerFilas.Close();
+            conexion.Close();
+
+            return table;
+        }
+
     }
 }
