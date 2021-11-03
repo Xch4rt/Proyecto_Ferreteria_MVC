@@ -87,7 +87,7 @@ namespace Datos
         {
             DataTable table = new DataTable();
             SqlDataReader leerFilas;
-            SqlCommand cmd = new SqlCommand("SP_ListarProductos", conexion);
+            SqlCommand cmd = new SqlCommand("SP_ListarEmpleados", conexion);
 
             cmd.CommandType = CommandType.StoredProcedure;
             conexion.Open();
