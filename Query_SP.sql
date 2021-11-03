@@ -172,19 +172,19 @@ set @totalStock = (select sum(stock) as [Productos Totales] from Productos)
 
 
 -- Procedimientos para la tabla Empleado
-
+use Mantenimiento_Productos
 -- Procedimiento para insertar empleado
-create proc InsertarEmpleado
-@Puesto nvarchar(25),
+alter/*create*/ proc InsertarEmpleado
 @PrimerNombre nvarchar(25),
 @PrimerApellido nvarchar(25),
 @SegundoNombre nvarchar (25),
 @SegundoApellido nvarchar (25),
 @FechaContrato date,
 @Salario decimal (18,2),
-@IdUsuario int
+@Puesto nvarchar (45)
 as
-insert into Empleados values(@Puesto, @PrimerNombre,@PrimerApellido,@FechaContrato,@Salario,@IdUsuario,@SegundoNombre,@SegundoApellido)
+insert into Empleados values(@PrimerNombre,@SegundoNombre,@PrimerApellido,@SegundoApellido,@FechaContrato,@Salario,@Puesto)
+exec InsertarEmpleado 'Fhernando','Ariel','Villanueva','Mena','12-11-2002',19389.21,'Jefe de Ventas'
 
 -- Procedimiento para actualizar Empleado
 create proc SP_ActualizarEmpleado
@@ -243,7 +243,7 @@ or usuario like @Buscar + '%'
 order by e.IdEmpleado asc
 
 -- Procedimiento para mostrar los empleados
-create proc SP_ListarEmpleados
+alter proc SP_ListarEmpleados
 as
 select top 100
 e.IdEmpleado as [ID EMPLEADO],
@@ -255,9 +255,10 @@ e.SegundoApellido as [SEGUNDO APELLIDO],
 e.FechaContrato as [FECHA CONTRATO],
 e.Puesto as [PUESTO],
 e.Salario as [SALARIO],
-e.IdUsuario as [ID USUARIO],
 u.usuario as [USUARIO]
 from Empleados e
 inner join Usuario u
-on e.IdUsuario = u.IdUsuario
+on e.IdEmpleado = u.IdEmpleado
 order by e.IdEmpleado asc
+
+exec SP_ListarEmpleados
