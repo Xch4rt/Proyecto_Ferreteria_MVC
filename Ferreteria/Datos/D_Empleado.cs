@@ -17,7 +17,7 @@ namespace Datos
 
         public void insertarEmpleado(E_Empleado empleado)
         {
-            SqlCommand cmd = new SqlCommand("SP_InsertarEmpleado", conexion);
+            SqlCommand cmd = new SqlCommand("InsertarEmpleado", conexion);
             cmd.CommandType = CommandType.StoredProcedure;
             conexion.Open();
 
@@ -28,7 +28,7 @@ namespace Datos
             cmd.Parameters.AddWithValue("@SegundoApellido", empleado.SApellido1);
             cmd.Parameters.AddWithValue("@FechaContrato", empleado.FechaContrato1);
             cmd.Parameters.AddWithValue("@Salario", empleado.Salario1);
-            cmd.Parameters.AddWithValue("@IdUsuario", empleado.IdUsuario1);
+            
 
             cmd.ExecuteNonQuery();
             conexion.Close();

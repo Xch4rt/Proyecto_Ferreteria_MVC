@@ -5,7 +5,7 @@ create login Ariel with password='ariel123'
 
 sp_adduser Ariel, Ariel
 GRANT EXECUTE ON Schema:: DBO to Ariel
-
+/*
 Create table Usuario (IdUsuario int primary key identity(1,1),
 usuario varchar(80),
 contraseña varchar(80),
@@ -16,14 +16,14 @@ estado varchar(80))
 Alter table Usuario
  add IdColaborador int
 
-
+ */
 
 
  Create procedure [dbo].[Insertar_Usuario]
- @usuario varchar(50), @contraseña varchar(50), @rol varchar(50)
+ @usuario varchar(50), @contraseña varchar(50), @rol varchar(50), @IdEmpleado
  as
  insert into Usuario(usuario, contraseña, rol, Estado) values
- (@usuario, ENCRYPTBYPASSPHRASE( @contraseña,  @contraseña), @rol, 'Habilitado')
+ (@usuario, ENCRYPTBYPASSPHRASE( @contraseña,  @contraseña), @rol, 'Habilitado', @IdEmpleado)
 
  
  Create table Colaborador

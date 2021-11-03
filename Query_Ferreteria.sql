@@ -38,23 +38,39 @@ insert into Productos values ('TALADRO',12.50,20,100,1,1),
 							 ('SERRUCHO',8.32,12,12,1,1)
 
 -- Creando tabla Empleados
-alter table Empleados(
+create table Empleados(
 	IdEmpleado int identity (1,1) primary key not null,
 	CodigoEm as ('EM'+RIGHT('00'+CONVERT(VARCHAR,IdEmpleado),(2))),
-	Puesto nvarchar(25) not null,
 	PrimerNombre nvarchar(25) not null,
+	SegundoNombre nvarchar(25) not null,
 	PrimerApellido nvarchar (25) not null,
+	SegundoApellido nvarchar (25) not null,
 	FechaContrato date not null,
 	Salario decimal (18,2) not null,
 )
-
 alter table Empleados
-alter column FechaContrato date 
-	-- Fks
-	add IdUsuario int not null foreign key references Usuario(IdUsuario)
-alter table Empleados	
-	add SegundoNombre nvarchar(25) not null,
-		SegundoApellido nvarchar (25) not null
+		add Puesto varchar (45)
+-- Agregando empleados
+insert into Empleados values ('Pablo','Andres','Gutierrez','Almendarez','06-02-2003',19389.21,'Jefe de caja')
+insert into Empleados values ('Ariel','Adolfo','Reyes','Silva','05-05-2003',19389.21,'Jefe de planta')
+insert into Empleados values ('Wiston','Jose','Quintana','Osorio','04-12-2002',19389.21,'Jefe de inventario')
+insert into Empleados values ('Fhernando','Ariel','Villanueva','Mena','12-11-2002',19389.21,'Jefe de Ventas')
+select * from Empleados
+-- /Agregando empleados
+-- creando tabla usuario
+create table Usuario (
+IdUsuario int primary key identity(1,1),
+usuario varchar(80),
+contraseña varchar(80),
+rol varchar(80),
+estado varchar(80),
+IdEmpleado int not null foreign key references Empleados(IdEmpleado)
+)
+--Agregando Usuarios
+Execute dbo.Insertar_Usuario 'Pablo', 'pablo123', 'Administrador',1
+Execute dbo.Insertar_Usuario 'Ariel', 'ariel123', 'Administrador',2
+--/Agregando usuarios
+
 
 -- Creando tabla Clientes
 create table Clientes(
