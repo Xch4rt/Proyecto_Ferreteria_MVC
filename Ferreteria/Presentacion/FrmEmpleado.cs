@@ -49,7 +49,7 @@ namespace Presentacion
                     eEmpleado.Salario1 = Convert.ToDecimal(txtSalario.Text);
                     eEmpleado.Puesto1 = txtPuesto.Text;
                     nEmpleado.InsertarEmpleado(eEmpleado);
-                    //Close();
+                    Close();
 
 
                 }

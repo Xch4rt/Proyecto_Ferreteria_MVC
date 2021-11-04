@@ -46,7 +46,7 @@ namespace Presentacion
             dgvEmpleados.Columns[1].Width = 70;
             dgvEmpleados.Columns[0].Width = 70;
             dgvEmpleados.Columns[3].Width = 70;
-            dgvEmpleados.Columns[11].Width = 80;
+            //dgvEmpleados.Columns[11].Width = 80;
             dgvEmpleados.Columns[9].Width = 100;
 
             // cambiando de posicion las primeras 2 columnas a ser las ultimas 2
@@ -68,7 +68,7 @@ namespace Presentacion
         {
             FrmEmpleado frmEmpleado = new FrmEmpleado();
             frmEmpleado.ShowDialog();
-            //frmProd.Updates = false;
+            frmEmpleado.Updates = false;
             MostrarDatos(); // para que se refresque
             //ShowTotal();
         }
