@@ -254,16 +254,32 @@ e.PrimerApellido as [PRIMER APELLIDO],
 e.SegundoApellido as [SEGUNDO APELLIDO],
 e.FechaContrato as [FECHA CONTRATO],
 e.Puesto as [PUESTO],
-e.Salario as [SALARIO],
+e.Salario as [SALARIO]
+--u.usuario as [USUARIO]
+from Empleados e
+--inner join Usuario u
+--on e.IdEmpleado = u.IdEmpleado
+order by e.IdEmpleado asc
+
+exec SP_ListarEmpleados
+select * from Empleados
+-- Procedimiento para mostrar a los clientes que poseen usuarios
+alter proc SP_ListarEmpleadosUsuarios
+as
+select top 100
+e.CodigoEm as [CODIGO],
+e.PrimerNombre as [PRIMER NOMBRE],
+e.SegundoNombre as [SEGUNDO NOMBRE],
+e.PrimerApellido as [PRIMER APELLIDO],
+e.SegundoApellido as [SEGUNDO APELLIDO],
+e.FechaContrato as [FECHA CONTRATO],
+e.Puesto as [PUESTO],
 u.usuario as [USUARIO]
 from Empleados e
 inner join Usuario u
 on e.IdEmpleado = u.IdEmpleado
 order by e.IdEmpleado asc
-
-exec SP_ListarEmpleados
-
-
+exec SP_ListarEmpleadosUsuarios
 -- Procedimientos para los Clientes
 -- Procedimiento para insertar clientes
 create proc SP_InsertarCliente
