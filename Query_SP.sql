@@ -262,3 +262,72 @@ on e.IdEmpleado = u.IdEmpleado
 order by e.IdEmpleado asc
 
 exec SP_ListarEmpleados
+
+
+-- Procedimientos para los Clientes
+-- Procedimiento para insertar clientes
+create proc SP_InsertarCliente
+@PrimerNombre nvarchar(25),
+@PrimerApellido nvarchar(25),
+@SegundoNombre nvarchar (25),
+@SegundoApellido nvarchar (25),
+@NumTelf int
+as
+insert into Clientes values(@PrimerNombre,@SegundoNombre,@PrimerApellido,@SegundoApellido,@NumTelf)
+
+-- Procedimiento para eliminar clientes
+create proc SP_EliminarCliente
+@IdCliente int
+as
+delete Clientes
+where IdCliente = @IdCliente
+
+-- Procedimiento para actualizar clientes
+create proc SP_ActualizarCliente
+@IdCliente int,
+@PrimerNombre nvarchar(25),
+@PrimerApellido nvarchar(25),
+@SegundoNombre nvarchar (25),
+@SegundoApellido nvarchar (25),
+@NumTelf int
+as
+update Clientes set	 PrimerNombre = @PrimerNombre,
+					 PrimerApellido = @PrimerApellido,
+					 SegundoNombre = @SegundoNombre,
+					 SegundoApellido = @SegundoApellido,
+					 NumeroTelf = @NumTelf
+where IdCliente = @IdCliente
+
+-- Procedimientos para listar y buscar clientes
+create proc SP_ListarClientes
+as
+select top 100
+c.IdCliente as [ID CLIENTE],
+c.CodigoCl as [CODIGO],
+c.PrimerNombre as [PRIMER NOMBRE],
+c.SegundoNombre as [SEGUNDO NOMBRE],
+c.PrimerApellido as [PRIMER APELLIDO],
+c.SegundoApellido as [SEGUNDO APELLIDO],
+c.NumeroTelf as [NUMERO DE TELEFONO]
+from Clientes c
+
+order by c.IdCliente asc
+
+create proc SP_BuscarCliente
+@Buscar nvarchar (20)
+as
+select top 100
+c.IdCliente as [ID CLIENTE],
+c.CodigoCl as [CODIGO],
+c.PrimerNombre as [PRIMER NOMBRE],
+c.SegundoNombre as [SEGUNDO NOMBRE],
+c.PrimerApellido as [PRIMER APELLIDO],
+c.SegundoApellido as [SEGUNDO APELLIDO],
+c.NumeroTelf as [NUMERO DE TELEFONO]
+from Clientes c
+where PrimerNombre like @Buscar + '%'
+or PrimerApellido like @Buscar + '%'
+or SegundoNombre like @Buscar + '%'
+or SegundoApellido like @Buscar + '%'
+or NumeroTelf like @Buscar + '%'
+order by c.IdCliente asc
