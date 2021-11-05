@@ -59,17 +59,36 @@ select * from Empleados
 -- /Agregando empleados
 -- creando tabla usuario
 create table Usuario (
-IdUsuario int primary key identity(1,1),
+IdUsuario int primary key identity(1,1) not null,
 usuario varchar(80),
 contraseña varchar(80),
-rol varchar(80),
 estado varchar(80),
-IdEmpleado int not null foreign key references Empleados(IdEmpleado)
+-- Fks
+IdEmpleado int not null foreign key references Empleados(IdEmpleado),
+IdRol int not null foreign key references Rol(IdRol)
 )
 --Agregando Usuarios
-Execute dbo.Insertar_Usuario 'Pablo', 'pablo123', 'Administrador',1
-Execute dbo.Insertar_Usuario 'Ariel', 'ariel123', 'Administrador',2
+Execute SP_InsertarUsuario 'Pablo', 'pablo123', 'Habilitado',1,1
+Execute SP_InsertarUsuario 'Ariel', 'ariel123', 'Habilitado',2,1
+select * from Usuario
 --/Agregando usuarios
+-- <Comprobando que se muestre la informacion>
+select
+e.PrimerNombre,
+e.PrimerApellido,
+e.FechaContrato,
+e.Salario,
+e.Puesto,
+u.usuario,
+u.contraseña,
+r.Rol
+from Usuario u
+inner join Rol r
+on r.IdRol = u.IdRol
+inner join Empleados e
+on e.IdEmpleado = u.IdEmpleado
+
+-- </Comprobando que se muestre la informacion>
 
 
 -- Creando tabla Clientes
@@ -104,4 +123,14 @@ create table DetalleOrden(
 	IdOrden int not null foreign key references Ordenes(IdOrden),
 	IdProducto int not null foreign key references Productos(IdProducto)
 )
+
+
+create table Rol(
+	IdRol int  primary key not null,
+	Rol nvarchar(14) not null
+)
+insert into Rol values (1, 'Jefe'), (2, 'Administrador'), (3, 'Bodega'), (4, 'Vendedor')
+select * from Rol
+insert into prueba1 values ('Faviana','Jefe',1)
+
 

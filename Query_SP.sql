@@ -280,7 +280,12 @@ inner join Usuario u
 on e.IdEmpleado = u.IdEmpleado
 order by e.IdEmpleado asc
 exec SP_ListarEmpleadosUsuarios
+
+
+
 -- Procedimientos para los Clientes
+
+
 -- Procedimiento para insertar clientes
 create proc SP_InsertarCliente
 @PrimerNombre nvarchar(25),
@@ -347,3 +352,10 @@ or SegundoNombre like @Buscar + '%'
 or SegundoApellido like @Buscar + '%'
 or NumeroTelf like @Buscar + '%'
 order by c.IdCliente asc
+
+-- Procedimientos para Usuarios
+ create procedure SP_InsertarUsuario
+ @usuario varchar(50), @contraseña varchar(50), @Estado varchar(50), @IdEmpleado int, @IdRol int
+ as
+ insert into Usuario values
+ (@usuario, ENCRYPTBYPASSPHRASE( @contraseña,  @contraseña),@Estado , @IdEmpleado, @IdRol)

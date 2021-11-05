@@ -39,13 +39,11 @@ namespace Presentacion
         }
         public void HidenMoveColumns()
         {
-            dgvEmpleados.Columns[2].Visible = false;
-
-
             //modificando los widths
-            dgvEmpleados.Columns[1].Width = 70;
-            dgvEmpleados.Columns[0].Width = 70;
+            dgvEmpleados.Columns[1].Width = 50;
+            dgvEmpleados.Columns[0].Width = 50;
             dgvEmpleados.Columns[3].Width = 70;
+            dgvEmpleados.Columns[2].Width = 60;
             //dgvEmpleados.Columns[11].Width = 80;
             dgvEmpleados.Columns[9].Width = 100;
 

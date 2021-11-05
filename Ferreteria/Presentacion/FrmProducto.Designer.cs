@@ -90,7 +90,7 @@ namespace Presentacion
             this.TopForm.Dock = System.Windows.Forms.DockStyle.Top;
             this.TopForm.Location = new System.Drawing.Point(0, 0);
             this.TopForm.Name = "TopForm";
-            this.TopForm.Size = new System.Drawing.Size(687, 59);
+            this.TopForm.Size = new System.Drawing.Size(693, 59);
             this.TopForm.TabIndex = 1;
             // 
             // ClosePic
@@ -846,7 +846,7 @@ namespace Presentacion
             this.btnSave.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnSave.IdleIconLeftImage")));
             this.btnSave.IdleIconRightImage = null;
             this.btnSave.IndicateFocus = false;
-            this.btnSave.Location = new System.Drawing.Point(185, 465);
+            this.btnSave.Location = new System.Drawing.Point(186, 449);
             this.btnSave.Name = "btnSave";
             this.btnSave.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnSave.OnDisabledState.BorderRadius = 1;
@@ -893,7 +893,7 @@ namespace Presentacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(687, 516);
+            this.ClientSize = new System.Drawing.Size(693, 516);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.bunifuLabel8);
             this.Controls.Add(this.bunifuLabel7);
