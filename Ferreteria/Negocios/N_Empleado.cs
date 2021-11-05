@@ -35,5 +35,7 @@ namespace Negocios
         {
             objDato.EliminarEmpleado(id);
         }
+       
+
     }
 }

@@ -20,8 +20,7 @@ namespace Entidades
         private int IdUsuario;
         private string Search;
 
-        private string Username;
-        private string Password;
+        
 
         public int IdEmpleado1 { get => IdEmpleado; set => IdEmpleado = value; }
         public string CodigoEmpleado1 { get => CodigoEmpleado; set => CodigoEmpleado = value; }
@@ -34,7 +33,6 @@ namespace Entidades
         public string Puesto1 { get => Puesto; set => Puesto = value; }
         public int IdUsuario1 { get => IdUsuario; set => IdUsuario = value; }
         public string Search1 { get => Search; set => Search = value; }
-        public string Username1 { get => Username; set => Username = value; }
-        public string Password1 { get => Password; set => Password = value; }
+
     }
 }
