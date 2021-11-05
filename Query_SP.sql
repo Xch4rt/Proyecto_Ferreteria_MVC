@@ -229,10 +229,13 @@ e.SegundoApellido as [SEGUNDO APELLIDO],
 e.FechaContrato as [FECHA CONTRATO],
 e.Puesto as [PUESTO],
 e.Salario as [SALARIO],
-u.usuario as [USUARIO]
+u.usuario as [USUARIO],
+r.IdRol as [ID ROL]
 from Empleados e
 left join Usuario u
 on e.IdEmpleado = u.IdUsuario
+left join Rol r
+on r.IdRol = u.IdRol
 where PrimerNombre like @Buscar + '%'
 or PrimerApellido like @Buscar + '%'
 or SegundoNombre like @Buscar + '%'
