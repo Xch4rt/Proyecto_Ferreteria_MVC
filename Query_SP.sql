@@ -216,7 +216,7 @@ delete Empleados
 where IdEmpleado = @IdEmpleado
 
 -- Procedimiento para buscar Empleados
-create proc SP_BuscarEmpleado
+alter proc SP_BuscarEmpleado
 @Buscar nvarchar (20)
 as
 select top 100
@@ -229,11 +229,10 @@ e.SegundoApellido as [SEGUNDO APELLIDO],
 e.FechaContrato as [FECHA CONTRATO],
 e.Puesto as [PUESTO],
 e.Salario as [SALARIO],
-e.IdUsuario as [ID USUARIO],
 u.usuario as [USUARIO]
 from Empleados e
-inner join Usuario u
-on e.IdUsuario = u.IdUsuario
+left join Usuario u
+on e.IdEmpleado = u.IdUsuario
 where PrimerNombre like @Buscar + '%'
 or PrimerApellido like @Buscar + '%'
 or SegundoNombre like @Buscar + '%'
@@ -272,12 +271,16 @@ e.PrimerNombre as [PRIMER NOMBRE],
 e.SegundoNombre as [SEGUNDO NOMBRE],
 e.PrimerApellido as [PRIMER APELLIDO],
 e.SegundoApellido as [SEGUNDO APELLIDO],
+e.Salario as [SALARIO],
 e.FechaContrato as [FECHA CONTRATO],
 e.Puesto as [PUESTO],
-u.usuario as [USUARIO]
+u.usuario as [USUARIO],
+r.Rol as [ROL EMPLEADO]
 from Empleados e
 inner join Usuario u
 on e.IdEmpleado = u.IdEmpleado
+inner join Rol r
+on r.IdRol = u.IdRol
 order by e.IdEmpleado asc
 exec SP_ListarEmpleadosUsuarios
 
@@ -359,3 +362,17 @@ order by c.IdCliente asc
  as
  insert into Usuario values
  (@usuario, ENCRYPTBYPASSPHRASE( @contraseña,  @contraseña),@Estado , @IdEmpleado, @IdRol)
+
+ -- Procedimiento para buscar en Roles
+ alter proc SP_BuscarRol
+ @Buscar nvarchar (20)
+ as
+ select 
+ r.IdRol,
+ r.Rol
+ from Rol r
+ where Rol like @Buscar + '%' or IdRol like @Buscar + '%'
+ order by r.IdRol asc
+
+ exec SP_BuscarEmpleado ''
+ exec SP_BuscarCategoria''
