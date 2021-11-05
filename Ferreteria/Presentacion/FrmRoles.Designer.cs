@@ -76,7 +76,7 @@ namespace Presentacion
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.txtPassword = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuToggleSwitch1 = new Bunifu.UI.WinForms.BunifuToggleSwitch();
+            this.ToggleOptionUser = new Bunifu.UI.WinForms.BunifuToggleSwitch();
             this.TopForm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ClosePic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -358,6 +358,7 @@ namespace Presentacion
             this.btnSave.TextMarginLeft = 0;
             this.btnSave.TextPadding = new System.Windows.Forms.Padding(0);
             this.btnSave.UseDefaultRadiusAndThickness = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnDelete
             // 
@@ -606,7 +607,7 @@ namespace Presentacion
             this.btnAsignar.onHoverState.BorderThickness = 1;
             this.btnAsignar.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(150)))), ((int)(((byte)(255)))));
             this.btnAsignar.onHoverState.ForeColor = System.Drawing.Color.White;
-            this.btnAsignar.onHoverState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnNuevo.onHoverState.IconLeftImage")));
+            this.btnAsignar.onHoverState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnAsignar.onHoverState.IconLeftImage")));
             this.btnAsignar.onHoverState.IconRightImage = null;
             this.btnAsignar.OnIdleState.BorderColor = System.Drawing.Color.DodgerBlue;
             this.btnAsignar.OnIdleState.BorderRadius = 1;
@@ -614,7 +615,7 @@ namespace Presentacion
             this.btnAsignar.OnIdleState.BorderThickness = 1;
             this.btnAsignar.OnIdleState.FillColor = System.Drawing.Color.DodgerBlue;
             this.btnAsignar.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.btnAsignar.OnIdleState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnNuevo.OnIdleState.IconLeftImage")));
+            this.btnAsignar.OnIdleState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnAsignar.OnIdleState.IconLeftImage")));
             this.btnAsignar.OnIdleState.IconRightImage = null;
             this.btnAsignar.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
             this.btnAsignar.OnPressedState.BorderRadius = 1;
@@ -987,20 +988,20 @@ namespace Presentacion
             this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // bunifuToggleSwitch1
+            // ToggleOptionUser
             // 
-            this.bunifuToggleSwitch1.Animation = 5;
-            this.bunifuToggleSwitch1.AnimationSpeed = 5;
-            this.bunifuToggleSwitch1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuToggleSwitch1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuToggleSwitch1.BackgroundImage")));
-            this.bunifuToggleSwitch1.Checked = true;
-            this.bunifuToggleSwitch1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuToggleSwitch1.InnerCirclePadding = 3;
-            this.bunifuToggleSwitch1.Location = new System.Drawing.Point(695, 451);
-            this.bunifuToggleSwitch1.Name = "bunifuToggleSwitch1";
-            this.bunifuToggleSwitch1.Size = new System.Drawing.Size(56, 25);
-            this.bunifuToggleSwitch1.TabIndex = 33;
-            this.bunifuToggleSwitch1.ThumbMargin = 3;
+            this.ToggleOptionUser.Animation = 5;
+            this.ToggleOptionUser.AnimationSpeed = 5;
+            this.ToggleOptionUser.BackColor = System.Drawing.Color.Transparent;
+            this.ToggleOptionUser.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ToggleOptionUser.BackgroundImage")));
+            this.ToggleOptionUser.Checked = true;
+            this.ToggleOptionUser.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ToggleOptionUser.InnerCirclePadding = 3;
+            this.ToggleOptionUser.Location = new System.Drawing.Point(695, 451);
+            this.ToggleOptionUser.Name = "ToggleOptionUser";
+            this.ToggleOptionUser.Size = new System.Drawing.Size(56, 25);
+            this.ToggleOptionUser.TabIndex = 33;
+            this.ToggleOptionUser.ThumbMargin = 3;
             toggleState1.BackColor = System.Drawing.Color.DarkGray;
             toggleState1.BackColorInner = System.Drawing.Color.White;
             toggleState1.BorderColor = System.Drawing.Color.DarkGray;
@@ -1009,7 +1010,7 @@ namespace Presentacion
             toggleState1.BorderRadiusInner = 11;
             toggleState1.BorderThickness = 1;
             toggleState1.BorderThicknessInner = 1;
-            this.bunifuToggleSwitch1.ToggleStateDisabled = toggleState1;
+            this.ToggleOptionUser.ToggleStateDisabled = toggleState1;
             toggleState2.BackColor = System.Drawing.Color.Empty;
             toggleState2.BackColorInner = System.Drawing.Color.Empty;
             toggleState2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(0)))), ((int)(((byte)(140)))));
@@ -1018,7 +1019,7 @@ namespace Presentacion
             toggleState2.BorderRadiusInner = 1;
             toggleState2.BorderThickness = 1;
             toggleState2.BorderThicknessInner = 1;
-            this.bunifuToggleSwitch1.ToggleStateOff = toggleState2;
+            this.ToggleOptionUser.ToggleStateOff = toggleState2;
             toggleState3.BackColor = System.Drawing.Color.DodgerBlue;
             toggleState3.BackColorInner = System.Drawing.Color.White;
             toggleState3.BorderColor = System.Drawing.Color.DodgerBlue;
@@ -1027,8 +1028,9 @@ namespace Presentacion
             toggleState3.BorderRadiusInner = 9;
             toggleState3.BorderThickness = 1;
             toggleState3.BorderThicknessInner = 1;
-            this.bunifuToggleSwitch1.ToggleStateOn = toggleState3;
-            this.bunifuToggleSwitch1.Value = true;
+            this.ToggleOptionUser.ToggleStateOn = toggleState3;
+            this.ToggleOptionUser.Value = true;
+            this.ToggleOptionUser.CheckedChanged += new System.EventHandler<Bunifu.UI.WinForms.BunifuToggleSwitch.CheckedChangedEventArgs>(this.ToggleOptionUser_CheckedChanged);
             // 
             // FrmRoles
             // 
@@ -1036,7 +1038,7 @@ namespace Presentacion
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1003, 560);
-            this.Controls.Add(this.bunifuToggleSwitch1);
+            this.Controls.Add(this.ToggleOptionUser);
             this.Controls.Add(this.bunifuLabel2);
             this.Controls.Add(this.bunifuLabel1);
             this.Controls.Add(this.txtPassword);
@@ -1095,6 +1097,6 @@ namespace Presentacion
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
         public Bunifu.UI.WinForms.BunifuTextBox txtPassword;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel2;
-        private Bunifu.UI.WinForms.BunifuToggleSwitch bunifuToggleSwitch1;
+        private Bunifu.UI.WinForms.BunifuToggleSwitch ToggleOptionUser;
     }
 }
