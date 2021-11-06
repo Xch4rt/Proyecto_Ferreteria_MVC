@@ -18,7 +18,7 @@ namespace Presentacion
         private bool Updates = false;
         E_Usuarios eUsuarios = new E_Usuarios();
         N_Usuarios nUsuarios = new N_Usuarios();
-        private string option = "";
+        private string option = "Habilitado";
         public FrmRoles()
         {
             InitializeComponent(); 
@@ -98,11 +98,12 @@ namespace Presentacion
                     eUsuarios.Estado1 = option;
                     eUsuarios.IdRol1 = cmbRoles.SelectedIndex + 1;
                     eUsuarios.IdEmpleado1 = Convert.ToInt32(tablaEmpleadoRol.CurrentRow.Cells[0].Value.ToString());
-                    MostrarBuscarTable("");
                     nUsuarios.CrearUsuario(eUsuarios);
+
+                    MostrarBuscarTable("");
                     //Close();
 
-                    
+
 
 
                 }
