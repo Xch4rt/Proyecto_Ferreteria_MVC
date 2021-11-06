@@ -156,3 +156,93 @@ create table RolOperacion(
 	IdRol int not null foreign key references Rol(IdRol),
 	IdOperacion int not null foreign key references Operaciones(IdOperacion)
 )
+
+-- insertando datos
+insert into Modulo values ('Empleados'),('Proveedores'),('Marcas'),('Categorias'),('Usuario'),('Roles'),('Productos'),('Ordenes de compra'),('Ordenes de Venta'),('Clientes')
+select * from Modulo
+								
+								
+insert into Operaciones values  -- Empleados
+							   ('create',10),
+							   ('update',10),
+							   ('delete',10),
+							   ('read',10),
+							   -- Usuarios	
+						       ('create',1),
+							   ('update',1),
+							   ('delete',1),
+							   ('read',1),
+							   -- Roles
+							   ('create',2),
+							   ('update',2),
+							   ('delete',2),
+							   ('read',2),
+							   -- Productos
+							   ('create',3),
+							   ('update',3),
+							   ('delete',3),
+							   ('read',3),
+							   -- Clientes
+						       ('create',6),
+							   ('update',6),
+							   ('delete',6),
+							   ('read',6),
+							   -- Categoras
+							   ('create',8),
+							   ('update',8),
+							   ('delete',8),
+							   ('read',8),
+							   -- Marcas
+							   ('create',7),
+							   ('update',7),
+							   ('delete',7),
+							   ('read',7),
+							   -- Proveedores
+							   ('create',9),
+							   ('update',9),
+							   ('delete',9),
+							   ('read',9),
+							   -- Ordenes de compra
+							   ('generate',4),
+							   -- Ordenes de venta
+							   ('generate',5)
+select * from Operaciones
+-- /insertando datos
+
+-- insertando los permisos en rol operacion
+select * from Rol
+/*Para rol Jefe*/
+insert into RolOperacion values (1,1),(1,2),(1,3),(1,4),(1,5),(1,6),(1,7),(1,8),(1,9),(1,10),(1,11),(1,12),(1,13),(1,14),(1,15),(1,16),(1,17),(1,18),(1,19),(1,20),(1,21),(1,22),(1,23),(1,24),(1,25),(1,26),(1,27),(1,28),(1,29),(1,30),(1,31),(1,32),(1,33),(1,34)
+/*Para rol Administrador*/
+insert into RolOperacion values (2,31),(2,32),(2,33),(2,34),(2,9),(2,10),(2,11),(2,12),(2,13),(2,14),(2,15),(2,16),(2,1),(2,2),(2,3),(2,4),(2,5),(2,6),(2,7),(2,8),(2,25),(2,26),(2,27),(2,28)
+/*Para rol Bodega*/
+insert into RolOperacion values (3,29),(3,9),(3,10),(3,11),(3,12),(3,21),(3,22),(3,23),(3,34),(3,17),(3,18),(3,19),(3,20)
+/*Para rol Vendedor*/
+insert into RolOperacion values (4,30)
+select * from RolOperacion
+
+--<comprombando>
+select 
+u.IdUsuario,
+u.usuario,
+r.Rol,
+o.NombreOperacion,
+m.NombreModulo
+from Usuario u
+inner join Rol r
+on r.IdRol = u.IdRol
+inner join RolOperacion ro
+on ro.IdRol = r.IdRol
+inner join Operaciones o
+on o.IdOperacion = ro.IdOperacion
+inner join Modulo m
+on m.IdModulo = o.IdModulo
+order by IdUsuario
+
+--</comprobando>
+
+
+
+
+
+
