@@ -55,14 +55,16 @@ as
 if exists (Select usuario from Usuario
             where  cast (DECRYPTBYPASSPHRASE(@contraseña, contraseña) as Varchar(100)) = @contraseña
 			 and usuario = @Usuario and Estado = 'Habilitado' )
-			 select 'Acceso Exitoso' as Resultado, e.PrimerNombre +' '+ e.PrimerApellido, rol
+			 select 'Acceso Exitoso' as Resultado, (e.PrimerNombre +' '+ e.PrimerApellido) as [NOMBRE], r.Rol as [ROL]
 			 from Usuario u
 			 inner join Empleados e
-			 on e.IdEmpleado = u.IdColaborador
-			  where  cast (DECRYPTBYPASSPHRASE(@contraseña, u.contraseña) as Varchar(100)) = @contraseña
+			 on e.IdEmpleado = u.IdUsuario
+			 inner join Rol r
+			 on u.IdRol = r.IdRol
+			 where  cast (DECRYPTBYPASSPHRASE(@contraseña, u.contraseña) as Varchar(100)) = @contraseña
 			 and u.usuario = @Usuario and u.Estado = 'Habilitado'
 
 			 else
 			 Select 'Acceso Denegado' as Resultado
 
-			 Execute dbo.Validar_Acceso 'Ariel', 'ariel123'
+			 Execute dbo.Validar_Acceso 'Wiston', 'wiston123'

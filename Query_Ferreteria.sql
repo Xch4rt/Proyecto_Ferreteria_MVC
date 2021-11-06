@@ -239,6 +239,9 @@ inner join Modulo m
 on m.IdModulo = o.IdModulo
 order by IdUsuario
 
+
+
+
 --</comprobando>
 
 
