@@ -124,7 +124,9 @@ create table DetalleOrden(
 	IdProducto int not null foreign key references Productos(IdProducto)
 )
 
+-- LOGICA DE ROLES
 
+-- Creando tabla Rol
 create table Rol(
 	IdRol int  primary key not null,
 	Rol nvarchar(14) not null
@@ -133,4 +135,24 @@ insert into Rol values (1, 'Jefe'), (2, 'Administrador'), (3, 'Bodega'), (4, 'Ve
 select * from Rol
 insert into prueba1 values ('Faviana','Jefe',1)
 
+-- Creando tabla Modulo
+create table Modulo(
+	IdModulo int identity (1,1) primary key not null,
+	NombreModulo nvarchar (30)
+)
 
+-- Creando tabla Operaciones
+create table Operaciones(
+	IdOperacion int identity (1,1) primary key not null,
+	NombreOperacion nvarchar (45) not null,
+	-- Fks
+	IdModulo int not null foreign key references Modulo(IdModulo)
+)
+
+-- Creabdi tabka RolOperaciones
+create table RolOperacion(
+	IdRolOperacion int identity (1,1) primary key not null,
+	-- Fk
+	IdRol int not null foreign key references Rol(IdRol),
+	IdOperacion int not null foreign key references Operaciones(IdOperacion)
+)
