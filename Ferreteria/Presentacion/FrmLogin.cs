@@ -28,12 +28,15 @@ namespace Presentacion
 
         }
 
+
+
+        
         private void btnCancel_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void btnAccess_Click(object sender, EventArgs e)
+        private void btnAcces_Click(object sender, EventArgs e)
         {
             DataTable dato;
             dato = nUsuario.Validar_acceso(this.txtUsername.Text, this.txtPassword.Text);
