@@ -187,7 +187,7 @@ insert into Empleados values(@PrimerNombre,@SegundoNombre,@PrimerApellido,@Segun
 exec InsertarEmpleado 'Fhernando','Ariel','Villanueva','Mena','12-11-2002',19389.21,'Jefe de Ventas'
 
 -- Procedimiento para actualizar Empleado
-create proc SP_ActualizarEmpleado
+alter proc SP_ActualizarEmpleado
 @IdEmpleado int,
 @Puesto nvarchar(25),
 @PrimerNombre nvarchar(25),
@@ -195,8 +195,8 @@ create proc SP_ActualizarEmpleado
 @SegundoNombre nvarchar (25),
 @SegundoApellido nvarchar (25),
 @FechaContrato date,
-@Salario decimal (18,2),
-@IdUsuario int
+@Salario decimal (18,2)
+
 as
 update Empleados set Puesto = @Puesto,
 					 PrimerNombre = @PrimerNombre,
@@ -204,8 +204,8 @@ update Empleados set Puesto = @Puesto,
 					 SegundoNombre = @SegundoNombre,
 					 SegundoApellido = @SegundoApellido,
 					 FechaContrato = @FechaContrato,
-					 Salario = @Salario,
-					 IdUsuario = @IdUsuario
+					 Salario = @Salario
+					 
 where IdEmpleado = @IdEmpleado
 
 -- Procedimiento para eliminar Empleado
