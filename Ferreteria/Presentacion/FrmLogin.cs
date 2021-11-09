@@ -15,7 +15,7 @@ namespace Presentacion
 {
     public partial class FrmLogin : Form
     {
-
+        
         N_Usuario nUsuario = new N_Usuario();
         E_Usuario eUsuario = new E_Usuario();
         public FrmLogin()
@@ -49,10 +49,12 @@ namespace Presentacion
                 {
                     if (dato.Rows[0][0].ToString() == "Acceso Exitoso")
                     {
-                        nombreUsuario = dato.Rows[0][1].ToString();
+                        FrmPrincipal frmU = new FrmPrincipal();
+                        frmU.Username = dato.Rows[0][1].ToString(); //SetUsername(dato.Rows[0][1].ToString());//dato.Rows[0][1].ToString();
                         rol = dato.Rows[0][2].ToString();
-                        MessageBox.Show("Bienvenido al Sistema", "Sistema de Reservas", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Bienvenido al Sistema "+ dato.Rows[0][1].ToString(), "Sistema de Reservas", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         FrmPrincipal frmPrincipal = new FrmPrincipal();
+                        this.Hide();
                         frmPrincipal.Show();
 
 
