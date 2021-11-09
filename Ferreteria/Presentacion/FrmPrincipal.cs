@@ -12,9 +12,11 @@ namespace Presentacion
 {
     public partial class FrmPrincipal : Form
     {
+        public string Username;
         public FrmPrincipal()
         {
             InitializeComponent();
+            userName.Text = SetUsername();
         }
 
         // Metodo para que sea pantalla completa sin interrumpir la barra de tareas
@@ -27,6 +29,11 @@ namespace Presentacion
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
             Screen_();
+        }
+        public string SetUsername()
+        {
+
+            return Username;
         }
 
         private void BtnExit_Click(object sender, EventArgs e)
@@ -103,6 +110,15 @@ namespace Presentacion
             Wrapper.Tag = FormChild;
             FormChild.BringToFront();
             FormChild.Show();
+        }
+
+        private void logout_Click(object sender, EventArgs e)
+        {
+            FrmLogin frmLogin = new FrmLogin();
+
+            this.Hide();
+
+            frmLogin.Show();
         }
     }
 }
