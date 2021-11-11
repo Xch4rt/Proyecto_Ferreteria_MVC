@@ -100,7 +100,23 @@ namespace Datos
 
             return table;
         }
+        public DataTable ShowTotalEmployees() 
+        {
+            DataTable table = new DataTable();
+            SqlDataReader leerfilas;
+            SqlCommand cmd = new SqlCommand("SP_ListarEmpleados", conexion);
 
+            cmd.CommandType = CommandType.StoredProcedure;
+            conexion.Open();
+
+            leerfilas = cmd.ExecuteReader();
+            table.Load(leerfilas);
+
+            leerfilas.Close();
+            conexion.Close();
+
+            return table;
+        }
 
     }
 }

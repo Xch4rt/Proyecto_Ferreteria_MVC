@@ -18,6 +18,10 @@ namespace Negocios
         {
             return objDato.ListarEmpleados();
         }
+        public DataTable ShowTotalEmployees()
+        {
+            return objDato.ShowTotalEmployees();
+        }
         public DataTable BuscarEmpleado(string search)
         {
             eEmpleado.Search1 = search;
