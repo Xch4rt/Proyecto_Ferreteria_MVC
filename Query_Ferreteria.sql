@@ -71,6 +71,7 @@ IdRol int not null foreign key references Rol(IdRol)
 Execute SP_InsertarUsuario 'Pablo', 'pablo123', 'Habilitado',1,1
 Execute SP_InsertarUsuario 'Ariel', 'ariel123', 'Habilitado',2,1
 select * from Usuario
+exec Validar_Acceso 'Ariel','ariel123'
 --/Agregando usuarios
 -- <Comprobando que se muestre la informacion>
 select
@@ -101,7 +102,8 @@ create table Clientes(
 	SegundoApellido nvarchar (25) not null,
 	NumeroTelf int null
 )
-
+insert into Clientes values ('Paolo','Andrua','Gutuarre','Almendra',12345678)
+select * from Clientes
 -- Creando tabla Empleados
 create table Ordenes(
 	IdOrden int identity (1,1) primary key not null,

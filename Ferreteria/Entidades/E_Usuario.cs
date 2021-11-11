@@ -11,6 +11,14 @@ namespace Entidades
         private string Contraseña;
         private string Usuario;
 
+        public string Contraseña1 { get => Contraseña; set => Contraseña = value; }
+        public string Usuario1 { get => Usuario; set => Usuario = value; }
+
+        public string getS()
+        {
+            return Usuario;
+        }
+        /*
         public string GetContraseña()
         {
             return GetContraseña();
@@ -30,6 +38,7 @@ namespace Entidades
         {
             SetUsuario(value);
         }
+        */
     }
 
    

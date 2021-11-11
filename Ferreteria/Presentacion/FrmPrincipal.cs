@@ -8,15 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using Entidades;
 namespace Presentacion
 {
     public partial class FrmPrincipal : Form
     {
-        public string Username;
+        public string Username ;
+        E_Usuario eUsuario = new E_Usuario();
+        FrmLogin frmL = new FrmLogin();
         public FrmPrincipal()
         {
             InitializeComponent();
-            userName.Text = SetUsername();
+            userName.Text = (frmL.usernames == null).ToString();
         }
 
         // Metodo para que sea pantalla completa sin interrumpir la barra de tareas

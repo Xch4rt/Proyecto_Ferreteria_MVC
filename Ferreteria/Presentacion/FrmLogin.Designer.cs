@@ -75,6 +75,7 @@ namespace Presentacion
             this.txtUsername.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
             this.txtUsername.DefaultText = "";
             this.txtUsername.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtUsername.ForeColor = System.Drawing.Color.White;
             this.txtUsername.HideSelection = true;
             this.txtUsername.IconLeft = null;
             this.txtUsername.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
@@ -105,7 +106,7 @@ namespace Presentacion
             this.txtUsername.OnHoverState = stateProperties3;
             stateProperties4.BorderColor = System.Drawing.Color.Silver;
             stateProperties4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties4.ForeColor = System.Drawing.Color.Empty;
+            stateProperties4.ForeColor = System.Drawing.Color.White;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtUsername.OnIdleState = stateProperties4;
             this.txtUsername.Padding = new System.Windows.Forms.Padding(3);
@@ -150,6 +151,7 @@ namespace Presentacion
             this.txtPassword.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
             this.txtPassword.DefaultText = "";
             this.txtPassword.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtPassword.ForeColor = System.Drawing.Color.White;
             this.txtPassword.HideSelection = true;
             this.txtPassword.IconLeft = null;
             this.txtPassword.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
@@ -180,11 +182,11 @@ namespace Presentacion
             this.txtPassword.OnHoverState = stateProperties7;
             stateProperties8.BorderColor = System.Drawing.Color.Silver;
             stateProperties8.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties8.ForeColor = System.Drawing.Color.Empty;
+            stateProperties8.ForeColor = System.Drawing.Color.White;
             stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtPassword.OnIdleState = stateProperties8;
             this.txtPassword.Padding = new System.Windows.Forms.Padding(3);
-            this.txtPassword.PasswordChar = '\0';
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtPassword.PlaceholderText = "Enter text";
             this.txtPassword.ReadOnly = false;
@@ -397,6 +399,7 @@ namespace Presentacion
             // 
             this.bunifuLabel1.AllowParentOverrides = false;
             this.bunifuLabel1.AutoEllipsis = false;
+            this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel1.Font = new System.Drawing.Font("Segoe UI Light", 14F);
             this.bunifuLabel1.ForeColor = System.Drawing.Color.White;

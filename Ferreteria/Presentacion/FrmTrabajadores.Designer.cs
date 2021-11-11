@@ -29,7 +29,6 @@ namespace Presentacion
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTrabajadores));
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
@@ -37,26 +36,10 @@ namespace Presentacion
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTrabajadores));
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.pnlCantidadEmpleados = new Bunifu.UI.WinForms.BunifuPanel();
-            this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.lblCantidEmpl = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuSeparator2 = new Bunifu.UI.WinForms.BunifuSeparator();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pnlTotalProductosVendidos = new Bunifu.UI.WinForms.BunifuPanel();
-            this.bunifuPanel2 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.lblCantProdVendidos = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuSeparator1 = new Bunifu.UI.WinForms.BunifuSeparator();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.TopEmpleado = new Bunifu.UI.WinForms.BunifuPanel();
-            this.bunifuPanel3 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.lblTopEmpleado = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuSeparator3 = new Bunifu.UI.WinForms.BunifuSeparator();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pnlInfo = new Bunifu.UI.WinForms.BunifuPanel();
+            this.btnMostrarTodos = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnExcel = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnAsignarRol = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnNuevoEmpleado = new Bunifu.Framework.UI.BunifuThinButton2();
@@ -66,297 +49,52 @@ namespace Presentacion
             this.dgvEmpleados = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.EDITAR = new System.Windows.Forms.DataGridViewImageColumn();
             this.ELIMINAR = new System.Windows.Forms.DataGridViewImageColumn();
-            this.btnMostrarTodos = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.lblProd = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuSeparator1 = new Bunifu.UI.WinForms.BunifuSeparator();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.bunifuSeparator4 = new Bunifu.UI.WinForms.BunifuSeparator();
+            this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lblTopEmpleado = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuLabel5 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lblMejorEmpleado = new Bunifu.UI.WinForms.BunifuLabel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.lblTotalEmpleados = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuLabel6 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuSeparator2 = new Bunifu.UI.WinForms.BunifuSeparator();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel1.SuspendLayout();
-            this.pnlCantidadEmpleados.SuspendLayout();
-            this.bunifuPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.pnlTotalProductosVendidos.SuspendLayout();
-            this.bunifuPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.TopEmpleado.SuspendLayout();
-            this.bunifuPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.pnlInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.panel4.SuspendLayout();
+            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Controls.Add(this.pnlCantidadEmpleados);
-            this.flowLayoutPanel1.Controls.Add(this.pnlTotalProductosVendidos);
-            this.flowLayoutPanel1.Controls.Add(this.TopEmpleado);
+            this.flowLayoutPanel1.Controls.Add(this.panel1);
+            this.flowLayoutPanel1.Controls.Add(this.panel2);
+            this.flowLayoutPanel1.Controls.Add(this.panel4);
             this.flowLayoutPanel1.Controls.Add(this.pnlInfo);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1044, 689);
             this.flowLayoutPanel1.TabIndex = 0;
-            // 
-            // pnlCantidadEmpleados
-            // 
-            this.pnlCantidadEmpleados.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.pnlCantidadEmpleados.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlCantidadEmpleados.BackgroundImage")));
-            this.pnlCantidadEmpleados.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnlCantidadEmpleados.BorderColor = System.Drawing.Color.Transparent;
-            this.pnlCantidadEmpleados.BorderRadius = 3;
-            this.pnlCantidadEmpleados.BorderThickness = 1;
-            this.pnlCantidadEmpleados.Controls.Add(this.bunifuPanel1);
-            this.pnlCantidadEmpleados.Location = new System.Drawing.Point(3, 3);
-            this.pnlCantidadEmpleados.Name = "pnlCantidadEmpleados";
-            this.pnlCantidadEmpleados.ShowBorders = true;
-            this.pnlCantidadEmpleados.Size = new System.Drawing.Size(342, 132);
-            this.pnlCantidadEmpleados.TabIndex = 1;
-            // 
-            // bunifuPanel1
-            // 
-            this.bunifuPanel1.BackgroundColor = System.Drawing.Color.Transparent;
-            this.bunifuPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel1.BackgroundImage")));
-            this.bunifuPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuPanel1.BorderColor = System.Drawing.Color.Transparent;
-            this.bunifuPanel1.BorderRadius = 3;
-            this.bunifuPanel1.BorderThickness = 1;
-            this.bunifuPanel1.Controls.Add(this.lblCantidEmpl);
-            this.bunifuPanel1.Controls.Add(this.bunifuLabel3);
-            this.bunifuPanel1.Controls.Add(this.bunifuSeparator2);
-            this.bunifuPanel1.Controls.Add(this.pictureBox1);
-            this.bunifuPanel1.Location = new System.Drawing.Point(49, 9);
-            this.bunifuPanel1.Name = "bunifuPanel1";
-            this.bunifuPanel1.ShowBorders = true;
-            this.bunifuPanel1.Size = new System.Drawing.Size(290, 120);
-            this.bunifuPanel1.TabIndex = 2;
-            // 
-            // lblCantidEmpl
-            // 
-            this.lblCantidEmpl.AllowParentOverrides = false;
-            this.lblCantidEmpl.AutoEllipsis = false;
-            this.lblCantidEmpl.AutoSize = false;
-            this.lblCantidEmpl.CursorType = null;
-            this.lblCantidEmpl.Font = new System.Drawing.Font("Segoe UI", 24F);
-            this.lblCantidEmpl.Location = new System.Drawing.Point(208, 18);
-            this.lblCantidEmpl.Name = "lblCantidEmpl";
-            this.lblCantidEmpl.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblCantidEmpl.Size = new System.Drawing.Size(55, 45);
-            this.lblCantidEmpl.TabIndex = 8;
-            this.lblCantidEmpl.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lblCantidEmpl.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // bunifuLabel3
-            // 
-            this.bunifuLabel3.AllowParentOverrides = false;
-            this.bunifuLabel3.AutoEllipsis = false;
-            this.bunifuLabel3.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel3.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel3.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.bunifuLabel3.ForeColor = System.Drawing.Color.DimGray;
-            this.bunifuLabel3.Location = new System.Drawing.Point(14, 89);
-            this.bunifuLabel3.Name = "bunifuLabel3";
-            this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel3.Size = new System.Drawing.Size(185, 20);
-            this.bunifuLabel3.TabIndex = 3;
-            this.bunifuLabel3.Text = "CANTIDAD DE EMPLEADOS";
-            this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel3.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // bunifuSeparator2
-            // 
-            this.bunifuSeparator2.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuSeparator2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuSeparator2.BackgroundImage")));
-            this.bunifuSeparator2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuSeparator2.DashCap = Bunifu.UI.WinForms.BunifuSeparator.CapStyles.Flat;
-            this.bunifuSeparator2.LineColor = System.Drawing.Color.Silver;
-            this.bunifuSeparator2.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
-            this.bunifuSeparator2.LineThickness = 1;
-            this.bunifuSeparator2.Location = new System.Drawing.Point(3, 69);
-            this.bunifuSeparator2.Name = "bunifuSeparator2";
-            this.bunifuSeparator2.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
-            this.bunifuSeparator2.Size = new System.Drawing.Size(284, 14);
-            this.bunifuSeparator2.TabIndex = 2;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(14, 8);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(60, 60);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pnlTotalProductosVendidos
-            // 
-            this.pnlTotalProductosVendidos.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.pnlTotalProductosVendidos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlTotalProductosVendidos.BackgroundImage")));
-            this.pnlTotalProductosVendidos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnlTotalProductosVendidos.BorderColor = System.Drawing.Color.Transparent;
-            this.pnlTotalProductosVendidos.BorderRadius = 3;
-            this.pnlTotalProductosVendidos.BorderThickness = 1;
-            this.pnlTotalProductosVendidos.Controls.Add(this.bunifuPanel2);
-            this.pnlTotalProductosVendidos.Location = new System.Drawing.Point(351, 3);
-            this.pnlTotalProductosVendidos.Name = "pnlTotalProductosVendidos";
-            this.pnlTotalProductosVendidos.ShowBorders = true;
-            this.pnlTotalProductosVendidos.Size = new System.Drawing.Size(342, 132);
-            this.pnlTotalProductosVendidos.TabIndex = 0;
-            // 
-            // bunifuPanel2
-            // 
-            this.bunifuPanel2.BackgroundColor = System.Drawing.Color.Transparent;
-            this.bunifuPanel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel2.BackgroundImage")));
-            this.bunifuPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuPanel2.BorderColor = System.Drawing.Color.Transparent;
-            this.bunifuPanel2.BorderRadius = 3;
-            this.bunifuPanel2.BorderThickness = 1;
-            this.bunifuPanel2.Controls.Add(this.lblCantProdVendidos);
-            this.bunifuPanel2.Controls.Add(this.bunifuLabel1);
-            this.bunifuPanel2.Controls.Add(this.bunifuSeparator1);
-            this.bunifuPanel2.Controls.Add(this.pictureBox2);
-            this.bunifuPanel2.Location = new System.Drawing.Point(49, 9);
-            this.bunifuPanel2.Name = "bunifuPanel2";
-            this.bunifuPanel2.ShowBorders = true;
-            this.bunifuPanel2.Size = new System.Drawing.Size(290, 120);
-            this.bunifuPanel2.TabIndex = 3;
-            // 
-            // lblCantProdVendidos
-            // 
-            this.lblCantProdVendidos.AllowParentOverrides = false;
-            this.lblCantProdVendidos.AutoEllipsis = false;
-            this.lblCantProdVendidos.AutoSize = false;
-            this.lblCantProdVendidos.CursorType = null;
-            this.lblCantProdVendidos.Font = new System.Drawing.Font("Segoe UI", 24F);
-            this.lblCantProdVendidos.Location = new System.Drawing.Point(221, 18);
-            this.lblCantProdVendidos.Name = "lblCantProdVendidos";
-            this.lblCantProdVendidos.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblCantProdVendidos.Size = new System.Drawing.Size(55, 45);
-            this.lblCantProdVendidos.TabIndex = 8;
-            this.lblCantProdVendidos.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lblCantProdVendidos.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // bunifuLabel1
-            // 
-            this.bunifuLabel1.AllowParentOverrides = false;
-            this.bunifuLabel1.AutoEllipsis = false;
-            this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel1.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.bunifuLabel1.ForeColor = System.Drawing.Color.DimGray;
-            this.bunifuLabel1.Location = new System.Drawing.Point(14, 89);
-            this.bunifuLabel1.Name = "bunifuLabel1";
-            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(263, 20);
-            this.bunifuLabel1.TabIndex = 4;
-            this.bunifuLabel1.Text = "CANTIDAD DE PRODUCTOS VENDIDOS";
-            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // bunifuSeparator1
-            // 
-            this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuSeparator1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuSeparator1.BackgroundImage")));
-            this.bunifuSeparator1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuSeparator1.DashCap = Bunifu.UI.WinForms.BunifuSeparator.CapStyles.Flat;
-            this.bunifuSeparator1.LineColor = System.Drawing.Color.Silver;
-            this.bunifuSeparator1.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
-            this.bunifuSeparator1.LineThickness = 1;
-            this.bunifuSeparator1.Location = new System.Drawing.Point(6, 69);
-            this.bunifuSeparator1.Name = "bunifuSeparator1";
-            this.bunifuSeparator1.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
-            this.bunifuSeparator1.Size = new System.Drawing.Size(284, 14);
-            this.bunifuSeparator1.TabIndex = 3;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Location = new System.Drawing.Point(14, 8);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(60, 60);
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            // 
-            // TopEmpleado
-            // 
-            this.TopEmpleado.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.TopEmpleado.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("TopEmpleado.BackgroundImage")));
-            this.TopEmpleado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.TopEmpleado.BorderColor = System.Drawing.Color.Transparent;
-            this.TopEmpleado.BorderRadius = 3;
-            this.TopEmpleado.BorderThickness = 1;
-            this.TopEmpleado.Controls.Add(this.bunifuPanel3);
-            this.TopEmpleado.Location = new System.Drawing.Point(699, 3);
-            this.TopEmpleado.Name = "TopEmpleado";
-            this.TopEmpleado.ShowBorders = true;
-            this.TopEmpleado.Size = new System.Drawing.Size(342, 132);
-            this.TopEmpleado.TabIndex = 1;
-            // 
-            // bunifuPanel3
-            // 
-            this.bunifuPanel3.BackgroundColor = System.Drawing.Color.Transparent;
-            this.bunifuPanel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel3.BackgroundImage")));
-            this.bunifuPanel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuPanel3.BorderColor = System.Drawing.Color.Transparent;
-            this.bunifuPanel3.BorderRadius = 3;
-            this.bunifuPanel3.BorderThickness = 1;
-            this.bunifuPanel3.Controls.Add(this.lblTopEmpleado);
-            this.bunifuPanel3.Controls.Add(this.bunifuLabel2);
-            this.bunifuPanel3.Controls.Add(this.bunifuSeparator3);
-            this.bunifuPanel3.Controls.Add(this.pictureBox3);
-            this.bunifuPanel3.Location = new System.Drawing.Point(49, 9);
-            this.bunifuPanel3.Name = "bunifuPanel3";
-            this.bunifuPanel3.ShowBorders = true;
-            this.bunifuPanel3.Size = new System.Drawing.Size(290, 120);
-            this.bunifuPanel3.TabIndex = 3;
-            // 
-            // lblTopEmpleado
-            // 
-            this.lblTopEmpleado.AllowParentOverrides = false;
-            this.lblTopEmpleado.AutoEllipsis = false;
-            this.lblTopEmpleado.AutoSize = false;
-            this.lblTopEmpleado.CursorType = null;
-            this.lblTopEmpleado.Font = new System.Drawing.Font("Segoe UI", 24F);
-            this.lblTopEmpleado.Location = new System.Drawing.Point(217, 18);
-            this.lblTopEmpleado.Name = "lblTopEmpleado";
-            this.lblTopEmpleado.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblTopEmpleado.Size = new System.Drawing.Size(55, 45);
-            this.lblTopEmpleado.TabIndex = 8;
-            this.lblTopEmpleado.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lblTopEmpleado.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // bunifuLabel2
-            // 
-            this.bunifuLabel2.AllowParentOverrides = false;
-            this.bunifuLabel2.AutoEllipsis = false;
-            this.bunifuLabel2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel2.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel2.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.bunifuLabel2.ForeColor = System.Drawing.Color.DimGray;
-            this.bunifuLabel2.Location = new System.Drawing.Point(16, 89);
-            this.bunifuLabel2.Name = "bunifuLabel2";
-            this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel2.Size = new System.Drawing.Size(126, 20);
-            this.bunifuLabel2.TabIndex = 4;
-            this.bunifuLabel2.Text = "MEJOR EMPLEADO";
-            this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // bunifuSeparator3
-            // 
-            this.bunifuSeparator3.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuSeparator3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuSeparator3.BackgroundImage")));
-            this.bunifuSeparator3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuSeparator3.DashCap = Bunifu.UI.WinForms.BunifuSeparator.CapStyles.Flat;
-            this.bunifuSeparator3.LineColor = System.Drawing.Color.Silver;
-            this.bunifuSeparator3.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
-            this.bunifuSeparator3.LineThickness = 1;
-            this.bunifuSeparator3.Location = new System.Drawing.Point(3, 69);
-            this.bunifuSeparator3.Name = "bunifuSeparator3";
-            this.bunifuSeparator3.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
-            this.bunifuSeparator3.Size = new System.Drawing.Size(284, 14);
-            this.bunifuSeparator3.TabIndex = 3;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Location = new System.Drawing.Point(16, 8);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(60, 60);
-            this.pictureBox3.TabIndex = 1;
-            this.pictureBox3.TabStop = false;
             // 
             // pnlInfo
             // 
@@ -374,11 +112,36 @@ namespace Presentacion
             this.pnlInfo.Controls.Add(this.bunifuSeparator6);
             this.pnlInfo.Controls.Add(this.pictureBox6);
             this.pnlInfo.Controls.Add(this.dgvEmpleados);
-            this.pnlInfo.Location = new System.Drawing.Point(3, 141);
+            this.pnlInfo.Location = new System.Drawing.Point(3, 134);
             this.pnlInfo.Name = "pnlInfo";
             this.pnlInfo.ShowBorders = true;
             this.pnlInfo.Size = new System.Drawing.Size(1041, 580);
             this.pnlInfo.TabIndex = 1;
+            // 
+            // btnMostrarTodos
+            // 
+            this.btnMostrarTodos.ActiveBorderThickness = 1;
+            this.btnMostrarTodos.ActiveCornerRadius = 20;
+            this.btnMostrarTodos.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(110)))), ((int)(((byte)(242)))));
+            this.btnMostrarTodos.ActiveForecolor = System.Drawing.Color.White;
+            this.btnMostrarTodos.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(110)))), ((int)(((byte)(242)))));
+            this.btnMostrarTodos.BackColor = System.Drawing.SystemColors.Control;
+            this.btnMostrarTodos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMostrarTodos.BackgroundImage")));
+            this.btnMostrarTodos.ButtonText = "TODOS LOS EMPLEADOS";
+            this.btnMostrarTodos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMostrarTodos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMostrarTodos.ForeColor = System.Drawing.Color.White;
+            this.btnMostrarTodos.IdleBorderThickness = 1;
+            this.btnMostrarTodos.IdleCornerRadius = 20;
+            this.btnMostrarTodos.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(110)))), ((int)(((byte)(242)))));
+            this.btnMostrarTodos.IdleForecolor = System.Drawing.Color.White;
+            this.btnMostrarTodos.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(110)))), ((int)(((byte)(242)))));
+            this.btnMostrarTodos.Location = new System.Drawing.Point(601, 12);
+            this.btnMostrarTodos.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.btnMostrarTodos.Name = "btnMostrarTodos";
+            this.btnMostrarTodos.Size = new System.Drawing.Size(205, 43);
+            this.btnMostrarTodos.TabIndex = 16;
+            this.btnMostrarTodos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnExcel
             // 
@@ -642,30 +405,274 @@ namespace Presentacion
             this.ELIMINAR.Name = "ELIMINAR";
             this.ELIMINAR.ReadOnly = true;
             // 
-            // btnMostrarTodos
+            // panel1
             // 
-            this.btnMostrarTodos.ActiveBorderThickness = 1;
-            this.btnMostrarTodos.ActiveCornerRadius = 20;
-            this.btnMostrarTodos.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(110)))), ((int)(((byte)(242)))));
-            this.btnMostrarTodos.ActiveForecolor = System.Drawing.Color.White;
-            this.btnMostrarTodos.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(110)))), ((int)(((byte)(242)))));
-            this.btnMostrarTodos.BackColor = System.Drawing.SystemColors.Control;
-            this.btnMostrarTodos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMostrarTodos.BackgroundImage")));
-            this.btnMostrarTodos.ButtonText = "TODOS LOS EMPLEADOS";
-            this.btnMostrarTodos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMostrarTodos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMostrarTodos.ForeColor = System.Drawing.Color.White;
-            this.btnMostrarTodos.IdleBorderThickness = 1;
-            this.btnMostrarTodos.IdleCornerRadius = 20;
-            this.btnMostrarTodos.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(110)))), ((int)(((byte)(242)))));
-            this.btnMostrarTodos.IdleForecolor = System.Drawing.Color.White;
-            this.btnMostrarTodos.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(110)))), ((int)(((byte)(242)))));
-            this.btnMostrarTodos.Location = new System.Drawing.Point(601, 12);
-            this.btnMostrarTodos.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.btnMostrarTodos.Name = "btnMostrarTodos";
-            this.btnMostrarTodos.Size = new System.Drawing.Size(205, 43);
-            this.btnMostrarTodos.TabIndex = 16;
-            this.btnMostrarTodos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.panel1.Controls.Add(this.panel5);
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(333, 125);
+            this.panel1.TabIndex = 9;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.Transparent;
+            this.panel5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel5.BackgroundImage")));
+            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel5.Controls.Add(this.lblProd);
+            this.panel5.Controls.Add(this.bunifuLabel1);
+            this.panel5.Controls.Add(this.bunifuSeparator1);
+            this.panel5.Controls.Add(this.pictureBox2);
+            this.panel5.Location = new System.Drawing.Point(21, 14);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(272, 111);
+            this.panel5.TabIndex = 1;
+            // 
+            // lblProd
+            // 
+            this.lblProd.AllowParentOverrides = false;
+            this.lblProd.AutoEllipsis = false;
+            this.lblProd.AutoSize = false;
+            this.lblProd.CursorType = null;
+            this.lblProd.Font = new System.Drawing.Font("Segoe UI", 24F);
+            this.lblProd.Location = new System.Drawing.Point(203, 22);
+            this.lblProd.Name = "lblProd";
+            this.lblProd.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblProd.Size = new System.Drawing.Size(55, 45);
+            this.lblProd.TabIndex = 3;
+            this.lblProd.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lblProd.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // bunifuLabel1
+            // 
+            this.bunifuLabel1.AllowParentOverrides = false;
+            this.bunifuLabel1.AutoEllipsis = false;
+            this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel1.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.bunifuLabel1.ForeColor = System.Drawing.Color.DimGray;
+            this.bunifuLabel1.Location = new System.Drawing.Point(8, 86);
+            this.bunifuLabel1.Name = "bunifuLabel1";
+            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel1.Size = new System.Drawing.Size(162, 20);
+            this.bunifuLabel1.TabIndex = 2;
+            this.bunifuLabel1.Text = "PRODUCTOS VENDIDOS";
+            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // bunifuSeparator1
+            // 
+            this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuSeparator1.BackgroundImage")));
+            this.bunifuSeparator1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuSeparator1.DashCap = Bunifu.UI.WinForms.BunifuSeparator.CapStyles.Flat;
+            this.bunifuSeparator1.LineColor = System.Drawing.Color.Silver;
+            this.bunifuSeparator1.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
+            this.bunifuSeparator1.LineThickness = 1;
+            this.bunifuSeparator1.Location = new System.Drawing.Point(4, 71);
+            this.bunifuSeparator1.Name = "bunifuSeparator1";
+            this.bunifuSeparator1.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
+            this.bunifuSeparator1.Size = new System.Drawing.Size(265, 14);
+            this.bunifuSeparator1.TabIndex = 1;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(7, 12);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(55, 55);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Location = new System.Drawing.Point(342, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(345, 125);
+            this.panel2.TabIndex = 9;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Transparent;
+            this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
+            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel3.Controls.Add(this.lblMejorEmpleado);
+            this.panel3.Controls.Add(this.bunifuLabel5);
+            this.panel3.Controls.Add(this.bunifuSeparator4);
+            this.panel3.Controls.Add(this.pictureBox4);
+            this.panel3.Location = new System.Drawing.Point(21, 14);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(272, 111);
+            this.panel3.TabIndex = 1;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(7, 12);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(55, 55);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 0;
+            this.pictureBox4.TabStop = false;
+            // 
+            // bunifuSeparator4
+            // 
+            this.bunifuSeparator4.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuSeparator4.BackgroundImage")));
+            this.bunifuSeparator4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuSeparator4.DashCap = Bunifu.UI.WinForms.BunifuSeparator.CapStyles.Flat;
+            this.bunifuSeparator4.LineColor = System.Drawing.Color.Silver;
+            this.bunifuSeparator4.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
+            this.bunifuSeparator4.LineThickness = 1;
+            this.bunifuSeparator4.Location = new System.Drawing.Point(4, 71);
+            this.bunifuSeparator4.Name = "bunifuSeparator4";
+            this.bunifuSeparator4.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
+            this.bunifuSeparator4.Size = new System.Drawing.Size(265, 14);
+            this.bunifuSeparator4.TabIndex = 1;
+            // 
+            // bunifuLabel2
+            // 
+            this.bunifuLabel2.AllowParentOverrides = false;
+            this.bunifuLabel2.AutoEllipsis = false;
+            this.bunifuLabel2.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel2.CursorType = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel2.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.bunifuLabel2.ForeColor = System.Drawing.Color.DimGray;
+            this.bunifuLabel2.Location = new System.Drawing.Point(16, 89);
+            this.bunifuLabel2.Name = "bunifuLabel2";
+            this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel2.Size = new System.Drawing.Size(126, 20);
+            this.bunifuLabel2.TabIndex = 4;
+            this.bunifuLabel2.Text = "MEJOR EMPLEADO";
+            this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // lblTopEmpleado
+            // 
+            this.lblTopEmpleado.AllowParentOverrides = false;
+            this.lblTopEmpleado.AutoEllipsis = false;
+            this.lblTopEmpleado.AutoSize = false;
+            this.lblTopEmpleado.CursorType = null;
+            this.lblTopEmpleado.Font = new System.Drawing.Font("Segoe UI", 24F);
+            this.lblTopEmpleado.Location = new System.Drawing.Point(217, 18);
+            this.lblTopEmpleado.Name = "lblTopEmpleado";
+            this.lblTopEmpleado.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblTopEmpleado.Size = new System.Drawing.Size(55, 45);
+            this.lblTopEmpleado.TabIndex = 8;
+            this.lblTopEmpleado.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lblTopEmpleado.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // bunifuLabel5
+            // 
+            this.bunifuLabel5.AllowParentOverrides = false;
+            this.bunifuLabel5.AutoEllipsis = false;
+            this.bunifuLabel5.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel5.CursorType = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel5.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.bunifuLabel5.ForeColor = System.Drawing.Color.DimGray;
+            this.bunifuLabel5.Location = new System.Drawing.Point(8, 86);
+            this.bunifuLabel5.Name = "bunifuLabel5";
+            this.bunifuLabel5.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel5.Size = new System.Drawing.Size(126, 20);
+            this.bunifuLabel5.TabIndex = 2;
+            this.bunifuLabel5.Text = "MEJOR EMPLEADO";
+            this.bunifuLabel5.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel5.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // lblMejorEmpleado
+            // 
+            this.lblMejorEmpleado.AllowParentOverrides = false;
+            this.lblMejorEmpleado.AutoEllipsis = false;
+            this.lblMejorEmpleado.AutoSize = false;
+            this.lblMejorEmpleado.CursorType = null;
+            this.lblMejorEmpleado.Font = new System.Drawing.Font("Segoe UI", 24F);
+            this.lblMejorEmpleado.Location = new System.Drawing.Point(203, 22);
+            this.lblMejorEmpleado.Name = "lblMejorEmpleado";
+            this.lblMejorEmpleado.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblMejorEmpleado.Size = new System.Drawing.Size(55, 45);
+            this.lblMejorEmpleado.TabIndex = 3;
+            this.lblMejorEmpleado.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lblMejorEmpleado.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.panel6);
+            this.panel4.Location = new System.Drawing.Point(693, 3);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(345, 125);
+            this.panel4.TabIndex = 4;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.Transparent;
+            this.panel6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel6.BackgroundImage")));
+            this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel6.Controls.Add(this.lblTotalEmpleados);
+            this.panel6.Controls.Add(this.bunifuLabel6);
+            this.panel6.Controls.Add(this.bunifuSeparator2);
+            this.panel6.Controls.Add(this.pictureBox1);
+            this.panel6.Location = new System.Drawing.Point(21, 14);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(272, 111);
+            this.panel6.TabIndex = 1;
+            // 
+            // lblTotalEmpleados
+            // 
+            this.lblTotalEmpleados.AllowParentOverrides = false;
+            this.lblTotalEmpleados.AutoEllipsis = false;
+            this.lblTotalEmpleados.AutoSize = false;
+            this.lblTotalEmpleados.CursorType = null;
+            this.lblTotalEmpleados.Font = new System.Drawing.Font("Segoe UI", 24F);
+            this.lblTotalEmpleados.Location = new System.Drawing.Point(204, 22);
+            this.lblTotalEmpleados.Name = "lblTotalEmpleados";
+            this.lblTotalEmpleados.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblTotalEmpleados.Size = new System.Drawing.Size(55, 45);
+            this.lblTotalEmpleados.TabIndex = 3;
+            this.lblTotalEmpleados.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lblTotalEmpleados.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // bunifuLabel6
+            // 
+            this.bunifuLabel6.AllowParentOverrides = false;
+            this.bunifuLabel6.AutoEllipsis = false;
+            this.bunifuLabel6.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel6.CursorType = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel6.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.bunifuLabel6.ForeColor = System.Drawing.Color.DimGray;
+            this.bunifuLabel6.Location = new System.Drawing.Point(8, 86);
+            this.bunifuLabel6.Name = "bunifuLabel6";
+            this.bunifuLabel6.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel6.Size = new System.Drawing.Size(132, 20);
+            this.bunifuLabel6.TabIndex = 2;
+            this.bunifuLabel6.Text = "TOTAL EMPLEADOS";
+            this.bunifuLabel6.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel6.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // bunifuSeparator2
+            // 
+            this.bunifuSeparator2.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuSeparator2.BackgroundImage")));
+            this.bunifuSeparator2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuSeparator2.DashCap = Bunifu.UI.WinForms.BunifuSeparator.CapStyles.Flat;
+            this.bunifuSeparator2.LineColor = System.Drawing.Color.Silver;
+            this.bunifuSeparator2.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
+            this.bunifuSeparator2.LineThickness = 1;
+            this.bunifuSeparator2.Location = new System.Drawing.Point(4, 71);
+            this.bunifuSeparator2.Name = "bunifuSeparator2";
+            this.bunifuSeparator2.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
+            this.bunifuSeparator2.Size = new System.Drawing.Size(265, 14);
+            this.bunifuSeparator2.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(7, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(55, 55);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // FrmTrabajadores
             // 
@@ -677,21 +684,21 @@ namespace Presentacion
             this.Name = "FrmTrabajadores";
             this.Text = "FrmTrabajadores";
             this.flowLayoutPanel1.ResumeLayout(false);
-            this.pnlCantidadEmpleados.ResumeLayout(false);
-            this.bunifuPanel1.ResumeLayout(false);
-            this.bunifuPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.pnlTotalProductosVendidos.ResumeLayout(false);
-            this.bunifuPanel2.ResumeLayout(false);
-            this.bunifuPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.TopEmpleado.ResumeLayout(false);
-            this.bunifuPanel3.ResumeLayout(false);
-            this.bunifuPanel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.pnlInfo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -699,25 +706,7 @@ namespace Presentacion
         #endregion
 
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private Bunifu.UI.WinForms.BunifuPanel pnlCantidadEmpleados;
-        private Bunifu.UI.WinForms.BunifuPanel pnlTotalProductosVendidos;
-        private Bunifu.UI.WinForms.BunifuPanel TopEmpleado;
         private Bunifu.UI.WinForms.BunifuPanel pnlInfo;
-        private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
-        private Bunifu.UI.WinForms.BunifuPanel bunifuPanel2;
-        private Bunifu.UI.WinForms.BunifuPanel bunifuPanel3;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator2;
-        private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator1;
-        private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator3;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel3;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel2;
-        private Bunifu.UI.WinForms.BunifuLabel lblCantidEmpl;
-        private Bunifu.UI.WinForms.BunifuLabel lblCantProdVendidos;
-        private Bunifu.UI.WinForms.BunifuLabel lblTopEmpleado;
         private Bunifu.UI.WinForms.BunifuDataGridView dgvEmpleados;
         private System.Windows.Forms.DataGridViewImageColumn EDITAR;
         private System.Windows.Forms.DataGridViewImageColumn ELIMINAR;
@@ -728,5 +717,25 @@ namespace Presentacion
         private Bunifu.Framework.UI.BunifuThinButton2 btnExcel;
         private Bunifu.Framework.UI.BunifuThinButton2 btnAsignarRol;
         private Bunifu.Framework.UI.BunifuThinButton2 btnMostrarTodos;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel5;
+        private Bunifu.UI.WinForms.BunifuLabel lblProd;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
+        private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private Bunifu.UI.WinForms.BunifuLabel lblMejorEmpleado;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel5;
+        private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator4;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel6;
+        private Bunifu.UI.WinForms.BunifuLabel lblTotalEmpleados;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel6;
+        private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel2;
+        private Bunifu.UI.WinForms.BunifuLabel lblTopEmpleado;
     }
 }

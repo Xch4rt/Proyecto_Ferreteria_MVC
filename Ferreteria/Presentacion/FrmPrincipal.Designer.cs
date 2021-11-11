@@ -29,6 +29,7 @@ namespace Presentacion
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal));
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
@@ -37,8 +38,9 @@ namespace Presentacion
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges7 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges8 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal));
             this.SideBar = new System.Windows.Forms.Panel();
+            this.userName = new Bunifu.UI.WinForms.BunifuLabel();
+            this.logout = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.btnGanancias = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnProveedores = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnClientes = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
@@ -48,7 +50,6 @@ namespace Presentacion
             this.btnProductos = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnDashboard = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuSeparator2 = new Bunifu.UI.WinForms.BunifuSeparator();
-            this.userName = new Bunifu.UI.WinForms.BunifuLabel();
             this.picUser = new System.Windows.Forms.PictureBox();
             this.bunifuSeparator1 = new Bunifu.UI.WinForms.BunifuSeparator();
             this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
@@ -56,17 +57,17 @@ namespace Presentacion
             this.PanelName = new Bunifu.UI.WinForms.BunifuLabel();
             this.BtnExit = new System.Windows.Forms.PictureBox();
             this.Wrapper = new System.Windows.Forms.Panel();
-            this.logout = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.SideBar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logout)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picUser)).BeginInit();
             this.Header.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtnExit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.logout)).BeginInit();
             this.SuspendLayout();
             // 
             // SideBar
             // 
             this.SideBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.SideBar.Controls.Add(this.userName);
             this.SideBar.Controls.Add(this.logout);
             this.SideBar.Controls.Add(this.btnGanancias);
             this.SideBar.Controls.Add(this.btnProveedores);
@@ -77,7 +78,6 @@ namespace Presentacion
             this.SideBar.Controls.Add(this.btnProductos);
             this.SideBar.Controls.Add(this.btnDashboard);
             this.SideBar.Controls.Add(this.bunifuSeparator2);
-            this.SideBar.Controls.Add(this.userName);
             this.SideBar.Controls.Add(this.picUser);
             this.SideBar.Controls.Add(this.bunifuSeparator1);
             this.SideBar.Controls.Add(this.bunifuLabel2);
@@ -87,6 +87,39 @@ namespace Presentacion
             this.SideBar.Size = new System.Drawing.Size(240, 749);
             this.SideBar.TabIndex = 0;
             this.SideBar.Paint += new System.Windows.Forms.PaintEventHandler(this.SideBar_Paint);
+            // 
+            // userName
+            // 
+            this.userName.AllowParentOverrides = false;
+            this.userName.AutoEllipsis = false;
+            this.userName.AutoSize = false;
+            this.userName.CursorType = null;
+            this.userName.Font = new System.Drawing.Font("Segoe UI", 24F);
+            this.userName.ForeColor = System.Drawing.Color.White;
+            this.userName.Location = new System.Drawing.Point(23, 221);
+            this.userName.Name = "userName";
+            this.userName.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.userName.Size = new System.Drawing.Size(194, 45);
+            this.userName.TabIndex = 16;
+            this.userName.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.userName.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // logout
+            // 
+            this.logout.AllowFocused = false;
+            this.logout.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.logout.AutoSizeHeight = true;
+            this.logout.BorderRadius = 0;
+            this.logout.Image = ((System.Drawing.Image)(resources.GetObject("logout.Image")));
+            this.logout.IsCircle = true;
+            this.logout.Location = new System.Drawing.Point(12, 702);
+            this.logout.Name = "logout";
+            this.logout.Size = new System.Drawing.Size(35, 35);
+            this.logout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.logout.TabIndex = 15;
+            this.logout.TabStop = false;
+            this.logout.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Square;
+            this.logout.Click += new System.EventHandler(this.logout_Click);
             // 
             // btnGanancias
             // 
@@ -839,23 +872,6 @@ namespace Presentacion
             this.bunifuSeparator2.Size = new System.Drawing.Size(225, 14);
             this.bunifuSeparator2.TabIndex = 5;
             // 
-            // userName
-            // 
-            this.userName.AllowParentOverrides = false;
-            this.userName.AutoEllipsis = false;
-            this.userName.Cursor = System.Windows.Forms.Cursors.Default;
-            this.userName.CursorType = System.Windows.Forms.Cursors.Default;
-            this.userName.Font = new System.Drawing.Font("Segoe UI", 16F);
-            this.userName.ForeColor = System.Drawing.Color.White;
-            this.userName.Location = new System.Drawing.Point(62, 237);
-            this.userName.Name = "userName";
-            this.userName.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.userName.Size = new System.Drawing.Size(120, 30);
-            this.userName.TabIndex = 4;
-            this.userName.Text = "bunifuLabel3";
-            this.userName.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.userName.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
             // picUser
             // 
             this.picUser.Location = new System.Drawing.Point(72, 125);
@@ -944,22 +960,6 @@ namespace Presentacion
             this.Wrapper.Size = new System.Drawing.Size(1044, 689);
             this.Wrapper.TabIndex = 2;
             // 
-            // logout
-            // 
-            this.logout.AllowFocused = false;
-            this.logout.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.logout.AutoSizeHeight = true;
-            this.logout.BorderRadius = 0;
-            this.logout.Image = ((System.Drawing.Image)(resources.GetObject("logout.Image")));
-            this.logout.IsCircle = true;
-            this.logout.Location = new System.Drawing.Point(12, 702);
-            this.logout.Name = "logout";
-            this.logout.Size = new System.Drawing.Size(35, 35);
-            this.logout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.logout.TabIndex = 15;
-            this.logout.TabStop = false;
-            this.logout.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Square;
-            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -975,11 +975,11 @@ namespace Presentacion
             this.Load += new System.EventHandler(this.FrmPrincipal_Load);
             this.SideBar.ResumeLayout(false);
             this.SideBar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logout)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picUser)).EndInit();
             this.Header.ResumeLayout(false);
             this.Header.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtnExit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.logout)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -992,7 +992,6 @@ namespace Presentacion
         private System.Windows.Forms.Panel Wrapper;
         private Bunifu.UI.WinForms.BunifuLabel PanelName;
         private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator2;
-        private Bunifu.UI.WinForms.BunifuLabel userName;
         private System.Windows.Forms.PictureBox picUser;
         private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator1;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel2;
@@ -1005,5 +1004,6 @@ namespace Presentacion
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnTrabajadores;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnCompras;
         private Bunifu.UI.WinForms.BunifuPictureBox logout;
+        public Bunifu.UI.WinForms.BunifuLabel userName;
     }
 }

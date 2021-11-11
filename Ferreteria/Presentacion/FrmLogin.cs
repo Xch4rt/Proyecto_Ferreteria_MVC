@@ -15,7 +15,7 @@ namespace Presentacion
 {
     public partial class FrmLogin : Form
     {
-        
+        public string usernames;
         N_Usuario nUsuario = new N_Usuario();
         E_Usuario eUsuario = new E_Usuario();
         public FrmLogin()
@@ -40,8 +40,7 @@ namespace Presentacion
         {
             DataTable dato;
             dato = nUsuario.Validar_acceso(this.txtUsername.Text, this.txtPassword.Text);
-            string nombreUsuario;
-            string rol;
+
 
             if (dato != null)
             {
@@ -49,11 +48,12 @@ namespace Presentacion
                 {
                     if (dato.Rows[0][0].ToString() == "Acceso Exitoso")
                     {
-                        FrmPrincipal frmU = new FrmPrincipal();
-                        frmU.Username = dato.Rows[0][1].ToString(); //SetUsername(dato.Rows[0][1].ToString());//dato.Rows[0][1].ToString();
-                        rol = dato.Rows[0][2].ToString();
+                        usernames = "aa";//dato.Rows[0][1].ToString();
+                        eUsuario.Usuario1 = dato.Rows[0][1].ToString(); //SetUsername(dato.Rows[0][1].ToString());//dato.Rows[0][1].ToString();
+                        eUsuario.Contraseña1 = dato.Rows[0][2].ToString();
                         MessageBox.Show("Bienvenido al Sistema "+ dato.Rows[0][1].ToString(), "Sistema de Reservas", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         FrmPrincipal frmPrincipal = new FrmPrincipal();
+                        frmPrincipal.Username = usernames;
                         this.Hide();
                         frmPrincipal.Show();
 
