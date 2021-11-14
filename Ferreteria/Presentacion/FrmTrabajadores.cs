@@ -24,7 +24,7 @@ namespace Presentacion
         public void MostrarDatos()
         {
             N_Empleado objEmpleado = new N_Empleado();
-            dgvEmpleados.DataSource = objEmpleado.ListarEmpleados();
+            dgvClientes.DataSource = objEmpleado.ListarEmpleados();
         }
         public void ShowTotal()
         {
@@ -40,16 +40,16 @@ namespace Presentacion
         public void HidenMoveColumns()
         {
             //modificando los widths
-            dgvEmpleados.Columns[1].Width = 50;
-            dgvEmpleados.Columns[0].Width = 50;
-            dgvEmpleados.Columns[3].Width = 70;
-            dgvEmpleados.Columns[2].Width = 60;
+            dgvClientes.Columns[1].Width = 50;
+            dgvClientes.Columns[0].Width = 50;
+            dgvClientes.Columns[3].Width = 70;
+            dgvClientes.Columns[2].Width = 60;
             //dgvEmpleados.Columns[11].Width = 80;
-            dgvEmpleados.Columns[9].Width = 100;
+            dgvClientes.Columns[9].Width = 100;
 
             // cambiando de posicion las primeras 2 columnas a ser las ultimas 2
-            dgvEmpleados.Columns[0].DisplayIndex = 11;
-            dgvEmpleados.Columns[1].DisplayIndex = 11;
+            dgvClientes.Columns[0].DisplayIndex = 11;
+            dgvClientes.Columns[1].DisplayIndex = 11;
         }
 
         private void txtSearch_TextChange(object sender, EventArgs e)
@@ -59,7 +59,7 @@ namespace Presentacion
         public void BuscarEmpleado(string search)
         {
             N_Empleado nEmpleado = new N_Empleado();
-            dgvEmpleados.DataSource = nEmpleado.BuscarEmpleado(search);
+            dgvClientes.DataSource = nEmpleado.BuscarEmpleado(search);
         }
 
         private void btnNuevoEmpleado_Click(object sender, EventArgs e)
@@ -69,6 +69,11 @@ namespace Presentacion
             frmEmpleado.Updates = false;
             MostrarDatos(); // para que se refresque
             //ShowTotal();
+        }
+
+        private void dgvEmpleados_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

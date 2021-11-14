@@ -80,6 +80,7 @@ namespace Presentacion
                     eProducto.IdCategoria1 = Convert.ToInt32(cmbCategory.SelectedValue);
                     eProducto.IdMarca1 = Convert.ToInt32(cmbBrand.SelectedValue);
 
+
                 } catch(Exception ex)
                 {
                     MessageBox.Show("No se pudo guardar la categoria " + ex);

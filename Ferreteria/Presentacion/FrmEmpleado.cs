@@ -83,5 +83,54 @@ namespace Presentacion
             Close();
         }
 
+        private void txtIdEmpleado_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuLabel4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuLabel5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateContratacion_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuLabel8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPuesto_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuLabel6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSalario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuLabel7_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
