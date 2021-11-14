@@ -32,9 +32,14 @@ namespace Presentacion
 
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+
+        private void ClosePic_Click(object sender, EventArgs e)
         {
-            
+            Close();
+        }
+
+        private void btnSave_Click_1(object sender, EventArgs e)
+        {
             string Nombres = txtNombres.Text;
             string[] NombresC = Nombres.Split(' ');
 
@@ -61,7 +66,7 @@ namespace Presentacion
                 }
                 catch (Exception ex)
                 {
-                    
+
                 }
             }
             if (Updates)
@@ -81,11 +86,6 @@ namespace Presentacion
                     MessageBox.Show("Se ha actualizado correctamente");
                 }
             }
-        }
-
-        private void ClosePic_Click(object sender, EventArgs e)
-        {
-            Close();
         }
     }
 }
