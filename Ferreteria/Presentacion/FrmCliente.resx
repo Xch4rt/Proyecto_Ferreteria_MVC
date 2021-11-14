@@ -303,10 +303,11 @@
   </data>
   <data name="btnSave.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAACwAAAAnCAYAAAB0Q6rCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABbSURBVFhH7c4xDQAgEMBAlLxl8IcM9n8QwNoEkg43dWmL
-        kTNG1R9ynuFbeJfDNIdpDtMcpjlMc5jmMM1hmsM0h2kO0xymOUxzmOYwzWGawzSHaS16rlt4Us+1AUtJ
-        6YodHIl9AAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAAP4AAAAnCAYAAAAvp/W2AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACfSURBVHhe7dMxAYAwAMCwKZll8DcZ/AMEoIDmyNW7Y557
+        zfO+gYq93vG/AvBnxocg40OQ8SHI+BBkfAgyPgQZH4KMD0HGhyDjQ5DxIcj4EGR8CDI+BBkfgowPQcaH
+        IONDkPEhyPgQZHwIMj4EGR+CjA9Bxocg40OQ8SHI+BBkfAgyPgQZH4KMD0HGhyDjQ5DxIcj4EDTmsa+v
+        APzUsa8H26ZpPP4ha7QAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="btnSave.IconLeft" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -906,4 +907,10 @@
         AAAAAAAAAAAAAAAAAO7V53zO/wfnUMQWoM3kOwAAAABJRU5ErkJggg==
 </value>
   </data>
+  <metadata name="bunifuDragControl1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="bunifuElipse1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>177, 17</value>
+  </metadata>
 </root>
