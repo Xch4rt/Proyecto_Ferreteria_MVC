@@ -60,7 +60,7 @@ namespace Presentacion
             dgvClientes.DataSource = nCliente.BuscarCliente(search);
         }
 
-        private void btnExcel_Click(object sender, EventArgs e)
+        private void btnNuevoCliente_Click(object sender, EventArgs e)
         {
             FrmCliente frmCliente = new FrmCliente();
             frmCliente.ShowDialog();
