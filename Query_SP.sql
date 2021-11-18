@@ -7,6 +7,7 @@ as
 select * from Categoria
 where Nombre like  @Buscar + '%'
 
+
 -- Procedimiento almacenado para insertar categoria
 create proc SP_InsertarCategoria
 @Nombre nvarchar(30),
@@ -73,7 +74,7 @@ where IdMarca = @IdMarca
 
 -- Procedimiento para Listar Productos
 
-/*create*/alter proc SP_ListarProductos
+/*create*/create proc SP_ListarProductos
 as 
 select top 100
 p.IdProducto as [ID PRODUCTO],
@@ -125,9 +126,10 @@ create proc SP_CrearProducto
 @Precio_Venta decimal (18,2),
 @Stock int,
 @IdCategoria int,
-@IdMarca int
+@IdMarca int,
+@IdProveedor int
 as
-insert into Productos values (@Producto, @Precio_Compra, @Precio_Venta, @Stock, @IdCategoria, @IdMarca)
+insert into Productos values (@Producto, @Precio_Compra, @Precio_Venta, @Stock, @IdCategoria, @IdMarca, @IdProveedor)
 
 -- Procedimiento para actualizar un producto
 create proc SP_ActualizarProducto
@@ -172,9 +174,9 @@ set @totalStock = (select sum(stock) as [Productos Totales] from Productos)
 
 
 -- Procedimientos para la tabla Empleado
-use Mantenimiento_Productos
+
 -- Procedimiento para insertar empleado
-alter/*create*/ proc InsertarEmpleado
+create/*create*/ proc InsertarEmpleado
 @PrimerNombre nvarchar(25),
 @PrimerApellido nvarchar(25),
 @SegundoNombre nvarchar (25),
@@ -184,10 +186,9 @@ alter/*create*/ proc InsertarEmpleado
 @Puesto nvarchar (45)
 as
 insert into Empleados values(@PrimerNombre,@SegundoNombre,@PrimerApellido,@SegundoApellido,@FechaContrato,@Salario,@Puesto)
-exec InsertarEmpleado 'Fhernando','Ariel','Villanueva','Mena','12-11-2002',19389.21,'Jefe de Ventas'
 
 -- Procedimiento para actualizar Empleado
-alter proc SP_ActualizarEmpleado
+create proc SP_ActualizarEmpleado
 @IdEmpleado int,
 @Puesto nvarchar(25),
 @PrimerNombre nvarchar(25),
@@ -216,7 +217,7 @@ delete Empleados
 where IdEmpleado = @IdEmpleado
 
 -- Procedimiento para buscar Empleados
-alter proc SP_BuscarEmpleado
+create proc SP_BuscarEmpleado
 @Buscar nvarchar (20)
 as
 select top 100
@@ -245,7 +246,7 @@ or usuario like @Buscar + '%'
 order by e.IdEmpleado asc
 
 -- Procedimiento para mostrar los empleados
-alter proc SP_ListarEmpleados
+create proc SP_ListarEmpleados
 as
 select top 100
 e.IdEmpleado as [ID EMPLEADO],
@@ -266,7 +267,7 @@ order by e.IdEmpleado asc
 exec SP_ListarEmpleados
 select * from Empleados
 -- Procedimiento para mostrar a los clientes que poseen usuarios
-alter proc SP_ListarEmpleadosUsuarios
+create proc SP_ListarEmpleadosUsuarios
 as
 select top 100
 e.CodigoEm as [CODIGO],
@@ -337,8 +338,9 @@ c.PrimerApellido as [PRIMER APELLIDO],
 c.SegundoApellido as [SEGUNDO APELLIDO],
 c.NumeroTelf as [NUMERO DE TELEFONO]
 from Clientes c
-
 order by c.IdCliente asc
+
+exec SP_ListarClientes
 
 create proc SP_BuscarCliente
 @Buscar nvarchar (20)
@@ -367,7 +369,7 @@ order by c.IdCliente asc
  (@usuario, ENCRYPTBYPASSPHRASE( @contraseña,  @contraseña),@Estado , @IdEmpleado, @IdRol)
 
  -- Procedimiento para buscar en Roles
- alter proc SP_BuscarRol
+ create proc SP_BuscarRol
  @Buscar nvarchar (20)
  as
  select 
@@ -382,4 +384,69 @@ order by c.IdCliente asc
 
 
  -- PROCEDIMIENTO PARA PROVEEDORES
+ 
+ -- Procedimiento para agregar proveedores
+ create proc SP_InsertarProveedor
+ @NombreCompany nvarchar (50),
+ @NombreContacto nvarchar (80),
+ @Direccion nvarchar (256),
+ @Telf int
+ as
+ insert into Proveedor values(@NombreCompany, @NombreContacto, @Direccion, @Telf)
 
+ -- Procedimiento para actualizar Proveedores
+
+create proc SP_ActualizarProveedor
+@IdProveedor int,
+@NombreCompany nvarchar (50),
+@NombreContacto nvarchar (80),
+@Direccion nvarchar (256),
+@Telf int
+as
+update Proveedor set NombreCompany = @NombreCompany,
+					 NombreContacto = @NombreContacto,
+					 Direccion = @Direccion,
+					 Telf = @Telf
+where IdProveedor = @IdProveedor
+
+-- Procedimiento para eliminar Proveedor
+
+create proc SP_EliminarProveedor
+@IdProveedor int
+as
+delete Proveedor
+where IdProveedor = @IdProveedor
+
+
+-- Procedimiento para listar Proveedores
+
+create proc SP_ListarProveedores
+as
+select top 100
+p.IdProveedor as [ID PROVEEDOR],
+p.CodigoProveedor as [CODIGO],
+p.NombreCompany as [NOMBRE COMPAÑIA],
+p.NombreContacto as [NOMBRE CONTACTO],
+p.Telf as [TELEFONO]
+from Proveedor p
+order by p.IdProveedor asc
+
+-- Procedimiento para buscar Proveedores
+
+create proc SP_BuscarProveedor
+@Buscar nvarchar (20)
+as
+select top 100
+p.IdProveedor as [ID PROVEEDOR],
+p.CodigoProveedor as [CODIGO],
+p.NombreCompany as [NOMBRE COMPAÑIA],
+p.NombreContacto as [NOMBRE CONTACTO],
+p.Telf as [TELEFONO]
+from Proveedor p
+where 
+IdProveedor like @Buscar + '%'
+or CodigoProveedor like @Buscar + '%'
+or NombreCompany like @Buscar + '%'
+or NombreContacto like @Buscar + '%'
+or Telf like @Buscar + '%'
+order by p.IdProveedor asc
