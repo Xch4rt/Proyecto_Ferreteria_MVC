@@ -31,11 +31,22 @@ create table Productos(
 
 	-- Fks
 	IdCategoria int not null foreign key references Categoria(IdCategoria),
-	IdMarca int not null foreign key references Marcas(IdMarca)
+	IdMarca int not null foreign key references Marcas(IdMarca),
+	IdProveedor int not null foreign key references Proveedor(IdProveedor)
 )
 
 insert into Productos values ('TALADRO',12.50,20,100,1,1), 
 							 ('SERRUCHO',8.32,12,12,1,1)
+
+-- Creando tabla Proveedor
+create table Proveedor(
+	IdProveedor int identity (1,1) primary key not null,
+	CodigoProveedor as ('PRO'+RIGHT('00'+CONVERT(VARCHAR,IdProveedor),(2))),
+	NombreCompany nvarchar (50) not null,
+	NombreContacto nvarchar (80) not null,
+	Direccion nvarchar (256),
+	Telf int
+)
 
 -- Creando tabla Empleados
 create table Empleados(
