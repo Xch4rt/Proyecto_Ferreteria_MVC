@@ -379,3 +379,7 @@ order by c.IdCliente asc
 
  exec SP_BuscarEmpleado ''
  exec SP_BuscarCategoria''
+
+
+ -- PROCEDIMIENTO PARA PROVEEDORES
+
