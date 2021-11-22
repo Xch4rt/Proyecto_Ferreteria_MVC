@@ -21,7 +21,8 @@ namespace Presentacion
         private string option = "Habilitado";
         public FrmRoles()
         {
-            InitializeComponent(); 
+            InitializeComponent();
+            ToggleOptionUser.Checked = true;
             CmbRoles();
             MostrarBuscarTable("");
         }
@@ -137,11 +138,56 @@ namespace Presentacion
             if (e.Checked)
             {
                 option = "Habilitado";
+                Select();
             }
             else
             {
                 option = "Deshabilitado";
+                UnSelect();
             }
+        }
+        private void UnSelect()
+        {
+            cbCreate.Checked = false;
+            cbUpdate.Checked = false;
+            cbDelete.Checked = false;
+            cbGenerate.Checked = false;
+            cbShowAll.Checked = false;
+
+            cbCreate.AutoCheck = false;
+            cbUpdate.AutoCheck = false;
+            cbDelete.AutoCheck = false;
+            cbGenerate.AutoCheck = false;
+            cbShowAll.AutoCheck = false;
+        }
+        private void Select()
+        {
+            cbCreate.AutoCheck = true;
+            cbUpdate.AutoCheck = true;
+            cbDelete.AutoCheck = true;
+            cbGenerate.AutoCheck = false;
+            cbShowAll.AutoCheck = true;
+
+            cbGenerate.Checked = false;
+        }
+        private void SelectAltern()
+        {
+            cbCreate.AutoCheck = false;
+            cbUpdate.AutoCheck = false;
+            cbDelete.AutoCheck = false;
+            cbGenerate.AutoCheck = true;
+            cbShowAll.AutoCheck = false;
+
+            cbGenerate.Checked = true;
+            cbCreate.Checked = false;
+            cbUpdate.Checked = false;
+            cbDelete.Checked = false;
+            cbShowAll.Checked = false;
+        }
+
+        private void cmbRoles_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbRoles.SelectedIndex == 3) SelectAltern(); else Select();
         }
     }
 }
