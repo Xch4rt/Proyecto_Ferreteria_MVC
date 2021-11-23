@@ -24,7 +24,7 @@ namespace Presentacion
         public void MostrarDatos()
         {
             N_Empleado objEmpleado = new N_Empleado();
-            dgvClientes.DataSource = objEmpleado.ListarEmpleados();
+            dgvTrabajadores.DataSource = objEmpleado.ListarEmpleados();
         }
         public void ShowTotal()
         {
@@ -40,16 +40,16 @@ namespace Presentacion
         public void HidenMoveColumns()
         {
             //modificando los widths
-            dgvClientes.Columns[1].Width = 50;
-            dgvClientes.Columns[0].Width = 50;
-            dgvClientes.Columns[3].Width = 70;
-            dgvClientes.Columns[2].Width = 60;
+            dgvTrabajadores.Columns[1].Width = 50;
+            dgvTrabajadores.Columns[0].Width = 50;
+            dgvTrabajadores.Columns[3].Width = 70;
+            dgvTrabajadores.Columns[2].Width = 60;
             //dgvEmpleados.Columns[11].Width = 80;
-            dgvClientes.Columns[9].Width = 100;
+            dgvTrabajadores.Columns[9].Width = 100;
 
             // cambiando de posicion las primeras 2 columnas a ser las ultimas 2
-            dgvClientes.Columns[0].DisplayIndex = 11;
-            dgvClientes.Columns[1].DisplayIndex = 11;
+            dgvTrabajadores.Columns[0].DisplayIndex = 11;
+            dgvTrabajadores.Columns[1].DisplayIndex = 11;
         }
 
         private void txtSearch_TextChange(object sender, EventArgs e)
@@ -59,7 +59,7 @@ namespace Presentacion
         public void BuscarEmpleado(string search)
         {
             N_Empleado nEmpleado = new N_Empleado();
-            dgvClientes.DataSource = nEmpleado.BuscarEmpleado(search);
+            dgvTrabajadores.DataSource = nEmpleado.BuscarEmpleado(search);
         }
 
         private void btnNuevoEmpleado_Click(object sender, EventArgs e)
@@ -74,6 +74,13 @@ namespace Presentacion
         private void dgvEmpleados_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btnAsignarRol_Click(object sender, EventArgs e)
+        {
+            FrmRoles frmRol = new FrmRoles();
+            frmRol.ShowDialog();
+            MostrarDatos();
         }
     }
 }

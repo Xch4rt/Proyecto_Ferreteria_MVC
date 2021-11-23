@@ -10,3 +10,9 @@ D:\Ariel\Base de datos I\Trabajo duo\Proyecto_Ferreteria_MVC\Ferreteria\Entidade
 D:\Ariel\Base de datos I\Trabajo duo\Proyecto_Ferreteria_MVC\Ferreteria\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
 D:\Ariel\Base de datos I\Trabajo duo\Proyecto_Ferreteria_MVC\Ferreteria\Entidades\obj\Debug\Entidades.dll
 D:\Ariel\Base de datos I\Trabajo duo\Proyecto_Ferreteria_MVC\Ferreteria\Entidades\obj\Debug\Entidades.pdb
+C:\Users\Pablo\Desktop\ProyectoFinanzas\Proyecto_Ferreteria_MVC\Ferreteria\Entidades\bin\Debug\Entidades.dll
+C:\Users\Pablo\Desktop\ProyectoFinanzas\Proyecto_Ferreteria_MVC\Ferreteria\Entidades\bin\Debug\Entidades.pdb
+C:\Users\Pablo\Desktop\ProyectoFinanzas\Proyecto_Ferreteria_MVC\Ferreteria\Entidades\obj\Debug\Entidades.csproj.AssemblyReference.cache
+C:\Users\Pablo\Desktop\ProyectoFinanzas\Proyecto_Ferreteria_MVC\Ferreteria\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\Pablo\Desktop\ProyectoFinanzas\Proyecto_Ferreteria_MVC\Ferreteria\Entidades\obj\Debug\Entidades.dll
+C:\Users\Pablo\Desktop\ProyectoFinanzas\Proyecto_Ferreteria_MVC\Ferreteria\Entidades\obj\Debug\Entidades.pdb
