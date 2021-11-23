@@ -13,13 +13,11 @@ namespace Presentacion
 {
     public partial class FrmPrincipal : Form
     {
-        public string Username ;
         E_Usuario eUsuario = new E_Usuario();
-        FrmLogin frmL = new FrmLogin();
-        public FrmPrincipal()
+        public FrmPrincipal(string nombreUsuario)
         {
             InitializeComponent();
-            userName.Text = (frmL.usernames == null).ToString();
+            userName.Text = nombreUsuario;
         }
 
         // Metodo para que sea pantalla completa sin interrumpir la barra de tareas
@@ -33,11 +31,7 @@ namespace Presentacion
         {
             Screen_();
         }
-        public string SetUsername()
-        {
-
-            return Username;
-        }
+     
 
         private void BtnExit_Click(object sender, EventArgs e)
         {
