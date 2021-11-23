@@ -217,7 +217,7 @@ delete Empleados
 where IdEmpleado = @IdEmpleado
 
 -- Procedimiento para buscar Empleados
-create proc SP_BuscarEmpleado
+alter proc SP_BuscarEmpleado
 @Buscar nvarchar (20)
 as
 select top 100
@@ -237,12 +237,12 @@ left join Usuario u
 on e.IdEmpleado = u.IdUsuario
 left join Rol r
 on r.IdRol = u.IdRol
-where PrimerNombre like @Buscar + '%'
-or PrimerApellido like @Buscar + '%'
-or SegundoNombre like @Buscar + '%'
-or SegundoApellido like @Buscar + '%'
-or Puesto like @Buscar + '%'
-or usuario like @Buscar + '%'
+where e.PrimerNombre like @Buscar + '%'
+or e.PrimerApellido like @Buscar + '%'
+or e.SegundoNombre like @Buscar + '%'
+or e.SegundoApellido like @Buscar + '%'
+or e.Puesto like @Buscar + '%'
+or u.usuario like @Buscar + '%'
 order by e.IdEmpleado asc
 
 -- Procedimiento para mostrar los empleados
