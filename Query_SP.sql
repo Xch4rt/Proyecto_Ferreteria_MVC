@@ -471,3 +471,10 @@ or NombreCompany like @Buscar + '%'
 or NombreContacto like @Buscar + '%'
 or Telf like @Buscar + '%'
 order by p.IdProveedor asc
+
+-- PROCEDIMIENTOS PARA FACTURAR
+
+create procedure SP_LastOrderID
+as
+select * from DetalleOrden
+select * from Ordenes

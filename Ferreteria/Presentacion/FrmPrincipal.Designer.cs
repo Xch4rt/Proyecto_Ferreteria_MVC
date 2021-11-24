@@ -94,14 +94,14 @@ namespace Presentacion
             this.userName.AutoEllipsis = false;
             this.userName.AutoSize = false;
             this.userName.CursorType = null;
-            this.userName.Font = new System.Drawing.Font("Segoe UI", 24F);
+            this.userName.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.userName.ForeColor = System.Drawing.Color.White;
-            this.userName.Location = new System.Drawing.Point(23, 221);
+            this.userName.Location = new System.Drawing.Point(3, 228);
             this.userName.Name = "userName";
             this.userName.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.userName.Size = new System.Drawing.Size(194, 45);
+            this.userName.Size = new System.Drawing.Size(234, 45);
             this.userName.TabIndex = 16;
-            this.userName.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.userName.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.userName.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // logout
@@ -874,9 +874,11 @@ namespace Presentacion
             // 
             // picUser
             // 
-            this.picUser.Location = new System.Drawing.Point(72, 125);
+            this.picUser.Image = ((System.Drawing.Image)(resources.GetObject("picUser.Image")));
+            this.picUser.Location = new System.Drawing.Point(55, 125);
             this.picUser.Name = "picUser";
-            this.picUser.Size = new System.Drawing.Size(90, 90);
+            this.picUser.Size = new System.Drawing.Size(116, 97);
+            this.picUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picUser.TabIndex = 3;
             this.picUser.TabStop = false;
             // 
@@ -901,12 +903,12 @@ namespace Presentacion
             this.bunifuLabel2.AutoEllipsis = false;
             this.bunifuLabel2.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel2.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel2.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.bunifuLabel2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.bunifuLabel2.ForeColor = System.Drawing.Color.White;
-            this.bunifuLabel2.Location = new System.Drawing.Point(104, 45);
+            this.bunifuLabel2.Location = new System.Drawing.Point(70, 40);
             this.bunifuLabel2.Name = "bunifuLabel2";
             this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel2.Size = new System.Drawing.Size(80, 20);
+            this.bunifuLabel2.Size = new System.Drawing.Size(87, 20);
             this.bunifuLabel2.TabIndex = 1;
             this.bunifuLabel2.Text = "FERRETERIA";
             this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;

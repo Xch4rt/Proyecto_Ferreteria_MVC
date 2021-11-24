@@ -48,7 +48,7 @@ Alter table Usuario
 
 
 
-alter /*create*/ procedure [dbo].[Validar_Acceso]
+create /*create*/ procedure [dbo].[Validar_Acceso]
 @usuario varchar(50),
 @contraseña varchar(50)
 as
@@ -67,4 +67,4 @@ if exists (Select usuario from Usuario
 			 else
 			 Select 'Acceso Denegado' as Resultado
 
-			 Execute dbo.Validar_Acceso 'Wiston', 'wiston123'
+			 Execute dbo.Validar_Acceso 'Pablo', 'pablo123'

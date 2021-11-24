@@ -30,13 +30,13 @@ namespace Presentacion
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmProveedores));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.lblProd = new Bunifu.UI.WinForms.BunifuLabel();
@@ -44,19 +44,19 @@ namespace Presentacion
             this.bunifuSeparator1 = new Bunifu.UI.WinForms.BunifuSeparator();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.txtSearch = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.bunifuSeparator6 = new Bunifu.UI.WinForms.BunifuSeparator();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.btnNuevoProveedor = new Bunifu.Framework.UI.BunifuThinButton2();
             this.dgvProveedores = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.EDITAR = new System.Windows.Forms.DataGridViewImageColumn();
             this.ELIMINAR = new System.Windows.Forms.DataGridViewImageColumn();
-            this.btnNuevoProveedor = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.txtSearch = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.bunifuSeparator6 = new Bunifu.UI.WinForms.BunifuSeparator();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.bunifuPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProveedores)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -157,6 +157,117 @@ namespace Presentacion
             this.bunifuPanel1.Size = new System.Drawing.Size(1041, 558);
             this.bunifuPanel1.TabIndex = 11;
             // 
+            // btnNuevoProveedor
+            // 
+            this.btnNuevoProveedor.ActiveBorderThickness = 1;
+            this.btnNuevoProveedor.ActiveCornerRadius = 20;
+            this.btnNuevoProveedor.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(110)))), ((int)(((byte)(242)))));
+            this.btnNuevoProveedor.ActiveForecolor = System.Drawing.Color.White;
+            this.btnNuevoProveedor.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(110)))), ((int)(((byte)(242)))));
+            this.btnNuevoProveedor.BackColor = System.Drawing.SystemColors.Control;
+            this.btnNuevoProveedor.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNuevoProveedor.BackgroundImage")));
+            this.btnNuevoProveedor.ButtonText = "AGREGAR PROVEEDOR";
+            this.btnNuevoProveedor.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNuevoProveedor.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevoProveedor.ForeColor = System.Drawing.Color.White;
+            this.btnNuevoProveedor.IdleBorderThickness = 1;
+            this.btnNuevoProveedor.IdleCornerRadius = 20;
+            this.btnNuevoProveedor.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(110)))), ((int)(((byte)(242)))));
+            this.btnNuevoProveedor.IdleForecolor = System.Drawing.Color.White;
+            this.btnNuevoProveedor.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(110)))), ((int)(((byte)(242)))));
+            this.btnNuevoProveedor.Location = new System.Drawing.Point(63, 91);
+            this.btnNuevoProveedor.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.btnNuevoProveedor.Name = "btnNuevoProveedor";
+            this.btnNuevoProveedor.Size = new System.Drawing.Size(199, 43);
+            this.btnNuevoProveedor.TabIndex = 17;
+            this.btnNuevoProveedor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnNuevoProveedor.Click += new System.EventHandler(this.btnNuevoProveedor_Click);
+            // 
+            // dgvProveedores
+            // 
+            this.dgvProveedores.AllowCustomTheming = false;
+            this.dgvProveedores.AllowUserToAddRows = false;
+            this.dgvProveedores.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.dgvProveedores.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvProveedores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvProveedores.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvProveedores.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvProveedores.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvProveedores.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProveedores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvProveedores.ColumnHeadersHeight = 40;
+            this.dgvProveedores.ColumnHeadersVisible = false;
+            this.dgvProveedores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.EDITAR,
+            this.ELIMINAR});
+            this.dgvProveedores.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            this.dgvProveedores.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.dgvProveedores.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.dgvProveedores.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.dgvProveedores.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvProveedores.CurrentTheme.BackColor = System.Drawing.Color.White;
+            this.dgvProveedores.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.dgvProveedores.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.DodgerBlue;
+            this.dgvProveedores.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            this.dgvProveedores.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgvProveedores.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            this.dgvProveedores.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvProveedores.CurrentTheme.Name = null;
+            this.dgvProveedores.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvProveedores.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.dgvProveedores.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.dgvProveedores.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.dgvProveedores.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvProveedores.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvProveedores.EnableHeadersVisualStyles = false;
+            this.dgvProveedores.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.dgvProveedores.HeaderBackColor = System.Drawing.Color.DodgerBlue;
+            this.dgvProveedores.HeaderBgColor = System.Drawing.Color.Empty;
+            this.dgvProveedores.HeaderForeColor = System.Drawing.Color.White;
+            this.dgvProveedores.Location = new System.Drawing.Point(11, 164);
+            this.dgvProveedores.Name = "dgvProveedores";
+            this.dgvProveedores.ReadOnly = true;
+            this.dgvProveedores.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvProveedores.RowHeadersVisible = false;
+            this.dgvProveedores.RowTemplate.Height = 40;
+            this.dgvProveedores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dgvProveedores.Size = new System.Drawing.Size(1017, 362);
+            this.dgvProveedores.TabIndex = 16;
+            this.dgvProveedores.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+            this.dgvProveedores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProveedores_CellContentClick);
+            // 
+            // EDITAR
+            // 
+            this.EDITAR.HeaderText = "EDITAR";
+            this.EDITAR.Image = ((System.Drawing.Image)(resources.GetObject("EDITAR.Image")));
+            this.EDITAR.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.EDITAR.Name = "EDITAR";
+            this.EDITAR.ReadOnly = true;
+            // 
+            // ELIMINAR
+            // 
+            this.ELIMINAR.HeaderText = "ELIMINAR";
+            this.ELIMINAR.Image = ((System.Drawing.Image)(resources.GetObject("ELIMINAR.Image")));
+            this.ELIMINAR.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.ELIMINAR.Name = "ELIMINAR";
+            this.ELIMINAR.ReadOnly = true;
+            // 
             // txtSearch
             // 
             this.txtSearch.AcceptsReturn = false;
@@ -231,6 +342,7 @@ namespace Presentacion
             this.txtSearch.TextPlaceholder = "Enter text";
             this.txtSearch.UseSystemPasswordChar = false;
             this.txtSearch.WordWrap = true;
+            this.txtSearch.TextChange += new System.EventHandler(this.txtSearch_TextChange);
             // 
             // bunifuSeparator6
             // 
@@ -258,115 +370,6 @@ namespace Presentacion
             this.pictureBox6.TabIndex = 13;
             this.pictureBox6.TabStop = false;
             // 
-            // dgvProveedores
-            // 
-            this.dgvProveedores.AllowCustomTheming = false;
-            this.dgvProveedores.AllowUserToAddRows = false;
-            this.dgvProveedores.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.dgvProveedores.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvProveedores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvProveedores.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvProveedores.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvProveedores.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvProveedores.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProveedores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvProveedores.ColumnHeadersHeight = 40;
-            this.dgvProveedores.ColumnHeadersVisible = false;
-            this.dgvProveedores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.EDITAR,
-            this.ELIMINAR});
-            this.dgvProveedores.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            this.dgvProveedores.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.dgvProveedores.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.dgvProveedores.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.dgvProveedores.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvProveedores.CurrentTheme.BackColor = System.Drawing.Color.White;
-            this.dgvProveedores.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
-            this.dgvProveedores.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.DodgerBlue;
-            this.dgvProveedores.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            this.dgvProveedores.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dgvProveedores.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            this.dgvProveedores.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvProveedores.CurrentTheme.Name = null;
-            this.dgvProveedores.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgvProveedores.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.dgvProveedores.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.dgvProveedores.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.dgvProveedores.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvProveedores.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvProveedores.EnableHeadersVisualStyles = false;
-            this.dgvProveedores.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
-            this.dgvProveedores.HeaderBackColor = System.Drawing.Color.DodgerBlue;
-            this.dgvProveedores.HeaderBgColor = System.Drawing.Color.Empty;
-            this.dgvProveedores.HeaderForeColor = System.Drawing.Color.White;
-            this.dgvProveedores.Location = new System.Drawing.Point(11, 164);
-            this.dgvProveedores.Name = "dgvProveedores";
-            this.dgvProveedores.ReadOnly = true;
-            this.dgvProveedores.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgvProveedores.RowHeadersVisible = false;
-            this.dgvProveedores.RowTemplate.Height = 40;
-            this.dgvProveedores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dgvProveedores.Size = new System.Drawing.Size(1017, 362);
-            this.dgvProveedores.TabIndex = 16;
-            this.dgvProveedores.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
-            // 
-            // EDITAR
-            // 
-            this.EDITAR.HeaderText = "EDITAR";
-            this.EDITAR.Image = ((System.Drawing.Image)(resources.GetObject("EDITAR.Image")));
-            this.EDITAR.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.EDITAR.Name = "EDITAR";
-            this.EDITAR.ReadOnly = true;
-            // 
-            // ELIMINAR
-            // 
-            this.ELIMINAR.HeaderText = "ELIMINAR";
-            this.ELIMINAR.Image = ((System.Drawing.Image)(resources.GetObject("ELIMINAR.Image")));
-            this.ELIMINAR.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.ELIMINAR.Name = "ELIMINAR";
-            this.ELIMINAR.ReadOnly = true;
-            // 
-            // btnNuevoProveedor
-            // 
-            this.btnNuevoProveedor.ActiveBorderThickness = 1;
-            this.btnNuevoProveedor.ActiveCornerRadius = 20;
-            this.btnNuevoProveedor.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(110)))), ((int)(((byte)(242)))));
-            this.btnNuevoProveedor.ActiveForecolor = System.Drawing.Color.White;
-            this.btnNuevoProveedor.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(110)))), ((int)(((byte)(242)))));
-            this.btnNuevoProveedor.BackColor = System.Drawing.SystemColors.Control;
-            this.btnNuevoProveedor.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNuevoProveedor.BackgroundImage")));
-            this.btnNuevoProveedor.ButtonText = "AGREGAR PROVEEDOR";
-            this.btnNuevoProveedor.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNuevoProveedor.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevoProveedor.ForeColor = System.Drawing.Color.White;
-            this.btnNuevoProveedor.IdleBorderThickness = 1;
-            this.btnNuevoProveedor.IdleCornerRadius = 20;
-            this.btnNuevoProveedor.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(110)))), ((int)(((byte)(242)))));
-            this.btnNuevoProveedor.IdleForecolor = System.Drawing.Color.White;
-            this.btnNuevoProveedor.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(110)))), ((int)(((byte)(242)))));
-            this.btnNuevoProveedor.Location = new System.Drawing.Point(63, 91);
-            this.btnNuevoProveedor.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.btnNuevoProveedor.Name = "btnNuevoProveedor";
-            this.btnNuevoProveedor.Size = new System.Drawing.Size(199, 43);
-            this.btnNuevoProveedor.TabIndex = 17;
-            this.btnNuevoProveedor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // FrmProveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -382,8 +385,8 @@ namespace Presentacion
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.bunifuPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProveedores)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
 
         }

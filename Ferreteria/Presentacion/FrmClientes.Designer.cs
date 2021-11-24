@@ -353,6 +353,7 @@ namespace Presentacion
             this.txtSearch.TextPlaceholder = "Enter text";
             this.txtSearch.UseSystemPasswordChar = false;
             this.txtSearch.WordWrap = true;
+            this.txtSearch.TextChange += new System.EventHandler(this.bunifuTextBox2_TextChanged);
             // 
             // bunifuSeparator6
             // 
