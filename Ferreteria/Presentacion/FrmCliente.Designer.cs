@@ -499,6 +499,7 @@ namespace Presentacion
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmCliente";
             this.Text = "FrmCliente";
+            this.Load += new System.EventHandler(this.FrmCliente_Load);
             this.TopForm.ResumeLayout(false);
             this.TopForm.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ClosePic)).EndInit();

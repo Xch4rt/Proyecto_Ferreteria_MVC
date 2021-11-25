@@ -89,5 +89,27 @@ namespace Datos
 
             return table;
         }
+
+        public DataTable MostarClientes()
+        {
+            DataTable table = new DataTable();
+            SqlDataReader leerfilas;
+            SqlCommand cmd = new SqlCommand("SP_ListarClientes", conexion);
+
+            cmd.CommandType = CommandType.StoredProcedure;
+            conexion.Open();
+
+            leerfilas = cmd.ExecuteReader();
+            table.Load(leerfilas);
+
+            leerfilas.Close();
+            conexion.Close();
+
+            return table;
+        }
+
+
+
+
     }
 }

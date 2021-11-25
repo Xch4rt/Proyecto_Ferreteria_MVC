@@ -407,13 +407,14 @@ if exists (Select usuario from Usuario
  -- PROCEDIMIENTO PARA PROVEEDORES
  
  -- Procedimiento para agregar proveedores
- create proc SP_InsertarProveedor
+create proc SP_InsertarProveedor
  @NombreCompany nvarchar (50),
  @NombreContacto nvarchar (80),
  @Direccion nvarchar (256),
  @Telf int
  as
  insert into Proveedor values(@NombreCompany, @NombreContacto, @Direccion, @Telf)
+
 
  -- Procedimiento para actualizar Proveedores
 
@@ -440,17 +441,19 @@ where IdProveedor = @IdProveedor
 
 
 -- Procedimiento para listar Proveedores
-
-create proc SP_ListarProveedores
+alter proc SP_ListarProveedores
 as
 select top 100
 p.IdProveedor as [ID PROVEEDOR],
 p.CodigoProveedor as [CODIGO],
 p.NombreCompany as [NOMBRE COMPAÑIA],
 p.NombreContacto as [NOMBRE CONTACTO],
+p.Direccion as [DIRECCION],
 p.Telf as [TELEFONO]
 from Proveedor p
 order by p.IdProveedor asc
+
+
 
 -- Procedimiento para buscar Proveedores
 
@@ -478,3 +481,6 @@ create procedure SP_LastOrderID
 as
 select * from DetalleOrden
 select * from Ordenes
+
+
+
