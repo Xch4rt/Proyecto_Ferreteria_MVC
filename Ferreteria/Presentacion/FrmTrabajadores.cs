@@ -42,14 +42,15 @@ namespace Presentacion
             //modificando los widths
             dgvTrabajadores.Columns[1].Width = 50;
             dgvTrabajadores.Columns[0].Width = 50;
-            dgvTrabajadores.Columns[3].Width = 70;
-            dgvTrabajadores.Columns[2].Width = 60;
+            dgvTrabajadores.Columns[4].Width = 70;
+            dgvTrabajadores.Columns[3].Width = 60;
             //dgvEmpleados.Columns[11].Width = 80;
             dgvTrabajadores.Columns[9].Width = 100;
 
+            dgvTrabajadores.Columns[2].Visible = false;
             // cambiando de posicion las primeras 2 columnas a ser las ultimas 2
-            dgvTrabajadores.Columns[0].DisplayIndex = 11;
-            dgvTrabajadores.Columns[1].DisplayIndex = 11;
+            dgvTrabajadores.Columns[0].DisplayIndex = 12;
+            dgvTrabajadores.Columns[1].DisplayIndex = 12;
         }
 
         private void txtSearch_TextChange(object sender, EventArgs e)
@@ -92,7 +93,7 @@ namespace Presentacion
 
                 // procedemos a cargar el formulario del FrmProducto
                 
-                frmE.txtNombre.Text = dgvTrabajadores.Rows[e.RowIndex].Cells["PRIMER NOMBRE"].Value.ToString() + dgvTrabajadores.Rows[e.RowIndex].Cells["SEGUNDO NOMBRE"].Value.ToString();
+                frmE.txtNombre.Text = dgvTrabajadores.Rows[e.RowIndex].Cells["PRIMER NOMBRE"].Value.ToString() + " " + dgvTrabajadores.Rows[e.RowIndex].Cells["SEGUNDO NOMBRE"].Value.ToString()+" "+ dgvTrabajadores.Rows[e.RowIndex].Cells["PRIMER APELLIDO"].Value.ToString()+" "+ dgvTrabajadores.Rows[e.RowIndex].Cells["SEGUNDO APELLIDO"].Value.ToString();
                 frmE.dateContratacion.Value = Convert.ToDateTime(dgvTrabajadores.Rows[e.RowIndex].Cells["FECHA CONTRATO"].Value.ToString());
                 frmE.txtPuesto.Text = dgvTrabajadores.Rows[e.RowIndex].Cells["PUESTO"].Value.ToString();
                 frmE.txtSalario.Text = dgvTrabajadores.Rows[e.RowIndex].Cells["SALARIO"].Value.ToString();

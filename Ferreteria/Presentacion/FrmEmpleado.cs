@@ -77,6 +77,7 @@ namespace Presentacion
                     eEmpleado.FechaContrato1 = fecha;
                     eEmpleado.Puesto1 = txtPuesto.Text;
                     eEmpleado.Salario1 = Convert.ToDecimal(txtSalario.Text);
+                    nEmpleado.EditarEmpleado(eEmpleado);
                     MessageBox.Show("Se ha actualizado el empleado correctamente");
 
                 }

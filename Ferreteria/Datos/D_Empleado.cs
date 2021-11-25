@@ -62,7 +62,7 @@ namespace Datos
             cmd.Parameters.AddWithValue("@SegundoApellido", empleado.SApellido1);
             cmd.Parameters.AddWithValue("@FechaContrato", empleado.FechaContrato1);
             cmd.Parameters.AddWithValue("@Salario", empleado.Salario1);
-            cmd.Parameters.AddWithValue("@IdUsuario", empleado.IdUsuario1);
+            //cmd.Parameters.AddWithValue("@IdUsuario", empleado.IdUsuario1);
 
             cmd.ExecuteNonQuery();
             conexion.Close();
