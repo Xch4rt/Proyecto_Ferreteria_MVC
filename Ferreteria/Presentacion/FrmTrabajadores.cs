@@ -73,7 +73,36 @@ namespace Presentacion
 
         private void dgvEmpleados_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (dgvTrabajadores.Rows[e.RowIndex].Cells["ELIMINAR"].Selected)
+            {
+                int indexDel = Convert.ToInt32(dgvTrabajadores.Rows[e.RowIndex].Cells[2].Value.ToString());
+                objEmpleado.EliminarEmpleado(indexDel);
 
+                MostrarDatos();
+
+
+
+            }
+            else if (dgvTrabajadores.Rows[e.RowIndex].Cells["EDITAR"].Selected)
+            {
+                int indexUpdt = Convert.ToInt32(dgvTrabajadores.Rows[e.RowIndex].Cells[2].Value.ToString());
+                
+                FrmEmpleado frmE = new FrmEmpleado(indexUpdt);
+                frmE.Updates = true;
+
+                // procedemos a cargar el formulario del FrmProducto
+                
+                frmE.txtNombre.Text = dgvTrabajadores.Rows[e.RowIndex].Cells["PRIMER NOMBRE"].Value.ToString() + dgvTrabajadores.Rows[e.RowIndex].Cells["SEGUNDO NOMBRE"].Value.ToString();
+                frmE.dateContratacion.Value = Convert.ToDateTime(dgvTrabajadores.Rows[e.RowIndex].Cells["FECHA CONTRATO"].Value.ToString());
+                frmE.txtPuesto.Text = dgvTrabajadores.Rows[e.RowIndex].Cells["PUESTO"].Value.ToString();
+                frmE.txtSalario.Text = dgvTrabajadores.Rows[e.RowIndex].Cells["SALARIO"].Value.ToString();
+
+
+
+                frmE.ShowDialog();
+                MostrarDatos();
+
+            }
         }
 
         private void btnAsignarRol_Click(object sender, EventArgs e)

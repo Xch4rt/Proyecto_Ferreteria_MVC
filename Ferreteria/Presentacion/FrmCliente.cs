@@ -17,9 +17,15 @@ namespace Presentacion
         N_Cliente nCliente = new N_Cliente();
         E_Cliente eCliente = new E_Cliente();
         public Boolean Updates = false;
+        public int id;
         public FrmCliente()
         {
             InitializeComponent();
+        }
+        public FrmCliente(int ide)
+        {
+            InitializeComponent();
+            this.id = ide;
         }
 
         private void TopForm_Paint(object sender, PaintEventArgs e)
@@ -73,6 +79,7 @@ namespace Presentacion
             {
                 try
                 {
+                    eCliente.IdCliente1 = id;
                     eCliente.PNombre1 = NombresC[0];
                     eCliente.SNombre1 = NombresC[1];
                     eCliente.PApellido1 = ApellidosC[0];
@@ -80,10 +87,12 @@ namespace Presentacion
                     eCliente.NTelefono1 = Convert.ToInt32(txtTelefono.Text);
 
                     nCliente.EditarCliente(eCliente);
+                    MessageBox.Show("Se ha actualizado correctamente");
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Se ha actualizado correctamente");
+                    Console.WriteLine( ex);
+                   
                 }
             }
         }

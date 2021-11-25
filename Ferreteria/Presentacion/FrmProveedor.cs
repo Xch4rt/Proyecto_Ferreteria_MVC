@@ -17,9 +17,15 @@ namespace Presentacion
         N_Proveedor nProveedor = new N_Proveedor();
         E_Proveedor eProveedor = new E_Proveedor();
         public Boolean Updates = false;
+        public int id;
         public FrmProveedor()
         {
             InitializeComponent();
+        }
+        public FrmProveedor(int ide)
+        {
+            InitializeComponent();
+            this.id = ide;
         }
 
         private void ClosePic_Click(object sender, EventArgs e)
@@ -36,6 +42,7 @@ namespace Presentacion
             {
                 try
                 {
+                    
                     eProveedor.NombreCompany1 = txtNombreEmpresa.Text;
                     eProveedor.Contacto1 = txtNombreContacto.Text;
                     eProveedor.Direccion1 = txtDireccionEmpresa.Text;
@@ -58,17 +65,20 @@ namespace Presentacion
             {
                 try
                 {
+                    
+                    eProveedor.IdProveedor1 = id;
                     eProveedor.NombreCompany1 = txtNombreEmpresa.Text;
                     eProveedor.Contacto1 = txtNombreContacto.Text;
                     eProveedor.Direccion1 = txtDireccionEmpresa.Text;
                     eProveedor.Telf1 = Convert.ToInt32(txtTelefonoEmpresa.Text);
 
                     nProveedor.EditarProveedores(eProveedor);
+                    MessageBox.Show("Se ha actualizado correctamente");
 
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Se ha actualizado correctamente");
+                   
                 }
             }
         }

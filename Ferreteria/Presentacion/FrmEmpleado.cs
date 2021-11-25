@@ -18,9 +18,16 @@ namespace Presentacion
         public bool Updates = false;
         E_Empleado eEmpleado = new E_Empleado();
         N_Empleado nEmpleado = new N_Empleado();
+        public int id;
         public FrmEmpleado()
         {
             InitializeComponent();
+        }
+
+        public FrmEmpleado(int ide)
+        {
+            InitializeComponent();
+            this.id = ide;
         }
 
         private void FrmEmpleado_Load(object sender, EventArgs e)
@@ -62,7 +69,7 @@ namespace Presentacion
             {
                 try
                 {
-                    eEmpleado.IdEmpleado1 = Convert.ToInt32(txtIdEmpleado.Text);
+                    eEmpleado.IdEmpleado1 = id;
                     eEmpleado.PNombre1 = NombreC[0];
                     eEmpleado.SNombre1 = NombreC[1];
                     eEmpleado.PApellido1 = NombreC[2];
@@ -70,6 +77,7 @@ namespace Presentacion
                     eEmpleado.FechaContrato1 = fecha;
                     eEmpleado.Puesto1 = txtPuesto.Text;
                     eEmpleado.Salario1 = Convert.ToDecimal(txtSalario.Text);
+                    MessageBox.Show("Se ha actualizado el empleado correctamente");
 
                 }
                 catch (Exception ex)

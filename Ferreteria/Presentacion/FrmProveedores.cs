@@ -70,7 +70,8 @@ namespace Presentacion
             }
             else if (dgvProveedores.Rows[e.RowIndex].Cells["EDITAR"].Selected)
             {
-                FrmProveedor frmP = new FrmProveedor();
+                int indexUpdt = Convert.ToInt32(dgvProveedores.Rows[e.RowIndex].Cells[2].Value.ToString());
+                FrmProveedor frmP = new FrmProveedor(indexUpdt);
                 frmP.Updates = true;
 
                 // procedemos a cargar el formulario del FrmProducto

@@ -311,11 +311,11 @@ delete Clientes
 where IdCliente = @IdCliente
 
 -- Procedimiento para actualizar clientes
-create proc SP_ActualizarCliente
+alter proc SP_ActualizarCliente
 @IdCliente int,
 @PrimerNombre nvarchar(25),
-@PrimerApellido nvarchar(25),
 @SegundoNombre nvarchar (25),
+@PrimerApellido nvarchar(25),
 @SegundoApellido nvarchar (25),
 @NumTelf int
 as
@@ -325,6 +325,8 @@ update Clientes set	 PrimerNombre = @PrimerNombre,
 					 SegundoApellido = @SegundoApellido,
 					 NumeroTelf = @NumTelf
 where IdCliente = @IdCliente
+
+
 
 -- Procedimientos para listar y buscar clientes
 create proc SP_ListarClientes
@@ -340,7 +342,7 @@ c.NumeroTelf as [NUMERO DE TELEFONO]
 from Clientes c
 order by c.IdCliente asc
 
-exec SP_ListarClientes
+
 
 create proc SP_BuscarCliente
 @Buscar nvarchar (20)
@@ -431,6 +433,8 @@ update Proveedor set NombreCompany = @NombreCompany,
 					 Telf = @Telf
 where IdProveedor = @IdProveedor
 
+select * from Proveedor
+
 -- Procedimiento para eliminar Proveedor
 
 create proc SP_EliminarProveedor
@@ -452,7 +456,6 @@ p.Direccion as [DIRECCION],
 p.Telf as [TELEFONO]
 from Proveedor p
 order by p.IdProveedor asc
-
 
 
 -- Procedimiento para buscar Proveedores

@@ -83,7 +83,8 @@ namespace Presentacion
             }
             else if (dgvClientes.Rows[e.RowIndex].Cells["EDITAR"].Selected)
             {
-                FrmCliente frmC = new FrmCliente();
+                int indexUpdt = Convert.ToInt32(dgvClientes.Rows[e.RowIndex].Cells[2].Value.ToString());
+                FrmCliente frmC = new FrmCliente(indexUpdt);
                 frmC.Updates = true;
 
                 // procedemos a cargar el formulario del FrmProducto

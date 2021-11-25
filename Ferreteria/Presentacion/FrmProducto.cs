@@ -18,11 +18,19 @@ namespace Presentacion
         public bool Updates = false;
         E_Productos eProducto = new E_Productos();
         N_Productos nProducto = new N_Productos();
+        public int id;
         public FrmProducto()
         {
             InitializeComponent();
             CmbCategorias();
             CmbMarcas();
+        }
+        public FrmProducto(int ide)
+        {
+            InitializeComponent();
+            CmbCategorias();
+            CmbMarcas();
+            this.id = ide;
         }
 
         // para rellenar los combobox
@@ -72,13 +80,16 @@ namespace Presentacion
             {
                 try
                 {
-                    eProducto.IdProducto1 = Convert.ToInt32(txtId.Text);
+                    eProducto.IdProducto1 = id;
                     eProducto.Producto1 = txtNombreProducto.Text;
                     eProducto.PrecioCompra1 = Convert.ToDecimal(txtPrecioCompra.Text);
                     eProducto.PrecioVenta1 = Convert.ToDecimal(txtPrecioVenta.Text);
                     eProducto.Stock1 = Convert.ToInt32(txtStock.Text);
                     eProducto.IdCategoria1 = Convert.ToInt32(cmbCategory.SelectedValue);
                     eProducto.IdMarca1 = Convert.ToInt32(cmbBrand.SelectedValue);
+
+                    nProducto.ActualizarProducto(eProducto);
+                    MessageBox.Show("Se ha actualizado el producto correctamente ");
 
 
                 } catch(Exception ex)

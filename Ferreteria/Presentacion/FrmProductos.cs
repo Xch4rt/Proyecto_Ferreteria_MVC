@@ -83,11 +83,12 @@ namespace Presentacion
             }
             else if (dgvProductos.Rows[e.RowIndex].Cells["EDITAR"].Selected)
             {
-                FrmProducto frmP = new FrmProducto();
+                int indexUpdt = Convert.ToInt32(dgvProductos.Rows[e.RowIndex].Cells[2].Value.ToString());
+                FrmProducto frmP = new FrmProducto(indexUpdt);
                 frmP.Updates = true;
 
                 // procedemos a cargar el formulario del FrmProducto
-                frmP.txtId.Text = dgvProductos.Rows[e.RowIndex].Cells["ID PRODUCTO"].Value.ToString();
+                
                 frmP.txtCod.Text = dgvProductos.Rows[e.RowIndex].Cells["CODIGO"].Value.ToString();
                 frmP.txtNombreProducto.Text = dgvProductos.Rows[e.RowIndex].Cells["PRODUCTO"].Value.ToString();
                 frmP.txtPrecioCompra.Text = dgvProductos.Rows[e.RowIndex].Cells["PRECIO COMPRA"].Value.ToString();
