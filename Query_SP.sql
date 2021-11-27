@@ -1,5 +1,5 @@
 -- PROCEDIMIENTOS PARA CATEGORIAS
-
+use Mantenimiento_Productos
 -- Procedimiento almacendo para buscar categorias
 create proc SP_BuscarCategoria
 @Buscar nvarchar(20)
@@ -217,7 +217,7 @@ delete Empleados
 where IdEmpleado = @IdEmpleado
 
 -- Procedimiento para buscar Empleados
-alter proc SP_BuscarEmpleado
+create proc SP_BuscarEmpleado
 @Buscar nvarchar (20)
 as
 select top 100
@@ -270,6 +270,7 @@ select * from Empleados
 create proc SP_ListarEmpleadosUsuarios
 as
 select top 100
+e.idEmpleado as [ID EMPLEADO],
 e.CodigoEm as [CODIGO],
 e.PrimerNombre as [PRIMER NOMBRE],
 e.SegundoNombre as [SEGUNDO NOMBRE],
@@ -281,9 +282,9 @@ e.Puesto as [PUESTO],
 u.usuario as [USUARIO],
 r.Rol as [ROL EMPLEADO]
 from Empleados e
-inner join Usuario u
+left join Usuario u
 on e.IdEmpleado = u.IdEmpleado
-inner join Rol r
+left join Rol r
 on r.IdRol = u.IdRol
 order by e.IdEmpleado asc
 exec SP_ListarEmpleadosUsuarios
@@ -311,7 +312,7 @@ delete Clientes
 where IdCliente = @IdCliente
 
 -- Procedimiento para actualizar clientes
-alter proc SP_ActualizarCliente
+create proc SP_ActualizarCliente
 @IdCliente int,
 @PrimerNombre nvarchar(25),
 @SegundoNombre nvarchar (25),
@@ -445,7 +446,7 @@ where IdProveedor = @IdProveedor
 
 
 -- Procedimiento para listar Proveedores
-alter proc SP_ListarProveedores
+create proc SP_ListarProveedores
 as
 select top 100
 p.IdProveedor as [ID PROVEEDOR],

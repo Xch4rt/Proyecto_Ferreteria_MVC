@@ -21,6 +21,7 @@ namespace Datos
             cmd.CommandType = CommandType.StoredProcedure;
             conexion.Open();
 
+            cmd.Parameters.AddWithValue("@IdCliente", cliente.IdCliente1);
             cmd.Parameters.AddWithValue("@PrimerNombre", cliente.PNombre1);
             cmd.Parameters.AddWithValue("@SegundoNombre", cliente.SNombre1);
             cmd.Parameters.AddWithValue("@PrimerApellido", cliente.PApellido1);

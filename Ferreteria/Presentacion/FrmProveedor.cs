@@ -24,7 +24,7 @@ namespace Presentacion
         }
         public FrmProveedor(int ide)
         {
-            InitializeComponent();
+            //InitializeComponent();
             this.id = ide;
         }
 
