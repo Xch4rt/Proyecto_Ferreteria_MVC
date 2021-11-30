@@ -115,7 +115,10 @@ inner join Categoria c
 on p.IdCategoria = c.IdCategoria
 inner join Marcas m
 on p.IdMarca = m.IdMarca
-where Producto like @Buscar + '%'
+where p.Producto like @Buscar + '%'
+	or p.Codigo like @Buscar + '%'
+	or c.Nombre like @Buscar + '%'
+	or m.Nombre like @Buscar + '%'
 order by p.IdProducto asc
 
 -- Procedimiento para crear Productos
@@ -480,10 +483,18 @@ order by p.IdProveedor asc
 
 -- PROCEDIMIENTOS PARA FACTURAR
 
-create procedure SP_LastOrderID
+alter procedure SP_LastOrderID -- Esto devolvera el codigo para la nueva factura
 as
-select * from DetalleOrden
-select * from Ordenes
+select top 1 ('OR'+RIGHT('00'+CONVERT(VARCHAR,IDORDEN+1),2)) from Ordenes order by CodigoOr desc
 
 
+create trigger ActualizarStock
+on DetalleOrden
+after insert, update
+as
+declare @IdProducto int, @Cantidad int
+set @IdProducto = (Select IdProducto from inserted)
+set @Cantidad = (Select Cantidad from inserted)
 
+update Productos set Stock = Stock - @Cantidad
+where IdProducto = @IdProducto
