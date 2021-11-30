@@ -50,6 +50,7 @@
     <Compile Include="N_Rol.cs" />
     <Compile Include="N_Usuario.cs" />
     <Compile Include="N_Usuarios.cs" />
+    <Compile Include="N_Ventas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

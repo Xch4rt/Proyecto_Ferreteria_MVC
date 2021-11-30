@@ -51,6 +51,7 @@
     <Compile Include="D_Usuario.cs" />
     <Compile Include="D_Empleado.cs" />
     <Compile Include="D_Usuarios.cs" />
+    <Compile Include="D_Ventas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

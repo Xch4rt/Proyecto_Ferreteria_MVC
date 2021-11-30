@@ -10,6 +10,7 @@ INSERT INTO CATEGORIA VALUES('CONSTRUCCION','LOS MEJORES MATERIALES PARA LOS CIM
 INSERT INTO CATEGORIA VALUES('BAÑO','DESTACAMOS EN LA CALIDAD DE NUESTRO INVENTARIO PARA BAÑOS')
 INSERT INTO CATEGORIA VALUES('ILUMINACION','LAS MEJORES LAMPARAS DEL PAIS')
 INSERT INTO CATEGORIA VALUES('VENTILADORES','LAS MEJORES VENTILIACIONES PARA TU OFICINA U HOGAR')
+
 -- En Marcas
 insert into Marcas values('BlACK AND DECKER','HERRAMIENTAS ELECTRICAS, INALAMBRICAS')
 insert into Marcas values('MAKITA','HERRAMIENTAS, JARDINERIA, ELECTRICA')
@@ -26,7 +27,7 @@ INSERT INTO PRODUCTOS VALUES ('LAMPARAS DE RECAMARA',180.20,320.30,35,8,6,1)
 INSERT INTO PRODUCTOS VALUES ('ARO DE INODORO, CERAMICA',300.50,520.50,7,6,6,1)
 INSERT INTO PRODUCTOS VALUES ('ABANICO DE PEDESTAL',642,819,3,9,7,1)
 INSERT INTO PRODUCTOS VALUES ('ESCALERAS METALICAS',769.22,799.99,10,2,4,3)
-
+select * from productos
 -- En Proveedores
 insert into Proveedor values ('CADUR','CHEPITO ARIAS','PLAZA ESPAÑA, EDIFICIO MALAGA MODULO B-11',22661355)
 INSERT INTO PROVEEDOR VALUES ('CEMENTOS.INC','FELIPE GURRIO','DEL HOSPITAL MILITAR, 30 VARAS AL SUR',21324459)
@@ -38,19 +39,20 @@ insert into Empleados values ('Pablo','Andres','Gutierrez','Almendarez','06-02-2
 insert into Empleados values ('Ariel','Adolfo','Reyes','Silva','05-05-2003',19389.21,'Jefe de planta')
 insert into Empleados values ('Wiston','Jose','Quintana','Osorio','04-12-2002',19389.21,'Jefe de inventario')
 insert into Empleados values ('Fhernando','Ariel','Villanueva','Mena','12-11-2002',19389.21,'Jefe de Ventas')
-
+select * from empleados
 -- En Clientes
 insert into Clientes values ('Paolo','Andrua','Gutuarre','Almendra',12345678)
 insert into Clientes values ('Arielo','Adolfoso','Reyeses','Sivador',87654321)
 insert into Clientes values ('Wistonso','Josefo','Quintanaso','Osorioso',01234567)
 insert into Clientes values ('Fhernandhino','Arielaso','Villavieja','Menudo',98765432) 
+select * from clientes
 -- En Roles
 insert into Rol values (1, 'Jefe'), (2, 'Administrador'), (3, 'Bodega'), (4, 'Vendedor')
-
+select * from rol
 
 -- En Modulos
 insert into Modulo values ('Empleados'),('Proveedores'),('Marcas'),('Categorias'),('Usuario'),('Roles'),('Productos'),('Ordenes de compra'),('Ordenes de Venta'),('Clientes')
-
+select * from modulo
 -- En Operaciones
 
 insert into Operaciones values  -- Empleados
@@ -111,14 +113,14 @@ insert into RolOperacion values (2,1),(2,2),(2,3),(2,4),(2,32),(2,16),(2,5),(2,6
 insert into RolOperacion values (3,13),(3,14),(3,15),(3,16),(3,3),(3,25),(3,26),(3,27),(3,28),(3,21),(3,22),(3,23),(3,24),(3,33),(3,34),(3,29)
 /*Para rol Vendedor*/
 insert into RolOperacion values (4,35),(4,36),(4,37)
-
+select * from roloperacion
 
 exec SP_InsertarUsuario 'Pablo','pablo123','Habilitado',1,1
 exec SP_InsertarUsuario 'Ariel','ariel123','Habilitado',2,1
 exec SP_InsertarUsuario 'Wiston','wiston123','Habilitado',3,2
 exec SP_InsertarUsuario 'Fhernando','fhernando123','Habilitado',4,3
 
-
+exec dbo.validar_acceso 'Wiston','wiston123'
 
 select 
 e.CodigoEm,
@@ -132,11 +134,11 @@ r.rol,
 o.nombreoperacion [PERMISOS],
 m.nombremodulo [EN DONDE TIENE PERMISOS]
 from Empleados e
-join Usuario u
+inner join Usuario u
 on u.IdEmpleado = e.IdEmpleado
-join Rol r
+inner join Rol r
 on r.IdRol = u.IdRol
-join RolOperacion ro
+inner join RolOperacion ro
 on ro.IdRol = r.IdRol
 join Operaciones o
 on o.idoperacion = ro.idoperacion
