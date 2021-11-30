@@ -59,7 +59,7 @@ namespace Presentacion
 
         private void btnVentas_Click(object sender, EventArgs e)
         {
-            OpenFormWrapper(new FrmVentas());
+            OpenFormWrapper(new FrmVentas(""));
             PanelName.Text = "VENTAS";
         }
 

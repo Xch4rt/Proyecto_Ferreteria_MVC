@@ -56,8 +56,6 @@ namespace Presentacion
             this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.dgvFacturados = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.bunifuSeparator1 = new Bunifu.UI.WinForms.BunifuSeparator();
             this.bunifuPanel3 = new Bunifu.UI.WinForms.BunifuPanel();
             this.bunifuSeparator2 = new Bunifu.UI.WinForms.BunifuSeparator();
@@ -174,12 +172,11 @@ namespace Presentacion
             this.lblCliente.CursorType = null;
             this.lblCliente.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.lblCliente.ForeColor = System.Drawing.Color.DimGray;
-            this.lblCliente.Location = new System.Drawing.Point(203, 122);
+            this.lblCliente.Location = new System.Drawing.Point(156, 122);
             this.lblCliente.Name = "lblCliente";
             this.lblCliente.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblCliente.Size = new System.Drawing.Size(88, 21);
+            this.lblCliente.Size = new System.Drawing.Size(213, 21);
             this.lblCliente.TabIndex = 24;
-            this.lblCliente.Text = "XXXX";
             this.lblCliente.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblCliente.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -191,7 +188,7 @@ namespace Presentacion
             this.lblNombre.CursorType = null;
             this.lblNombre.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.lblNombre.ForeColor = System.Drawing.Color.DimGray;
-            this.lblNombre.Location = new System.Drawing.Point(203, 73);
+            this.lblNombre.Location = new System.Drawing.Point(156, 68);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblNombre.Size = new System.Drawing.Size(88, 21);
@@ -208,7 +205,7 @@ namespace Presentacion
             this.lblIdOrden.CursorType = null;
             this.lblIdOrden.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.lblIdOrden.ForeColor = System.Drawing.Color.DimGray;
-            this.lblIdOrden.Location = new System.Drawing.Point(203, 23);
+            this.lblIdOrden.Location = new System.Drawing.Point(156, 23);
             this.lblIdOrden.Name = "lblIdOrden";
             this.lblIdOrden.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblIdOrden.Size = new System.Drawing.Size(88, 21);
@@ -225,7 +222,7 @@ namespace Presentacion
             this.bunifuLabel3.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel3.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.bunifuLabel3.ForeColor = System.Drawing.Color.DimGray;
-            this.bunifuLabel3.Location = new System.Drawing.Point(124, 122);
+            this.bunifuLabel3.Location = new System.Drawing.Point(89, 122);
             this.bunifuLabel3.Name = "bunifuLabel3";
             this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel3.Size = new System.Drawing.Size(51, 21);
@@ -242,7 +239,7 @@ namespace Presentacion
             this.bunifuLabel2.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel2.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.bunifuLabel2.ForeColor = System.Drawing.Color.DimGray;
-            this.bunifuLabel2.Location = new System.Drawing.Point(104, 73);
+            this.bunifuLabel2.Location = new System.Drawing.Point(69, 68);
             this.bunifuLabel2.Name = "bunifuLabel2";
             this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel2.Size = new System.Drawing.Size(71, 21);
@@ -259,7 +256,7 @@ namespace Presentacion
             this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel1.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.bunifuLabel1.ForeColor = System.Drawing.Color.DimGray;
-            this.bunifuLabel1.Location = new System.Drawing.Point(53, 23);
+            this.bunifuLabel1.Location = new System.Drawing.Point(18, 23);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel1.Size = new System.Drawing.Size(122, 21);
@@ -291,9 +288,6 @@ namespace Presentacion
             this.dgvFacturados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvFacturados.ColumnHeadersHeight = 40;
             this.dgvFacturados.ColumnHeadersVisible = false;
-            this.dgvFacturados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewImageColumn1,
-            this.dataGridViewImageColumn2});
             this.dgvFacturados.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             this.dgvFacturados.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.dgvFacturados.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
@@ -335,22 +329,6 @@ namespace Presentacion
             this.dgvFacturados.Size = new System.Drawing.Size(362, 298);
             this.dgvFacturados.TabIndex = 18;
             this.dgvFacturados.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
-            // 
-            // dataGridViewImageColumn1
-            // 
-            this.dataGridViewImageColumn1.HeaderText = "EDITAR";
-            this.dataGridViewImageColumn1.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn1.Image")));
-            this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            this.dataGridViewImageColumn1.ReadOnly = true;
-            // 
-            // dataGridViewImageColumn2
-            // 
-            this.dataGridViewImageColumn2.HeaderText = "ELIMINAR";
-            this.dataGridViewImageColumn2.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn2.Image")));
-            this.dataGridViewImageColumn2.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
-            this.dataGridViewImageColumn2.ReadOnly = true;
             // 
             // bunifuSeparator1
             // 
@@ -714,6 +692,7 @@ namespace Presentacion
             this.btnBuscarCliente.Size = new System.Drawing.Size(158, 43);
             this.btnBuscarCliente.TabIndex = 18;
             this.btnBuscarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnBuscarCliente.Click += new System.EventHandler(this.btnBuscarCliente_Click);
             // 
             // bunifuThinButton21
             // 
@@ -812,8 +791,6 @@ namespace Presentacion
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel2;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
         private Bunifu.UI.WinForms.BunifuDataGridView dgvFacturados;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
         private Bunifu.UI.WinForms.BunifuLabel lblTotal;
         private Bunifu.UI.WinForms.BunifuLabel lblIva;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel5;

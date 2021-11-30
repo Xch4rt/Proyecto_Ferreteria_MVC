@@ -17,6 +17,8 @@ namespace Presentacion
         public FrmBuscarClientes()
         {
             InitializeComponent();
+            MostrarDatos();
+            HidenMoveColumns();
         }
         public void BuscarCliente(string search)
         {
@@ -31,21 +33,41 @@ namespace Presentacion
         public void HidenMoveColumns()
         {
             //modificando los widths
-            dgvClientes.Columns[1].Width = 50;
-            dgvClientes.Columns[0].Width = 50;
-            dgvClientes.Columns[3].Width = 70;
-            dgvClientes.Columns[2].Width = 60;
+            dgvClientes.Columns[1].Width = 45;
+            dgvClientes.Columns[2].Width = 50;
+            dgvClientes.Columns[3].Width = 50;
+            dgvClientes.Columns[4].Width = 50;
+            dgvClientes.Columns[5].Width = 50;
+            dgvClientes.Columns[6].Width = 50;
             //dgvEmpleados.Columns[11].Width = 80;
             //dgvClientes.Columns[9].Width = 100;
 
             // cambiando de posicion las primeras 2 columnas a ser las ultimas 2
-            dgvClientes.Columns[0].DisplayIndex = 8;
-            dgvClientes.Columns[1].DisplayIndex = 8;
-            dgvClientes.Columns[2].Visible = false;
+
+            dgvClientes.Columns[0].Visible = false;
         }
         private void txtSearch_TextChange(object sender, EventArgs e)
         {
             BuscarCliente(txtSearch.Text);
+        }
+
+        private void dgvClientes_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var indexNo = dgvClientes.Rows[e.RowIndex].Index.ToString();
+            string[] fullname = { 
+                    dgvClientes.Rows[e.RowIndex].Cells[2].Value.ToString(),//primer nombre
+                    dgvClientes.Rows[e.RowIndex].Cells[3].Value.ToString(),//segundo nombre
+                    dgvClientes.Rows[e.RowIndex].Cells[4].Value.ToString(),//primer apellido
+                    dgvClientes.Rows[e.RowIndex].Cells[5].Value.ToString() //segundo apellido
+            };
+            FrmVentas frmVentas = new FrmVentas(string.Join(" ", fullname));
+            Close();
+            //MessageBox.Show(string.Join(" ",fullname));
+        }
+
+        private void ClosePic_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

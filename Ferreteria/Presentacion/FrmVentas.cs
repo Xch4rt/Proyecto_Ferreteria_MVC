@@ -15,12 +15,17 @@ namespace Presentacion
     public partial class FrmVentas : Form
     {
         N_Ventas objNegocio = new N_Ventas();
-        public FrmVentas()
+        public FrmVentas(string name)
         {
             InitializeComponent();
             MostrarDatos();
             HidenMoveColumns();
             LastOrderID();
+            FillTableFacturados();
+            MessageBox.Show(name);
+            // no se comom puta cambiar el nombre del label al nombre del cliente, help me
+            lblCliente.Text = name;
+            // = name;
         }
 
         public void HidenMoveColumns()
@@ -62,8 +67,29 @@ namespace Presentacion
             E_Ventas eVen = new E_Ventas();
             N_Ventas nVen = new N_Ventas();
 
-            nVen.LastOrderID(eVen);
-            lblIdOrden.Text = eVen.CodOrden1;
+            //nVen.LastOrderID(eVen);
+            //lblIdOrden.Text = eVen.CodOrden1;
+        }
+        public void FillTableFacturados()
+        {
+            dgvFacturados.ColumnCount = 3;
+            dgvFacturados.Columns[0].Name = "Codigo";
+            dgvFacturados.Columns[1].Name = "Nombre";
+            dgvFacturados.Columns[2].Name = "SubTotal";
+            DataGridViewRow fila = new DataGridViewRow();
+            fila.CreateCells(dgvFacturados);
+            fila.Cells[0].Value = "codigo";
+            fila.Cells[1].Value = "nombre";
+            fila.Cells[2].Value = "subtotal";
+
+            dgvFacturados.Rows.Add(fila);
+            
+        }
+
+        private void btnBuscarCliente_Click(object sender, EventArgs e)
+        {
+            FrmBuscarClientes frmBClientes = new FrmBuscarClientes();
+            frmBClientes.ShowDialog();
         }
     }
 }

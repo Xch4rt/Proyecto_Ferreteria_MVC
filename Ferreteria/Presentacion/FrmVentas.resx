@@ -187,41 +187,6 @@
   <data name="bunifuLabel1.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 0px; font-family: 'Segoe UI'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(105, 105, 105); text-align: left; }</value>
   </data>
-  <metadata name="dataGridViewImageColumn1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="dataGridViewImageColumn1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAB3RJTUUH5QodAS0H3RISCQAAAhNJREFU
-        WEftVz1Lw1AUfeLnIm3aLk4Vm9eI4mJFJ3X28w8IuvkP/AE6OYi4OvqBgpOTHYugJi8tCoqTCA4uLiJS
-        ShWl3vdyE9K0qU2autgDlybn3d5z7s3rCyUtmIiodFzS6KrXCOt0HktUIKzKCxGN3kmMziHlgvuhrgij
-        RUgu+YmYlkhhJQuSlpy11fyIavIiLlUieqH0GonyJ8Sup2B0k5zJ3VhKgItxUVGT0Wv8LLpOwjQAI31H
-        yjckNTlj63ybc9wk3lefRFAG7J1DrYKkJ4bFQom0wf2OMFFtEkEYKB+7/CTqMfpiNwHckaEj58kJaRc8
-        R6MGHOJb8Uy8BzpNi5poAq4nIN4Ep9F9/KqBRgw4xZEmThPwKcRh4x6Xdc/h1wD+zivETQgTGj03hF3E
-        OfwYqLbbneDnA+S8Ys4JyUx34FI5vBrguxjyXTvngDXrmbt2bsKHgYfAxDk8GcilOmGsX5D/zY9wZC3U
-        PXY7vBgIqUo/5j4jZeE38ShLLsMZsOc8uj0ZgLfflBBg9BIpgXo6B3Gdr8fUxChSBjwZUOUlFLmB/HUQ
-        PYDrK7guGLz7MwcDWZ4TZcoYUga8GIANuGYIVYYYb40NF4wBVRmBrtMQh5C/EdHpSpjRyVhusA9TXBGI
-        gUbQMtAy0DJQhwE5H8rSgWYFvD1vaxr4q6j2RwbGQ09h8bHpAS8x3jDK/nsQ8gPAxYRzANEYkQAAAABJ
-        RU5ErkJggg==
-</value>
-  </data>
-  <metadata name="dataGridViewImageColumn2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="dataGridViewImageColumn2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAB3RJTUUH5QodATIty/PVQQAAAYFJREFU
-        WEftlz8ohGEcxx9clpP8mRSDwSJdmRRxZbYqJUrJbBMplFUpi8HCdKPBYDAZbGy3KMSKwUWInM8vX/V6
-        nffwvi7D861P3ft5n+f3fO96u3rdd1J0rgk24BqKJSjANnRqS3JhaAOcgR30CCcluAO7fwNd2ppMGLim
-        4TlIS38IPgUrWrcrnUwYaN/wBZqlSob7NXAJT5CSjh+GXUFBl5Fh3RHYr9AoVT4szsBUBLdwH3JfcQFW
-        YDrgwvTr6Lcg8mCbKoU9yLU6HuPcIMyIQ7BF6wEXh2WweecBN6SjP4ebm2AbBqRihTktmncgFR0W+gK+
-        gC/gC/y/AnxOwx6MSplrh33ISpnrk+uQSqxAj1xOytyY3JKUuff//WDRPyswLucL+AK+QEUKdMttSZkb
-        kZuXMrcgNyyVWIFqmIOMlLl6WIRWKXNtcnVSvyqwqg2TUrHCnF7N25GKDguzYK9hz3AK4ZfQn/IAVmBC
-        R5QPi+0BO9bGuNib0ixUaXwozr0C6bOfS+UcH9wAAAAASUVORK5CYII=
-</value>
-  </data>
   <data name="bunifuSeparator1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAW4AAAAOCAYAAAAPIfZhAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
