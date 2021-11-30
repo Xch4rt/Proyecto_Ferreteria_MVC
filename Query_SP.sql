@@ -33,7 +33,6 @@ create proc SP_EliminarCategoria
 as 
 delete Categoria 
 where IdCategoria = @IdCategoria
-select @@servername
 
 
 

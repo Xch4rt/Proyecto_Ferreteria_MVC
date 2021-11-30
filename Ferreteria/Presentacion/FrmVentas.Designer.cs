@@ -30,6 +30,9 @@ namespace Presentacion
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmVentas));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -41,12 +44,22 @@ namespace Presentacion
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlInfoFactura = new Bunifu.UI.WinForms.BunifuPanel();
-            this.bunifuPanel3 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.lblTotal = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lblIva = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuLabel5 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuLabel4 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lblCliente = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lblNombre = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lblIdOrden = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.dgvFacturados = new Bunifu.UI.WinForms.BunifuDataGridView();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.bunifuSeparator1 = new Bunifu.UI.WinForms.BunifuSeparator();
+            this.bunifuPanel3 = new Bunifu.UI.WinForms.BunifuPanel();
             this.bunifuSeparator2 = new Bunifu.UI.WinForms.BunifuSeparator();
             this.dgvProductos = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.EDITAR = new System.Windows.Forms.DataGridViewImageColumn();
@@ -56,26 +69,13 @@ namespace Presentacion
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.ddDiscount = new Bunifu.UI.WinForms.BunifuDropdown();
             this.txtCantidad = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.dgvFacturados = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.lblCliente = new Bunifu.UI.WinForms.BunifuLabel();
-            this.lblNombre = new Bunifu.UI.WinForms.BunifuLabel();
-            this.lblIdOrden = new Bunifu.UI.WinForms.BunifuLabel();
             this.btnBuscarCliente = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnFacturar = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.bunifuLabel4 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuLabel5 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.lblIva = new Bunifu.UI.WinForms.BunifuLabel();
-            this.lblTotal = new Bunifu.UI.WinForms.BunifuLabel();
             this.pnlInfoFactura.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFacturados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvFacturados)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlInfoFactura
@@ -104,20 +104,255 @@ namespace Presentacion
             this.pnlInfoFactura.Size = new System.Drawing.Size(381, 612);
             this.pnlInfoFactura.TabIndex = 1;
             // 
-            // bunifuPanel3
+            // lblTotal
             // 
-            this.bunifuPanel3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(110)))), ((int)(((byte)(242)))));
-            this.bunifuPanel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel3.BackgroundImage")));
-            this.bunifuPanel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuPanel3.BorderColor = System.Drawing.Color.Transparent;
-            this.bunifuPanel3.BorderRadius = 3;
-            this.bunifuPanel3.BorderThickness = 1;
-            this.bunifuPanel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bunifuPanel3.Location = new System.Drawing.Point(0, 0);
-            this.bunifuPanel3.Name = "bunifuPanel3";
-            this.bunifuPanel3.ShowBorders = true;
-            this.bunifuPanel3.Size = new System.Drawing.Size(1044, 70);
-            this.bunifuPanel3.TabIndex = 1;
+            this.lblTotal.AllowParentOverrides = false;
+            this.lblTotal.AutoEllipsis = false;
+            this.lblTotal.CursorType = null;
+            this.lblTotal.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.lblTotal.ForeColor = System.Drawing.Color.DimGray;
+            this.lblTotal.Location = new System.Drawing.Point(97, 553);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblTotal.Size = new System.Drawing.Size(36, 21);
+            this.lblTotal.TabIndex = 28;
+            this.lblTotal.Text = "0000";
+            this.lblTotal.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lblTotal.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // lblIva
+            // 
+            this.lblIva.AllowParentOverrides = false;
+            this.lblIva.AutoEllipsis = false;
+            this.lblIva.CursorType = null;
+            this.lblIva.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.lblIva.ForeColor = System.Drawing.Color.DimGray;
+            this.lblIva.Location = new System.Drawing.Point(97, 504);
+            this.lblIva.Name = "lblIva";
+            this.lblIva.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblIva.Size = new System.Drawing.Size(43, 21);
+            this.lblIva.TabIndex = 27;
+            this.lblIva.Text = "0.00%";
+            this.lblIva.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lblIva.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // bunifuLabel5
+            // 
+            this.bunifuLabel5.AllowParentOverrides = false;
+            this.bunifuLabel5.AutoEllipsis = false;
+            this.bunifuLabel5.CursorType = null;
+            this.bunifuLabel5.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.bunifuLabel5.ForeColor = System.Drawing.Color.DimGray;
+            this.bunifuLabel5.Location = new System.Drawing.Point(7, 553);
+            this.bunifuLabel5.Name = "bunifuLabel5";
+            this.bunifuLabel5.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel5.Size = new System.Drawing.Size(49, 21);
+            this.bunifuLabel5.TabIndex = 26;
+            this.bunifuLabel5.Text = "TOTAL:";
+            this.bunifuLabel5.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel5.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // bunifuLabel4
+            // 
+            this.bunifuLabel4.AllowParentOverrides = false;
+            this.bunifuLabel4.AutoEllipsis = false;
+            this.bunifuLabel4.CursorType = null;
+            this.bunifuLabel4.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.bunifuLabel4.ForeColor = System.Drawing.Color.DimGray;
+            this.bunifuLabel4.Location = new System.Drawing.Point(7, 504);
+            this.bunifuLabel4.Name = "bunifuLabel4";
+            this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel4.Size = new System.Drawing.Size(27, 21);
+            this.bunifuLabel4.TabIndex = 25;
+            this.bunifuLabel4.Text = "IVA:";
+            this.bunifuLabel4.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel4.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // lblCliente
+            // 
+            this.lblCliente.AllowParentOverrides = false;
+            this.lblCliente.AutoEllipsis = false;
+            this.lblCliente.AutoSize = false;
+            this.lblCliente.CursorType = null;
+            this.lblCliente.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.lblCliente.ForeColor = System.Drawing.Color.DimGray;
+            this.lblCliente.Location = new System.Drawing.Point(203, 122);
+            this.lblCliente.Name = "lblCliente";
+            this.lblCliente.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblCliente.Size = new System.Drawing.Size(88, 21);
+            this.lblCliente.TabIndex = 24;
+            this.lblCliente.Text = "XXXX";
+            this.lblCliente.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lblCliente.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // lblNombre
+            // 
+            this.lblNombre.AllowParentOverrides = false;
+            this.lblNombre.AutoEllipsis = false;
+            this.lblNombre.AutoSize = false;
+            this.lblNombre.CursorType = null;
+            this.lblNombre.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.lblNombre.ForeColor = System.Drawing.Color.DimGray;
+            this.lblNombre.Location = new System.Drawing.Point(203, 73);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblNombre.Size = new System.Drawing.Size(88, 21);
+            this.lblNombre.TabIndex = 23;
+            this.lblNombre.Text = "XXXX";
+            this.lblNombre.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lblNombre.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // lblIdOrden
+            // 
+            this.lblIdOrden.AllowParentOverrides = false;
+            this.lblIdOrden.AutoEllipsis = false;
+            this.lblIdOrden.AutoSize = false;
+            this.lblIdOrden.CursorType = null;
+            this.lblIdOrden.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.lblIdOrden.ForeColor = System.Drawing.Color.DimGray;
+            this.lblIdOrden.Location = new System.Drawing.Point(203, 23);
+            this.lblIdOrden.Name = "lblIdOrden";
+            this.lblIdOrden.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblIdOrden.Size = new System.Drawing.Size(88, 21);
+            this.lblIdOrden.TabIndex = 22;
+            this.lblIdOrden.Text = "#0000";
+            this.lblIdOrden.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lblIdOrden.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // bunifuLabel3
+            // 
+            this.bunifuLabel3.AllowParentOverrides = false;
+            this.bunifuLabel3.AutoEllipsis = false;
+            this.bunifuLabel3.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel3.CursorType = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel3.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.bunifuLabel3.ForeColor = System.Drawing.Color.DimGray;
+            this.bunifuLabel3.Location = new System.Drawing.Point(124, 122);
+            this.bunifuLabel3.Name = "bunifuLabel3";
+            this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel3.Size = new System.Drawing.Size(51, 21);
+            this.bunifuLabel3.TabIndex = 21;
+            this.bunifuLabel3.Text = "Cliente:";
+            this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel3.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // bunifuLabel2
+            // 
+            this.bunifuLabel2.AllowParentOverrides = false;
+            this.bunifuLabel2.AutoEllipsis = false;
+            this.bunifuLabel2.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel2.CursorType = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel2.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.bunifuLabel2.ForeColor = System.Drawing.Color.DimGray;
+            this.bunifuLabel2.Location = new System.Drawing.Point(104, 73);
+            this.bunifuLabel2.Name = "bunifuLabel2";
+            this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel2.Size = new System.Drawing.Size(71, 21);
+            this.bunifuLabel2.TabIndex = 20;
+            this.bunifuLabel2.Text = "Vendedor:";
+            this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // bunifuLabel1
+            // 
+            this.bunifuLabel1.AllowParentOverrides = false;
+            this.bunifuLabel1.AutoEllipsis = false;
+            this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel1.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.bunifuLabel1.ForeColor = System.Drawing.Color.DimGray;
+            this.bunifuLabel1.Location = new System.Drawing.Point(53, 23);
+            this.bunifuLabel1.Name = "bunifuLabel1";
+            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel1.Size = new System.Drawing.Size(122, 21);
+            this.bunifuLabel1.TabIndex = 19;
+            this.bunifuLabel1.Text = "Codigo de Orden:";
+            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // dgvFacturados
+            // 
+            this.dgvFacturados.AllowCustomTheming = false;
+            this.dgvFacturados.AllowUserToAddRows = false;
+            this.dgvFacturados.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.dgvFacturados.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvFacturados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvFacturados.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvFacturados.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvFacturados.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvFacturados.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvFacturados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvFacturados.ColumnHeadersHeight = 40;
+            this.dgvFacturados.ColumnHeadersVisible = false;
+            this.dgvFacturados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewImageColumn1,
+            this.dataGridViewImageColumn2});
+            this.dgvFacturados.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            this.dgvFacturados.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.dgvFacturados.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.dgvFacturados.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.dgvFacturados.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvFacturados.CurrentTheme.BackColor = System.Drawing.Color.White;
+            this.dgvFacturados.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.dgvFacturados.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.DodgerBlue;
+            this.dgvFacturados.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            this.dgvFacturados.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgvFacturados.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            this.dgvFacturados.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvFacturados.CurrentTheme.Name = null;
+            this.dgvFacturados.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvFacturados.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.dgvFacturados.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.dgvFacturados.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.dgvFacturados.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvFacturados.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvFacturados.EnableHeadersVisualStyles = false;
+            this.dgvFacturados.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.dgvFacturados.HeaderBackColor = System.Drawing.Color.DodgerBlue;
+            this.dgvFacturados.HeaderBgColor = System.Drawing.Color.Empty;
+            this.dgvFacturados.HeaderForeColor = System.Drawing.Color.White;
+            this.dgvFacturados.Location = new System.Drawing.Point(7, 186);
+            this.dgvFacturados.Name = "dgvFacturados";
+            this.dgvFacturados.ReadOnly = true;
+            this.dgvFacturados.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvFacturados.RowHeadersVisible = false;
+            this.dgvFacturados.RowTemplate.Height = 40;
+            this.dgvFacturados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dgvFacturados.Size = new System.Drawing.Size(362, 298);
+            this.dgvFacturados.TabIndex = 18;
+            this.dgvFacturados.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+            // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.HeaderText = "EDITAR";
+            this.dataGridViewImageColumn1.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn1.Image")));
+            this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.ReadOnly = true;
+            // 
+            // dataGridViewImageColumn2
+            // 
+            this.dataGridViewImageColumn2.HeaderText = "ELIMINAR";
+            this.dataGridViewImageColumn2.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn2.Image")));
+            this.dataGridViewImageColumn2.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
+            this.dataGridViewImageColumn2.ReadOnly = true;
             // 
             // bunifuSeparator1
             // 
@@ -133,6 +368,21 @@ namespace Presentacion
             this.bunifuSeparator1.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
             this.bunifuSeparator1.Size = new System.Drawing.Size(366, 14);
             this.bunifuSeparator1.TabIndex = 2;
+            // 
+            // bunifuPanel3
+            // 
+            this.bunifuPanel3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(110)))), ((int)(((byte)(242)))));
+            this.bunifuPanel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel3.BackgroundImage")));
+            this.bunifuPanel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuPanel3.BorderColor = System.Drawing.Color.Transparent;
+            this.bunifuPanel3.BorderRadius = 3;
+            this.bunifuPanel3.BorderThickness = 1;
+            this.bunifuPanel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.bunifuPanel3.Location = new System.Drawing.Point(0, 0);
+            this.bunifuPanel3.Name = "bunifuPanel3";
+            this.bunifuPanel3.ShowBorders = true;
+            this.bunifuPanel3.Size = new System.Drawing.Size(1044, 70);
+            this.bunifuPanel3.TabIndex = 1;
             // 
             // bunifuSeparator2
             // 
@@ -381,6 +631,7 @@ namespace Presentacion
             this.ddDiscount.Name = "ddDiscount";
             this.ddDiscount.Size = new System.Drawing.Size(103, 32);
             this.ddDiscount.TabIndex = 16;
+            this.ddDiscount.Text = null;
             this.ddDiscount.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
             this.ddDiscount.TextLeftMargin = 5;
             // 
@@ -459,189 +710,6 @@ namespace Presentacion
             this.txtCantidad.UseSystemPasswordChar = false;
             this.txtCantidad.WordWrap = true;
             // 
-            // dgvFacturados
-            // 
-            this.dgvFacturados.AllowCustomTheming = false;
-            this.dgvFacturados.AllowUserToAddRows = false;
-            this.dgvFacturados.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.dgvFacturados.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvFacturados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvFacturados.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvFacturados.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvFacturados.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvFacturados.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvFacturados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvFacturados.ColumnHeadersHeight = 40;
-            this.dgvFacturados.ColumnHeadersVisible = false;
-            this.dgvFacturados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewImageColumn1,
-            this.dataGridViewImageColumn2});
-            this.dgvFacturados.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            this.dgvFacturados.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.dgvFacturados.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.dgvFacturados.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.dgvFacturados.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvFacturados.CurrentTheme.BackColor = System.Drawing.Color.White;
-            this.dgvFacturados.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
-            this.dgvFacturados.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.DodgerBlue;
-            this.dgvFacturados.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            this.dgvFacturados.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dgvFacturados.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            this.dgvFacturados.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvFacturados.CurrentTheme.Name = null;
-            this.dgvFacturados.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgvFacturados.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.dgvFacturados.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.dgvFacturados.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.dgvFacturados.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvFacturados.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvFacturados.EnableHeadersVisualStyles = false;
-            this.dgvFacturados.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
-            this.dgvFacturados.HeaderBackColor = System.Drawing.Color.DodgerBlue;
-            this.dgvFacturados.HeaderBgColor = System.Drawing.Color.Empty;
-            this.dgvFacturados.HeaderForeColor = System.Drawing.Color.White;
-            this.dgvFacturados.Location = new System.Drawing.Point(7, 186);
-            this.dgvFacturados.Name = "dgvFacturados";
-            this.dgvFacturados.ReadOnly = true;
-            this.dgvFacturados.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgvFacturados.RowHeadersVisible = false;
-            this.dgvFacturados.RowTemplate.Height = 40;
-            this.dgvFacturados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dgvFacturados.Size = new System.Drawing.Size(362, 298);
-            this.dgvFacturados.TabIndex = 18;
-            this.dgvFacturados.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
-            // 
-            // dataGridViewImageColumn1
-            // 
-            this.dataGridViewImageColumn1.HeaderText = "EDITAR";
-            this.dataGridViewImageColumn1.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn1.Image")));
-            this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            this.dataGridViewImageColumn1.ReadOnly = true;
-            // 
-            // dataGridViewImageColumn2
-            // 
-            this.dataGridViewImageColumn2.HeaderText = "ELIMINAR";
-            this.dataGridViewImageColumn2.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn2.Image")));
-            this.dataGridViewImageColumn2.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
-            this.dataGridViewImageColumn2.ReadOnly = true;
-            // 
-            // bunifuLabel1
-            // 
-            this.bunifuLabel1.AllowParentOverrides = false;
-            this.bunifuLabel1.AutoEllipsis = false;
-            this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.bunifuLabel1.ForeColor = System.Drawing.Color.DimGray;
-            this.bunifuLabel1.Location = new System.Drawing.Point(39, 23);
-            this.bunifuLabel1.Name = "bunifuLabel1";
-            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(85, 21);
-            this.bunifuLabel1.TabIndex = 19;
-            this.bunifuLabel1.Text = "Id de Orden:";
-            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // bunifuLabel2
-            // 
-            this.bunifuLabel2.AllowParentOverrides = false;
-            this.bunifuLabel2.AutoEllipsis = false;
-            this.bunifuLabel2.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel2.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.bunifuLabel2.ForeColor = System.Drawing.Color.DimGray;
-            this.bunifuLabel2.Location = new System.Drawing.Point(53, 73);
-            this.bunifuLabel2.Name = "bunifuLabel2";
-            this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel2.Size = new System.Drawing.Size(71, 21);
-            this.bunifuLabel2.TabIndex = 20;
-            this.bunifuLabel2.Text = "Vendedor:";
-            this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // bunifuLabel3
-            // 
-            this.bunifuLabel3.AllowParentOverrides = false;
-            this.bunifuLabel3.AutoEllipsis = false;
-            this.bunifuLabel3.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel3.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.bunifuLabel3.ForeColor = System.Drawing.Color.DimGray;
-            this.bunifuLabel3.Location = new System.Drawing.Point(73, 122);
-            this.bunifuLabel3.Name = "bunifuLabel3";
-            this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel3.Size = new System.Drawing.Size(51, 21);
-            this.bunifuLabel3.TabIndex = 21;
-            this.bunifuLabel3.Text = "Cliente:";
-            this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel3.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // lblCliente
-            // 
-            this.lblCliente.AllowParentOverrides = false;
-            this.lblCliente.AutoEllipsis = false;
-            this.lblCliente.AutoSize = false;
-            this.lblCliente.CursorType = null;
-            this.lblCliente.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.lblCliente.ForeColor = System.Drawing.Color.DimGray;
-            this.lblCliente.Location = new System.Drawing.Point(203, 122);
-            this.lblCliente.Name = "lblCliente";
-            this.lblCliente.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblCliente.Size = new System.Drawing.Size(88, 21);
-            this.lblCliente.TabIndex = 24;
-            this.lblCliente.Text = "XXXX";
-            this.lblCliente.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lblCliente.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // lblNombre
-            // 
-            this.lblNombre.AllowParentOverrides = false;
-            this.lblNombre.AutoEllipsis = false;
-            this.lblNombre.AutoSize = false;
-            this.lblNombre.CursorType = null;
-            this.lblNombre.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.lblNombre.ForeColor = System.Drawing.Color.DimGray;
-            this.lblNombre.Location = new System.Drawing.Point(203, 73);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblNombre.Size = new System.Drawing.Size(88, 21);
-            this.lblNombre.TabIndex = 23;
-            this.lblNombre.Text = "XXXX";
-            this.lblNombre.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lblNombre.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // lblIdOrden
-            // 
-            this.lblIdOrden.AllowParentOverrides = false;
-            this.lblIdOrden.AutoEllipsis = false;
-            this.lblIdOrden.AutoSize = false;
-            this.lblIdOrden.CursorType = null;
-            this.lblIdOrden.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.lblIdOrden.ForeColor = System.Drawing.Color.DimGray;
-            this.lblIdOrden.Location = new System.Drawing.Point(203, 23);
-            this.lblIdOrden.Name = "lblIdOrden";
-            this.lblIdOrden.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblIdOrden.Size = new System.Drawing.Size(88, 21);
-            this.lblIdOrden.TabIndex = 22;
-            this.lblIdOrden.Text = "#0000";
-            this.lblIdOrden.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lblIdOrden.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
             // btnBuscarCliente
             // 
             this.btnBuscarCliente.ActiveBorderThickness = 1;
@@ -717,70 +785,6 @@ namespace Presentacion
             this.btnFacturar.TabIndex = 20;
             this.btnFacturar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // bunifuLabel4
-            // 
-            this.bunifuLabel4.AllowParentOverrides = false;
-            this.bunifuLabel4.AutoEllipsis = false;
-            this.bunifuLabel4.CursorType = null;
-            this.bunifuLabel4.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.bunifuLabel4.ForeColor = System.Drawing.Color.DimGray;
-            this.bunifuLabel4.Location = new System.Drawing.Point(7, 504);
-            this.bunifuLabel4.Name = "bunifuLabel4";
-            this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel4.Size = new System.Drawing.Size(27, 21);
-            this.bunifuLabel4.TabIndex = 25;
-            this.bunifuLabel4.Text = "IVA:";
-            this.bunifuLabel4.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel4.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // bunifuLabel5
-            // 
-            this.bunifuLabel5.AllowParentOverrides = false;
-            this.bunifuLabel5.AutoEllipsis = false;
-            this.bunifuLabel5.CursorType = null;
-            this.bunifuLabel5.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.bunifuLabel5.ForeColor = System.Drawing.Color.DimGray;
-            this.bunifuLabel5.Location = new System.Drawing.Point(7, 553);
-            this.bunifuLabel5.Name = "bunifuLabel5";
-            this.bunifuLabel5.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel5.Size = new System.Drawing.Size(49, 21);
-            this.bunifuLabel5.TabIndex = 26;
-            this.bunifuLabel5.Text = "TOTAL:";
-            this.bunifuLabel5.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel5.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // lblIva
-            // 
-            this.lblIva.AllowParentOverrides = false;
-            this.lblIva.AutoEllipsis = false;
-            this.lblIva.CursorType = null;
-            this.lblIva.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.lblIva.ForeColor = System.Drawing.Color.DimGray;
-            this.lblIva.Location = new System.Drawing.Point(97, 504);
-            this.lblIva.Name = "lblIva";
-            this.lblIva.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblIva.Size = new System.Drawing.Size(43, 21);
-            this.lblIva.TabIndex = 27;
-            this.lblIva.Text = "0.00%";
-            this.lblIva.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lblIva.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // lblTotal
-            // 
-            this.lblTotal.AllowParentOverrides = false;
-            this.lblTotal.AutoEllipsis = false;
-            this.lblTotal.CursorType = null;
-            this.lblTotal.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.lblTotal.ForeColor = System.Drawing.Color.DimGray;
-            this.lblTotal.Location = new System.Drawing.Point(97, 553);
-            this.lblTotal.Name = "lblTotal";
-            this.lblTotal.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblTotal.Size = new System.Drawing.Size(36, 21);
-            this.lblTotal.TabIndex = 28;
-            this.lblTotal.Text = "0000";
-            this.lblTotal.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lblTotal.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
             // FrmVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -803,9 +807,9 @@ namespace Presentacion
             this.Text = "FrmVentas";
             this.pnlInfoFactura.ResumeLayout(false);
             this.pnlInfoFactura.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFacturados)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvFacturados)).EndInit();
             this.ResumeLayout(false);
 
         }

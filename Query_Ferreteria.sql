@@ -72,29 +72,6 @@ estado varchar(80),
 IdEmpleado int not null foreign key references Empleados(IdEmpleado),
 IdRol int not null foreign key references Rol(IdRol)
 )
---Agregando Usuarios
-Execute SP_InsertarUsuario 'Pablo', 'pablo123', 'Habilitado',1,1
-Execute SP_InsertarUsuario 'Ariel', 'ariel123', 'Habilitado',2,1
-select * from Usuario
-exec Validar_Acceso 'Ariel','ariel123'
---/Agregando usuarios
--- <Comprobando que se muestre la informacion>
-select
-e.PrimerNombre,
-e.PrimerApellido,
-e.FechaContrato,
-e.Salario,
-e.Puesto,
-u.usuario,
-u.contraseña,
-r.Rol
-from Usuario u
-inner join Rol r
-on r.IdRol = u.IdRol
-inner join Empleados e
-on e.IdEmpleado = u.IdEmpleado
-
--- </Comprobando que se muestre la informacion>
 
 
 -- Creando tabla Clientes
