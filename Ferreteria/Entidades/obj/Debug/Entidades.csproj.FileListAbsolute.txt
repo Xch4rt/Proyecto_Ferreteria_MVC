@@ -16,3 +16,9 @@ C:\Users\Pablo\Desktop\ProyectoFinanzas\Proyecto_Ferreteria_MVC\Ferreteria\Entid
 C:\Users\Pablo\Desktop\ProyectoFinanzas\Proyecto_Ferreteria_MVC\Ferreteria\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
 C:\Users\Pablo\Desktop\ProyectoFinanzas\Proyecto_Ferreteria_MVC\Ferreteria\Entidades\obj\Debug\Entidades.dll
 C:\Users\Pablo\Desktop\ProyectoFinanzas\Proyecto_Ferreteria_MVC\Ferreteria\Entidades\obj\Debug\Entidades.pdb
+C:\Users\Pablo\Desktop\Bases_De_Datos\Proyecto_Ferreteria_MVC\Ferreteria\Entidades\bin\Debug\Entidades.dll
+C:\Users\Pablo\Desktop\Bases_De_Datos\Proyecto_Ferreteria_MVC\Ferreteria\Entidades\bin\Debug\Entidades.pdb
+C:\Users\Pablo\Desktop\Bases_De_Datos\Proyecto_Ferreteria_MVC\Ferreteria\Entidades\obj\Debug\Entidades.csproj.AssemblyReference.cache
+C:\Users\Pablo\Desktop\Bases_De_Datos\Proyecto_Ferreteria_MVC\Ferreteria\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\Pablo\Desktop\Bases_De_Datos\Proyecto_Ferreteria_MVC\Ferreteria\Entidades\obj\Debug\Entidades.dll
+C:\Users\Pablo\Desktop\Bases_De_Datos\Proyecto_Ferreteria_MVC\Ferreteria\Entidades\obj\Debug\Entidades.pdb
