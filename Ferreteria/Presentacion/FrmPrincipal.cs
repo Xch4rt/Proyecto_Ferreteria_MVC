@@ -14,9 +14,11 @@ namespace Presentacion
     public partial class FrmPrincipal : Form
     {
         E_Usuario eUsuario = new E_Usuario();
+        string usernames;
         public FrmPrincipal(string nombreUsuario)
         {
             InitializeComponent();
+            this.usernames = nombreUsuario;
             userName.Text = nombreUsuario;
         }
 
@@ -59,7 +61,7 @@ namespace Presentacion
 
         private void btnVentas_Click(object sender, EventArgs e)
         {
-            OpenFormWrapper(new FrmVentas(""));
+            OpenFormWrapper(new FrmVentas(usernames));
             PanelName.Text = "VENTAS";
         }
 

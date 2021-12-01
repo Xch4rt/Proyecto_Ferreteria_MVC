@@ -28,6 +28,8 @@ namespace Presentacion
 
         }
 
+        
+
 
 
         
@@ -48,7 +50,7 @@ namespace Presentacion
                 {
                     if (dato.Rows[0][0].ToString() == "Acceso Exitoso")
                     {
-                        usernames = dato.Rows[0][2].ToString();
+                        usernames = dato.Rows[0][1].ToString();
                         
                         MessageBox.Show("Bienvenido al Sistema "+ usernames, "Sistema de Reservas", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         FrmPrincipal frmPrincipal = new FrmPrincipal(usernames);

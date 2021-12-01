@@ -14,6 +14,10 @@ namespace Presentacion
     public partial class FrmBuscarClientes : Form
     {
         N_Cliente objCliente = new N_Cliente();
+        public string[] fullname;
+        public string NombreCliente;
+        public int IdCliente;
+     
         public FrmBuscarClientes()
         {
             InitializeComponent();
@@ -60,14 +64,46 @@ namespace Presentacion
                     dgvClientes.Rows[e.RowIndex].Cells[4].Value.ToString(),//primer apellido
                     dgvClientes.Rows[e.RowIndex].Cells[5].Value.ToString() //segundo apellido
             };
-            FrmVentas frmVentas = new FrmVentas(string.Join(" ", fullname));
+            NombreCliente = fullname[0] + " " + fullname[2];
+            IdCliente = Int32.Parse(dgvClientes.Rows[e.RowIndex].Cells[0].Value.ToString());//id cliente
+           
+            
             Close();
             //MessageBox.Show(string.Join(" ",fullname));
+        }
+
+        public string getNombreCliente()
+        {
+
+            return NombreCliente;
+        }
+
+        public int getIdCliente()
+        {
+
+            return IdCliente;
         }
 
         private void ClosePic_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btnSeleccionar_Click(object sender, EventArgs e)
+        {
+            //var indexNo = dgvClientes.Rows[e.RowIndex].Index.ToString();
+            //string[] fullname = {
+            //        dgvClientes.Rows[e.RowIndex].Cells[2].Value.ToString(),//primer nombre
+            //        dgvClientes.Rows[e.RowIndex].Cells[3].Value.ToString(),//segundo nombre
+            //        dgvClientes.Rows[e.RowIndex].Cells[4].Value.ToString(),//primer apellido
+            //        dgvClientes.Rows[e.RowIndex].Cells[5].Value.ToString() //segundo apellido
+            //};
+            //NombreCliente = fullname[0] + " " + fullname[2];
+            //IdCliente = Int32.Parse(dgvClientes.Rows[e.RowIndex].Cells[0].Value.ToString());//id cliente
+
+
+            //Close();
+            ////MessageBox.Show(string.Join(" ",fullname));
         }
     }
 }

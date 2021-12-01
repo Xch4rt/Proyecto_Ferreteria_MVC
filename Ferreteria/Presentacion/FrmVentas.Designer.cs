@@ -30,9 +30,6 @@ namespace Presentacion
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmVentas));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -44,6 +41,9 @@ namespace Presentacion
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlInfoFactura = new Bunifu.UI.WinForms.BunifuPanel();
             this.lblTotal = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblIva = new Bunifu.UI.WinForms.BunifuLabel();
@@ -55,7 +55,6 @@ namespace Presentacion
             this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.dgvFacturados = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.bunifuSeparator1 = new Bunifu.UI.WinForms.BunifuSeparator();
             this.bunifuPanel3 = new Bunifu.UI.WinForms.BunifuPanel();
             this.bunifuSeparator2 = new Bunifu.UI.WinForms.BunifuSeparator();
@@ -66,12 +65,13 @@ namespace Presentacion
             this.ddDiscount = new Bunifu.UI.WinForms.BunifuDropdown();
             this.txtCantidad = new Bunifu.UI.WinForms.BunifuTextBox();
             this.btnBuscarCliente = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btnAgregarProducto = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnFacturar = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.dgvFacturados = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.pnlInfoFactura.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvFacturados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFacturados)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlInfoFactura
@@ -265,71 +265,6 @@ namespace Presentacion
             this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // dgvFacturados
-            // 
-            this.dgvFacturados.AllowCustomTheming = false;
-            this.dgvFacturados.AllowUserToAddRows = false;
-            this.dgvFacturados.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.dgvFacturados.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvFacturados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvFacturados.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvFacturados.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvFacturados.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvFacturados.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvFacturados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvFacturados.ColumnHeadersHeight = 40;
-            this.dgvFacturados.ColumnHeadersVisible = false;
-            this.dgvFacturados.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            this.dgvFacturados.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.dgvFacturados.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.dgvFacturados.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.dgvFacturados.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvFacturados.CurrentTheme.BackColor = System.Drawing.Color.White;
-            this.dgvFacturados.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
-            this.dgvFacturados.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.DodgerBlue;
-            this.dgvFacturados.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            this.dgvFacturados.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dgvFacturados.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            this.dgvFacturados.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvFacturados.CurrentTheme.Name = null;
-            this.dgvFacturados.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgvFacturados.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.dgvFacturados.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.dgvFacturados.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.dgvFacturados.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvFacturados.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvFacturados.EnableHeadersVisualStyles = false;
-            this.dgvFacturados.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
-            this.dgvFacturados.HeaderBackColor = System.Drawing.Color.DodgerBlue;
-            this.dgvFacturados.HeaderBgColor = System.Drawing.Color.Empty;
-            this.dgvFacturados.HeaderForeColor = System.Drawing.Color.White;
-            this.dgvFacturados.Location = new System.Drawing.Point(7, 186);
-            this.dgvFacturados.Name = "dgvFacturados";
-            this.dgvFacturados.ReadOnly = true;
-            this.dgvFacturados.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgvFacturados.RowHeadersVisible = false;
-            this.dgvFacturados.RowTemplate.Height = 40;
-            this.dgvFacturados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dgvFacturados.Size = new System.Drawing.Size(362, 298);
-            this.dgvFacturados.TabIndex = 18;
-            this.dgvFacturados.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
-            // 
             // bunifuSeparator1
             // 
             this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
@@ -359,6 +294,7 @@ namespace Presentacion
             this.bunifuPanel3.ShowBorders = true;
             this.bunifuPanel3.Size = new System.Drawing.Size(1044, 70);
             this.bunifuPanel3.TabIndex = 1;
+            this.bunifuPanel3.Click += new System.EventHandler(this.bunifuPanel3_Click);
             // 
             // bunifuSeparator2
             // 
@@ -695,30 +631,30 @@ namespace Presentacion
             this.btnBuscarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnBuscarCliente.Click += new System.EventHandler(this.btnBuscarCliente_Click);
             // 
-            // bunifuThinButton21
+            // btnAgregarProducto
             // 
-            this.bunifuThinButton21.ActiveBorderThickness = 1;
-            this.bunifuThinButton21.ActiveCornerRadius = 20;
-            this.bunifuThinButton21.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(110)))), ((int)(((byte)(242)))));
-            this.bunifuThinButton21.ActiveForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(110)))), ((int)(((byte)(242)))));
-            this.bunifuThinButton21.BackColor = System.Drawing.SystemColors.Control;
-            this.bunifuThinButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton21.BackgroundImage")));
-            this.bunifuThinButton21.ButtonText = "alguna cosa";
-            this.bunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton21.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton21.ForeColor = System.Drawing.Color.White;
-            this.bunifuThinButton21.IdleBorderThickness = 1;
-            this.bunifuThinButton21.IdleCornerRadius = 20;
-            this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(110)))), ((int)(((byte)(242)))));
-            this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(110)))), ((int)(((byte)(242)))));
-            this.bunifuThinButton21.Location = new System.Drawing.Point(266, 136);
-            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.bunifuThinButton21.Name = "bunifuThinButton21";
-            this.bunifuThinButton21.Size = new System.Drawing.Size(199, 43);
-            this.bunifuThinButton21.TabIndex = 19;
-            this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnAgregarProducto.ActiveBorderThickness = 1;
+            this.btnAgregarProducto.ActiveCornerRadius = 20;
+            this.btnAgregarProducto.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(110)))), ((int)(((byte)(242)))));
+            this.btnAgregarProducto.ActiveForecolor = System.Drawing.Color.White;
+            this.btnAgregarProducto.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(110)))), ((int)(((byte)(242)))));
+            this.btnAgregarProducto.BackColor = System.Drawing.SystemColors.Control;
+            this.btnAgregarProducto.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAgregarProducto.BackgroundImage")));
+            this.btnAgregarProducto.ButtonText = "Agregar producto";
+            this.btnAgregarProducto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAgregarProducto.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarProducto.ForeColor = System.Drawing.Color.White;
+            this.btnAgregarProducto.IdleBorderThickness = 1;
+            this.btnAgregarProducto.IdleCornerRadius = 20;
+            this.btnAgregarProducto.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(110)))), ((int)(((byte)(242)))));
+            this.btnAgregarProducto.IdleForecolor = System.Drawing.Color.White;
+            this.btnAgregarProducto.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(110)))), ((int)(((byte)(242)))));
+            this.btnAgregarProducto.Location = new System.Drawing.Point(266, 136);
+            this.btnAgregarProducto.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.btnAgregarProducto.Name = "btnAgregarProducto";
+            this.btnAgregarProducto.Size = new System.Drawing.Size(199, 43);
+            this.btnAgregarProducto.TabIndex = 19;
+            this.btnAgregarProducto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnFacturar
             // 
@@ -745,13 +681,78 @@ namespace Presentacion
             this.btnFacturar.TabIndex = 20;
             this.btnFacturar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // dgvFacturados
+            // 
+            this.dgvFacturados.AllowCustomTheming = false;
+            this.dgvFacturados.AllowUserToAddRows = false;
+            this.dgvFacturados.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.dgvFacturados.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvFacturados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvFacturados.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvFacturados.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvFacturados.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvFacturados.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvFacturados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvFacturados.ColumnHeadersHeight = 40;
+            this.dgvFacturados.ColumnHeadersVisible = false;
+            this.dgvFacturados.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            this.dgvFacturados.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.dgvFacturados.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.dgvFacturados.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.dgvFacturados.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvFacturados.CurrentTheme.BackColor = System.Drawing.Color.White;
+            this.dgvFacturados.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.dgvFacturados.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.DodgerBlue;
+            this.dgvFacturados.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            this.dgvFacturados.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgvFacturados.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            this.dgvFacturados.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvFacturados.CurrentTheme.Name = null;
+            this.dgvFacturados.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvFacturados.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.dgvFacturados.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.dgvFacturados.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.dgvFacturados.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvFacturados.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvFacturados.EnableHeadersVisualStyles = false;
+            this.dgvFacturados.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.dgvFacturados.HeaderBackColor = System.Drawing.Color.DodgerBlue;
+            this.dgvFacturados.HeaderBgColor = System.Drawing.Color.Empty;
+            this.dgvFacturados.HeaderForeColor = System.Drawing.Color.White;
+            this.dgvFacturados.Location = new System.Drawing.Point(7, 186);
+            this.dgvFacturados.Name = "dgvFacturados";
+            this.dgvFacturados.ReadOnly = true;
+            this.dgvFacturados.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvFacturados.RowHeadersVisible = false;
+            this.dgvFacturados.RowTemplate.Height = 40;
+            this.dgvFacturados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dgvFacturados.Size = new System.Drawing.Size(362, 298);
+            this.dgvFacturados.TabIndex = 18;
+            this.dgvFacturados.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+            // 
             // FrmVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1044, 689);
             this.Controls.Add(this.btnFacturar);
-            this.Controls.Add(this.bunifuThinButton21);
+            this.Controls.Add(this.btnAgregarProducto);
             this.Controls.Add(this.btnBuscarCliente);
             this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.ddDiscount);
@@ -765,11 +766,12 @@ namespace Presentacion
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmVentas";
             this.Text = "FrmVentas";
+            this.Load += new System.EventHandler(this.FrmVentas_Load);
             this.pnlInfoFactura.ResumeLayout(false);
             this.pnlInfoFactura.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvFacturados)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFacturados)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -791,13 +793,13 @@ namespace Presentacion
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel3;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel2;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
-        private Bunifu.UI.WinForms.BunifuDataGridView dgvFacturados;
         private Bunifu.UI.WinForms.BunifuLabel lblTotal;
         private Bunifu.UI.WinForms.BunifuLabel lblIva;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel5;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel4;
         private Bunifu.Framework.UI.BunifuThinButton2 btnBuscarCliente;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnAgregarProducto;
         private Bunifu.Framework.UI.BunifuThinButton2 btnFacturar;
+        private Bunifu.UI.WinForms.BunifuDataGridView dgvFacturados;
     }
 }

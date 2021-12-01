@@ -54,4 +54,40 @@ namespace Datos
 
         }
 
+        public void InsertarOrden(E_Ventas eVentas)
+        {
+            SqlCommand cmd = new SqlCommand("SP_InsertarOrden", conexion);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            conexion.Open();
+
+            cmd.Parameters.AddWithValue("@Fecha", eVentas.FechaCompra1);
+            cmd.Parameters.AddWithValue("@IdEmpleado", eVentas.Id_Empleado1);
+            cmd.Parameters.AddWithValue("@IdCliente", eVentas.Id_Cliente1);
+            
+
+            cmd.ExecuteNonQuery();
+            conexion.Close();
+        }
+
+        public void InsertarDetalleOrden(E_Ventas eVentas)
+        {
+            SqlCommand cmd = new SqlCommand("SP_InsertarDetalleOrden", conexion);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            conexion.Open();
+
+            cmd.Parameters.AddWithValue("@Precio", eVentas.Precio1);
+            cmd.Parameters.AddWithValue("@Cantidad", eVentas.Cantidad1);
+            cmd.Parameters.AddWithValue("@Descuento", eVentas.Descuento1);
+            cmd.Parameters.AddWithValue("@IdOrden", eVentas.Id_Orden1);
+            cmd.Parameters.AddWithValue("@IdProducto", eVentas.Id_Producto1);
+
+
+            cmd.ExecuteNonQuery();
+            conexion.Close();
+        }
+
+
+    }
 }

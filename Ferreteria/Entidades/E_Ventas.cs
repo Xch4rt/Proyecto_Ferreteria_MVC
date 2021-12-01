@@ -9,8 +9,10 @@ namespace Entidades
     public class E_Ventas
     {
         private int Id_Empleado;
+        private int Id_Cliente;
         private int Id_Orden;
         private int Id_Producto;
+        private DateTime FechaCompra;
         private int Cantidad;
         private string CodOrden;
         private string NombreCliente;
@@ -24,6 +26,8 @@ namespace Entidades
 
         public decimal Precio1 { get => Precio; set => Precio = value; }
         public int Id_Empleado1 { get => Id_Empleado; set => Id_Empleado = value; }
+
+        public int Id_Cliente1 { get => Id_Cliente; set => Id_Cliente = value; }
         public int Id_Orden1 { get => Id_Orden; set => Id_Orden = value; }
         public int Id_Producto1 { get => Id_Producto; set => Id_Producto = value; }
         public int Cantidad1 { get => Cantidad; set => Cantidad = value; }
@@ -35,5 +39,10 @@ namespace Entidades
         public decimal SubTotal1 { get => SubTotal; set => SubTotal = value; }
         public decimal IVA1 { get => IVA; set => IVA = value; }
         public decimal Total1 { get => Total; set => Total = value; }
+
+        public DateTime FechaCompra1 { get => FechaCompra; set => FechaCompra = value; }
+
+      
+
     }
 }

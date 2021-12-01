@@ -17,17 +17,29 @@ namespace Presentacion
         N_Ventas objNegocio = new N_Ventas();
         List<E_Ventas> DetalleVenta;
         decimal price;
-        public FrmVentas(string name)
+        string nombreCliente="Inserte nombre de cliente";
+        int idCliente;
+        
+ 
+
+        public FrmVentas()
+        {
+            InitializeComponent();
+            MostrarDatos();
+            HidenMoveColumns();
+            LastOrderID();
+           // FillTableFacturados();
+           
+        }
+
+        public FrmVentas(string NombreUsuario)
         {
             InitializeComponent();
             MostrarDatos();
             HidenMoveColumns();
             LastOrderID();
             FillTableFacturados();
-            MessageBox.Show(name);
-            // no se comom puta cambiar el nombre del label al nombre del cliente, help me
-            lblCliente.Text = name;
-            // = name;
+            lblNombre.Text = NombreUsuario;
         }
 
         public void HidenMoveColumns()
@@ -74,7 +86,7 @@ namespace Presentacion
         }
         public void FillTableFacturados()
         {
-            dgvFacturados.ColumnCount = 3;
+            dgvFacturados.ColumnCount = 4;
             dgvFacturados.Columns[0].Name = "Codigo";
             dgvFacturados.Columns[1].Name = "Nombre";
             dgvFacturados.Columns[2].Name = "SubTotal";
@@ -85,13 +97,16 @@ namespace Presentacion
             fila.Cells[2].Value = "subtotal";
 
             dgvFacturados.Rows.Add(fila);
-            
+
         }
 
         private void btnBuscarCliente_Click(object sender, EventArgs e)
         {
             FrmBuscarClientes frmBClientes = new FrmBuscarClientes();
             frmBClientes.ShowDialog();
+            nombreCliente = frmBClientes.getNombreCliente();
+            idCliente = frmBClientes.getIdCliente();
+            lblCliente.Text = nombreCliente;
         }
         private void dgvProductos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -109,8 +124,14 @@ namespace Presentacion
             };
         }
 
-        
+        private void bunifuPanel3_Click(object sender, EventArgs e)
+        {
 
+        }
 
+        private void FrmVentas_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
