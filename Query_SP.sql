@@ -503,4 +503,21 @@ where IdProducto = @IdProducto
 select * from Productos
 select * from DetalleOrden
 insert into DetalleOrden values (520.50, 1, 0.15, 8, 10)
+select * from Ordenes
 
+create proc SP_InsertarOrden
+ @Fecha datetime,
+ @IdEmpleado int,
+ @IdCliente int
+ as
+ insert into Ordenes values(@Fecha, @IdEmpleado, @IdCliente)
+
+create proc SP_InsertarDetalleOrden
+@Precio decimal,
+@Cantidad int,
+@Descuento decimal,
+@FechaOrden datetime,
+@IdOrden int,
+@IdProducto int
+as
+insert into DetalleOrden values (@Precio, @Cantidad, @Descuento, @IdOrden, @IdProducto)
