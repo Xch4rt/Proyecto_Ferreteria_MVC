@@ -505,12 +505,12 @@ select * from DetalleOrden
 insert into DetalleOrden values (520.50, 1, 0.15, 8, 10)
 select * from Ordenes
 
-create proc Reporte_Factura
+ALTER proc Reporte_Factura
 @IdOrden int
 as
 select o.CodigoOr,o.FechaOrden, 
-c.PrimerNombre + ' ' + c.PrimerApellido [Nombre del cliente],
-e.PrimerNombre + ' ' +  e.PrimerApellido [Nombre Del vendedor],
+c.PrimerNombre + ' ' + c.PrimerApellido AS NombreCliente,
+e.PrimerNombre + ' ' +  e.PrimerApellido AS NombreVendedor,
 (select 
  round(SUM((od.Cantidad*od.Precio)-(od.Precio*od.Cantidad*od.Descuento)),2) 
 from DetalleOrden od where od.IdOrden=o.IdOrden)  as SubTotal,
