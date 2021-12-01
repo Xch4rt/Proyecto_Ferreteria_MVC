@@ -15,6 +15,8 @@ namespace Presentacion
     public partial class FrmVentas : Form
     {
         N_Ventas objNegocio = new N_Ventas();
+        List<E_Ventas> DetalleVenta;
+        decimal price;
         public FrmVentas(string name)
         {
             InitializeComponent();
@@ -91,5 +93,24 @@ namespace Presentacion
             FrmBuscarClientes frmBClientes = new FrmBuscarClientes();
             frmBClientes.ShowDialog();
         }
+        private void dgvProductos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            price = Convert.ToDecimal(dgvProductos.Rows[e.RowIndex].Cells[4].Value.ToString());
+        }
+        private void AddtoDgvFacturar()
+        {
+            DetalleVenta = new List<E_Ventas>();
+            E_Ventas Prod_agregar = new E_Ventas() { // Es solo un ejemplo
+                Precio1 = price,
+                Cantidad1 = Convert.ToInt32(txtCantidad.ToString()),
+                Descuento1 = Convert.ToDecimal(ddDiscount.SelectedValue.ToString()),
+                Id_Orden1 = 1,
+                Id_Producto1 = 1
+            };
+        }
+
+        
+
+
     }
 }

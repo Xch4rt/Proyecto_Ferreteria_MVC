@@ -552,8 +552,9 @@ create proc SP_InsertarDetalleOrden
 @Precio decimal,
 @Cantidad int,
 @Descuento decimal,
-@FechaOrden datetime,
 @IdOrden int,
-@IdProducto int
+@IdProducto int 
 as
 insert into DetalleOrden values (@Precio, @Cantidad, @Descuento, @IdOrden, @IdProducto)
+
+select * from Productos

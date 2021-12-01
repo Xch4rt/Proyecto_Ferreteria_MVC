@@ -439,6 +439,7 @@ namespace Presentacion
             this.dgvProductos.Size = new System.Drawing.Size(611, 409);
             this.dgvProductos.TabIndex = 10;
             this.dgvProductos.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+            this.dgvProductos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductos_CellDoubleClick);
             // 
             // txtSearch
             // 
