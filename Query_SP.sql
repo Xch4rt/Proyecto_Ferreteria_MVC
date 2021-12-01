@@ -505,6 +505,42 @@ select * from DetalleOrden
 insert into DetalleOrden values (520.50, 1, 0.15, 8, 10)
 select * from Ordenes
 
+create proc Reporte_Factura
+@IdOrden int
+as
+select o.CodigoOr,o.FechaOrden, 
+c.PrimerNombre + ' ' + c.PrimerApellido [Nombre del cliente],
+e.PrimerNombre + ' ' +  e.PrimerApellido [Nombre Del vendedor],
+(select 
+ round(SUM((od.Cantidad*od.Precio)-(od.Precio*od.Cantidad*od.Descuento)),2) 
+from DetalleOrden od where od.IdOrden=o.IdOrden)  as SubTotal,
+((select 
+ round(SUM((od.Cantidad*od.Precio)-(od.Precio*od.Cantidad*od.Descuento)),2) as total
+from DetalleOrden od where od.IdOrden=o.IdOrden)*1.15) as TotalIva
+from ordenes o
+inner join Empleados e on e.IdEmpleado=o.IdEmpleado
+inner join Clientes c on c.IdCliente=o.IdCliente
+where o.IdOrden=@IdOrden
+
+
+create procedure Reporte_Detalle_Factura
+@IdOrden int 
+as
+Select 
+p.Codigo,
+p.Producto,
+do.Precio,
+do.Cantidad,
+do.Descuento,
+((do.Precio*do.Cantidad)-(do.Precio*do.Cantidad*do.Descuento)) as subtotal
+from DetalleOrden do
+inner join Productos p on
+p.IdProducto=do.IdProducto
+where do.IdOrden=@IdOrden
+
+exec Reporte_Detalle_Factura 11
+execute Reporte_Factura 11
+
 create proc SP_InsertarOrden
  @Fecha datetime,
  @IdEmpleado int,
