@@ -498,3 +498,9 @@ set @Cantidad = (Select Cantidad from inserted)
 
 update Productos set Stock = Stock - @Cantidad
 where IdProducto = @IdProducto
+
+
+select * from Productos
+select * from DetalleOrden
+insert into DetalleOrden values (520.50, 1, 0.15, 8, 10)
+
