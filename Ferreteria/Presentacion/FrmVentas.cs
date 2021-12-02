@@ -27,8 +27,17 @@ namespace Presentacion
         int[] Vcantidad = new int[100];
         decimal[] Vsubtotales = new decimal[100];
         decimal[] VDescuentos = new decimal[100];
-        decimal[] VIva = new decimal[100];
+        decimal[] Vprice = new decimal[100];
         int LastOrder;
+        decimal descuento = 0;
+        decimal total = 0;
+        int contador = 0;
+        decimal subtotal = 0;
+        decimal iva = 0;
+        decimal iva_ = 0.15m;
+
+       
+
 
 
 
@@ -108,16 +117,16 @@ namespace Presentacion
             dgvFacturados.Columns[3].Name = "Nombre";
             dgvFacturados.Columns[4].Name = "SubTotal";
             DataGridViewRow fila = new DataGridViewRow();
-            fila.CreateCells(dgvFacturados);
-            fila.Cells[2].Value = "codigo";
-            fila.Cells[3].Value = "nombre";
-            fila.Cells[4].Value = "subtotal";
+            //fila.CreateCells(dgvFacturados);
+            //fila.Cells[2].Value = "codigo";
+            //fila.Cells[3].Value = "nombre";
+            //fila.Cells[4].Value = "subtotal";
 
             dgvFacturados.Columns[0].DisplayIndex = 4;
             dgvFacturados.Columns[1].DisplayIndex = 4;
 
 
-            dgvFacturados.Rows.Add(fila);
+            //dgvFacturados.Rows.Add(fila);
 
         }
 
@@ -154,20 +163,21 @@ namespace Presentacion
         {
             
         }
+        
 
         private void btnAgregarProducto_Click(object sender, EventArgs e)
         {
 
             cantidad = Convert.ToInt32(txtCantidad.Text);
-            decimal descuento=0;
-            decimal total = 0;
-            int contador = 0;
 
-            if (ddDiscount.SelectedIndex==0)
+            switch (ddDiscount.SelectedIndex)
             {
-
-                descuento = 0.05m;
-
+                case 0: descuento = 0.05m; break;
+                case 1: descuento = 0.15m; break;
+                case 2: descuento = 0.25m;break;
+                case 3: descuento = 0.30m; break;
+                case 4: descuento = 0.50m; break;
+                case 5: descuento = 0.75m;break;
             }
 
             int indexRow = dgvProductos.CurrentRow.Index;
@@ -183,22 +193,19 @@ namespace Presentacion
                 VDescuentos[contador] = descuento;
 
                 Vsubtotales[contador]= (Convert.ToDecimal(dgvProductos.Rows[indexRow].Cells[8].Value.ToString()) * cantidad) * (1 - descuento);
+
+                Vprice[contador] = Convert.ToDecimal(dgvProductos.Rows[indexRow].Cells[8].Value.ToString());
                 contador++;
 
 
-            //subtotal = (Convert.ToDecimal(dgvProductos.Rows[indexRow].Cells[8].Value.ToString()) * cantidad)* (1-descuento);
-            decimal iva_ = 0.15m;
-            int count = 0;
-            foreach (decimal i in Vsubtotales)
-            {
-                VIva[count]=i*iva_;
-              
-                
-            }
+            subtotal = subtotal + ((Convert.ToDecimal(dgvProductos.Rows[indexRow].Cells[8].Value.ToString()) * cantidad)* (1-descuento));
 
-            total = VIva.Sum() + Vsubtotales.Sum();
+            iva = (subtotal * iva_);
 
-            lblIva.Text = VIva.Sum().ToString();
+
+            total =(subtotal + iva);
+
+            lblIva.Text = iva.ToString();
             lblTotal.Text = total.ToString();
            
 
@@ -224,18 +231,35 @@ namespace Presentacion
         private void btnFacturar_Click(object sender, EventArgs e)
         {
             DataTable dato;
-            dato = objNegocio.LastOrderID();
-            LastOrder = Convert.ToInt32(dato.Rows[0][0]);
             ventas.FechaCompra1 = this.FechaCompra;
             ventas.Id_Cliente1 = this.idCliente;
             ventas.Id_Empleado1 = this.idEmpleado;
 
             objNegocio.InsertarOrden(ventas);
+            //decimal price = 0;
+            dato = objNegocio.LastOrderID();
+            if (dato!=null)
+            {
+                if (dato.Rows.Count > 0)
+                {
+                    LastOrder = Convert.ToInt32(dato.Rows[0][0]);
+                }
+                
+            }
+            else
+            {
+                LastOrder = 1;
+                
+            }
+
+           
+
+
 
             for (int i = 0; i < dgvFacturados.Rows.Count; i++)
             {
-                decimal price = Convert.ToDecimal((dgvFacturados.Rows[i].Cells[8].Value));
-                ventas.Precio1 = price;
+                //price = Convert.ToDecimal((dgvProductos.Rows[i].Cells[8].Value));
+                ventas.Precio1 = Vprice[i];
                 ventas.Cantidad1 = Vcantidad[i];
                 ventas.Descuento1 = VDescuentos[i];
                 ventas.Id_Orden1 = LastOrder;
@@ -243,14 +267,19 @@ namespace Presentacion
                 objNegocio.InsertarDetalleOrden(ventas);
             }
 
-            // @Precio decimal,
-            //@Cantidad int,
-            //@Descuento decimal,
-            //@IdOrden int,
-            //@IdProducto int
+            FrmReporteFactura frmReporteFactura = new FrmReporteFactura(LastOrder);
+            frmReporteFactura.Show();
+           
+
+          
 
 
 
+
+        }
+
+        private void ddDiscount_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
     }

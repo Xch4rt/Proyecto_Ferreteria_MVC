@@ -485,8 +485,9 @@ order by p.IdProveedor asc
 
 alter procedure SP_LastOrderID -- Esto devolvera el codigo para la nueva factura
 AS
-select top 1 IdOrden + 1 from Ordenes order by IdOrden DESC
+select top 1 IdOrden  from Ordenes order by IdOrden DESC
 
+EXECUTE SP_LastOrderID
 CREATE PROC SP_LastCodID
 AS
 select top 1 ('OR'+RIGHT('00'+CONVERT(VARCHAR,IDORDEN+1),2)) from Ordenes order by CodigoOr desc
@@ -541,6 +542,10 @@ inner join Productos p on
 p.IdProducto=do.IdProducto
 where do.IdOrden=@IdOrden
 
+EXECUTE Reporte_Factura
+	@IdOrden = 4
+EXECUTE Reporte_Detalle_Factura
+	@IdOrden = 4
 
 
 create proc SP_InsertarOrden
@@ -550,7 +555,7 @@ create proc SP_InsertarOrden
  as
  insert into Ordenes values(@Fecha, @IdEmpleado, @IdCliente)
 
-create proc SP_InsertarDetalleOrden
+ALTER proc SP_InsertarDetalleOrden
 @Precio decimal,
 @Cantidad int,
 @Descuento decimal,
@@ -568,3 +573,21 @@ EXEC Validar_Acceso
 	@contraseña = ariel123
 	
 EXEC SP_LISTAREMPLEADOS
+
+USE Mantenimiento_Productos
+GO
+
+SELECT * FROM Ordenes 
+
+
+EXEC SP_InsertarDetalleOrden
+	@Precio = 12,
+	@Cantidad = 1,
+	@Descuento = 0.05,
+	@IdOrden = 1,
+	@IdProducto = 3
+SELECT * FROM DetalleOrden AS do
+	
+	SELECT * FROM Productos AS p
+	
+	
