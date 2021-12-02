@@ -103,6 +103,8 @@ namespace Presentacion
             }
         }
 
+
+
         private void btnCategorias_Click(object sender, EventArgs e)
         {
             FrmCategoria frmC = new FrmCategoria();

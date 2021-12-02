@@ -979,10 +979,9 @@
     </ReportItems>
     <Height>4.82164in</Height>
     <Style>
-      <BackgroundImage>
-        <Source>External</Source>
-        <Value>thgr</Value>
-      </BackgroundImage>
+      <Border>
+        <Style>None</Style>
+      </Border>
     </Style>
   </Body>
   <Width>11.47767in</Width>

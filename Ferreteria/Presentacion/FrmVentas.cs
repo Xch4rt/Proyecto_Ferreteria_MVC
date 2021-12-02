@@ -19,7 +19,7 @@ namespace Presentacion
         List<E_Ventas> DetalleVenta;
         decimal price;
         string nombreCliente="Inserte nombre de cliente";
-        int idCliente;
+        int idCliente = 0;
         int idEmpleado;
         DateTime FechaCompra = DateTime.Now;
         public int cantidad;
@@ -35,8 +35,11 @@ namespace Presentacion
         decimal subtotal = 0;
         decimal iva = 0;
         decimal iva_ = 0.15m;
+        Boolean updates = false;
+        int indexRow;
 
-       
+
+
 
 
 
@@ -115,6 +118,7 @@ namespace Presentacion
             dgvFacturados.ColumnCount = 6;
             dgvFacturados.Columns[2].Name = "Codigo";
             dgvFacturados.Columns[3].Name = "Nombre";
+            dgvFacturados.Columns[3].Width = 50;
             dgvFacturados.Columns[4].Name = "SubTotal";
             DataGridViewRow fila = new DataGridViewRow();
             //fila.CreateCells(dgvFacturados);
@@ -178,9 +182,10 @@ namespace Presentacion
                 case 3: descuento = 0.30m; break;
                 case 4: descuento = 0.50m; break;
                 case 5: descuento = 0.75m;break;
+                default: descuento = 0m;break;
             }
 
-            int indexRow = dgvProductos.CurrentRow.Index;
+            indexRow = dgvProductos.CurrentRow.Index;
 
             //dgvProductos.Rows[indexRow].Cells[0].Value.ToString();//id producto
             
@@ -207,19 +212,29 @@ namespace Presentacion
 
             lblIva.Text = iva.ToString();
             lblTotal.Text = total.ToString();
-           
-
 
             DataGridViewRow fila = new DataGridViewRow();
             fila.CreateCells(dgvFacturados);
-            fila.Cells[2].Value = dgvProductos.Rows[indexRow].Cells[1].Value.ToString(); 
-            fila.Cells[3].Value = dgvProductos.Rows[indexRow].Cells[2].Value.ToString(); 
-            fila.Cells[4].Value = (Convert.ToDecimal(dgvProductos.Rows[indexRow].Cells[8].Value.ToString()) * cantidad) * (1 - descuento);
+            if (!updates)
+            {
+               
+                fila.Cells[2].Value = dgvProductos.Rows[indexRow].Cells[1].Value.ToString();
+                fila.Cells[3].Value = dgvProductos.Rows[indexRow].Cells[2].Value.ToString();
+                fila.Cells[4].Value = (Convert.ToDecimal(dgvProductos.Rows[indexRow].Cells[8].Value.ToString()) * cantidad) * (1 - descuento);
+
+                dgvFacturados.Rows.Add(fila);
+            }
+            else
+            {
+                fila.Cells[2].Value = dgvProductos.Rows[indexRow].Cells[1].Value.ToString();
+                fila.Cells[3].Value = dgvProductos.Rows[indexRow].Cells[2].Value.ToString();
+                fila.Cells[4].Value = (Convert.ToDecimal(dgvProductos.Rows[indexRow].Cells[8].Value.ToString()) * cantidad) * (1 - descuento);
+
+            }
 
 
-
-
-            dgvFacturados.Rows.Add(fila);
+            txtCantidad.Clear();
+            
 
         }
 
@@ -234,53 +249,93 @@ namespace Presentacion
             ventas.FechaCompra1 = this.FechaCompra;
             ventas.Id_Cliente1 = this.idCliente;
             ventas.Id_Empleado1 = this.idEmpleado;
-
-            objNegocio.InsertarOrden(ventas);
-            //decimal price = 0;
-            dato = objNegocio.LastOrderID();
-            if (dato!=null)
+            if (this.idCliente ==0)
             {
-                if (dato.Rows.Count > 0)
-                {
-                    LastOrder = Convert.ToInt32(dato.Rows[0][0]);
-                }
-                
+                MessageBox.Show("INGRESE EL CLIENTE A FACTURAR");
             }
             else
             {
-                LastOrder = 1;
+                objNegocio.InsertarOrden(ventas);
+                dato = objNegocio.LastOrderID();
+                if (dato != null)
+                {
+                    if (dato.Rows.Count > 0)
+                    {
+                        LastOrder = Convert.ToInt32(dato.Rows[0][0]);
+                    }
+
+                }
+                else
+                {
+                    LastOrder = 1;
+
+                }
+
+
+
+
+
+                for (int i = 0; i < dgvFacturados.Rows.Count; i++)
+                {
+                    //price = Convert.ToDecimal((dgvProductos.Rows[i].Cells[8].Value));
+                    ventas.Precio1 = Vprice[i];
+                    ventas.Cantidad1 = Vcantidad[i];
+                    ventas.Descuento1 = VDescuentos[i];
+                    ventas.Id_Orden1 = LastOrder;
+                    ventas.Id_Producto1 = idProductos[i];
+                    objNegocio.InsertarDetalleOrden(ventas);
+                }
+
+                FrmReporteFactura frmReporteFactura = new FrmReporteFactura(LastOrder);
                 
+                this.Close();
+                frmReporteFactura.Show();
             }
-
+            
+            //decimal price = 0;
            
-
-
-
-            for (int i = 0; i < dgvFacturados.Rows.Count; i++)
-            {
-                //price = Convert.ToDecimal((dgvProductos.Rows[i].Cells[8].Value));
-                ventas.Precio1 = Vprice[i];
-                ventas.Cantidad1 = Vcantidad[i];
-                ventas.Descuento1 = VDescuentos[i];
-                ventas.Id_Orden1 = LastOrder;
-                ventas.Id_Producto1 = idProductos[i];
-                objNegocio.InsertarDetalleOrden(ventas);
-            }
-
-            FrmReporteFactura frmReporteFactura = new FrmReporteFactura(LastOrder);
-            frmReporteFactura.Show();
-           
-
-          
-
-
-
 
         }
 
         private void ddDiscount_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void dgvFacturados_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvFacturados.Rows[e.RowIndex].Cells["ELIMINAR"].Selected)
+            {
+                
+                dgvFacturados.Rows.RemoveAt(e.RowIndex);
+                subtotal = subtotal + ((Convert.ToDecimal(dgvProductos.Rows[indexRow].Cells[8].Value.ToString()) * cantidad) * (1 - descuento));
+
+                iva = (subtotal * iva_);
+
+
+                total = (subtotal + iva);
+
+                lblIva.Text = iva.ToString();
+                lblTotal.Text = total.ToString();
+
+
+            }
+
+            else if (dgvFacturados.Rows[e.RowIndex].Cells["EDITAR"].Selected)
+            {
+                updates = true;
+
+                // procedemos a cargar el formulario del FrmProducto
+
+                txtCantidad.Text = Vcantidad[e.RowIndex].ToString();
+                
+                txtSearch.Text = dgvFacturados.Rows[e.RowIndex].Cells["Nombre"].Value.ToString();
+
+                MessageBox.Show(Vcantidad[e.RowIndex].ToString(), dgvFacturados.Rows[e.RowIndex].Cells["Nombre"].Value.ToString());
+                
+
+
+            }
         }
     }
 }

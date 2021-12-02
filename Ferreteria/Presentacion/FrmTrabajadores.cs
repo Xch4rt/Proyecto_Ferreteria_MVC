@@ -49,8 +49,8 @@ namespace Presentacion
 
             dgvTrabajadores.Columns[2].Visible = false;
             // cambiando de posicion las primeras 2 columnas a ser las ultimas 2
-            dgvTrabajadores.Columns[0].DisplayIndex = 12;
-            dgvTrabajadores.Columns[1].DisplayIndex = 12;
+            dgvTrabajadores.Columns[0].DisplayIndex = 11;
+            dgvTrabajadores.Columns[1].DisplayIndex = 11;
         }
 
         private void txtSearch_TextChange(object sender, EventArgs e)

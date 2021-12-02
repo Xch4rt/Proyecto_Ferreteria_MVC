@@ -74,6 +74,43 @@ namespace Presentacion
                 MessageBox.Show("No hay conexión al servidor " + (dato == null).ToString(), "Sistema de Reservas", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btnAcces_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            DataTable dato;
+            dato = nUsuario.Validar_acceso(this.txtUsername.Text, this.txtPassword.Text);
+
+
+            if (dato != null)
+            {
+                if (dato.Rows.Count > 0)
+                {
+                    if (dato.Rows[0][0].ToString() == "Acceso Exitoso")
+                    {
+                        usernames = dato.Rows[0][1].ToString();
+                        idEmpleado = Convert.ToInt32(dato.Rows[0][3]);
+
+
+                        MessageBox.Show("Bienvenido al Sistema " + usernames, "Sistema de Reservas", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        FrmPrincipal frmPrincipal = new FrmPrincipal(usernames, idEmpleado);
+                        this.Hide();
+                        frmPrincipal.Show();
+
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Acceso Denegado al Sistema de Reservaciones", "Sistema de Reservas", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("No hay conexión al servidor " + (dato == null).ToString(), "Sistema de Reservas", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
     }
 

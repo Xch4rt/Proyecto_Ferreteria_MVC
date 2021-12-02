@@ -302,6 +302,7 @@ namespace Presentacion
             this.btnAcces.TextPadding = new System.Windows.Forms.Padding(0);
             this.btnAcces.UseDefaultRadiusAndThickness = true;
             this.btnAcces.Click += new System.EventHandler(this.btnAcces_Click);
+            this.btnAcces.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.btnAcces_KeyPress);
             // 
             // btnCancel
             // 

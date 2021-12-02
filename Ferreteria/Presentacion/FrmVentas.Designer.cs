@@ -348,10 +348,12 @@ namespace Presentacion
             this.dgvFacturados.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvFacturados.RowHeadersVisible = false;
             this.dgvFacturados.RowTemplate.Height = 40;
-            this.dgvFacturados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvFacturados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgvFacturados.Size = new System.Drawing.Size(362, 298);
             this.dgvFacturados.TabIndex = 18;
             this.dgvFacturados.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+            this.dgvFacturados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFacturados_CellContentClick);
+            this.dgvFacturados.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductos_CellDoubleClick);
             // 
             // EDITAR
             // 
