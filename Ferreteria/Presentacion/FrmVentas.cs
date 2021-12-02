@@ -15,12 +15,25 @@ namespace Presentacion
     public partial class FrmVentas : Form
     {
         N_Ventas objNegocio = new N_Ventas();
+        E_Ventas ventas = new E_Ventas();
         List<E_Ventas> DetalleVenta;
         decimal price;
         string nombreCliente="Inserte nombre de cliente";
         int idCliente;
-        
- 
+        int idEmpleado;
+        DateTime FechaCompra = DateTime.Now;
+        public int cantidad;
+        int[] idProductos = new int[100];
+        int[] Vcantidad = new int[100];
+        decimal[] Vsubtotales = new decimal[100];
+        decimal[] VDescuentos = new decimal[100];
+        decimal[] VIva = new decimal[100];
+        int LastOrder;
+
+
+
+
+
 
         public FrmVentas()
         {
@@ -28,11 +41,12 @@ namespace Presentacion
             MostrarDatos();
             HidenMoveColumns();
             LastOrderID();
-           // FillTableFacturados();
-           
+            FillTableFacturados();
+            // FillTableFacturados();
+
         }
 
-        public FrmVentas(string NombreUsuario)
+        public FrmVentas(string NombreUsuario,int idEmpleado)
         {
             InitializeComponent();
             MostrarDatos();
@@ -40,6 +54,8 @@ namespace Presentacion
             LastOrderID();
             FillTableFacturados();
             lblNombre.Text = NombreUsuario;
+            lblFecha.Text = DateTime.Now.ToString();
+            this.idEmpleado = idEmpleado;
         }
 
         public void HidenMoveColumns()
@@ -58,6 +74,7 @@ namespace Presentacion
             dgvProductos.Columns[4].Width = 150;
             dgvProductos.Columns[6].Width = 150;
 
+           
         }
 
         public void MostrarDatos()
@@ -96,6 +113,10 @@ namespace Presentacion
             fila.Cells[3].Value = "nombre";
             fila.Cells[4].Value = "subtotal";
 
+            dgvFacturados.Columns[0].DisplayIndex = 4;
+            dgvFacturados.Columns[1].DisplayIndex = 4;
+
+
             dgvFacturados.Rows.Add(fila);
 
         }
@@ -132,6 +153,105 @@ namespace Presentacion
         private void FrmVentas_Load(object sender, EventArgs e)
         {
             
+        }
+
+        private void btnAgregarProducto_Click(object sender, EventArgs e)
+        {
+
+            cantidad = Convert.ToInt32(txtCantidad.Text);
+            decimal descuento=0;
+            decimal total = 0;
+            int contador = 0;
+
+            if (ddDiscount.SelectedIndex==0)
+            {
+
+                descuento = 0.05m;
+
+            }
+
+            int indexRow = dgvProductos.CurrentRow.Index;
+
+            //dgvProductos.Rows[indexRow].Cells[0].Value.ToString();//id producto
+            
+            
+               
+                idProductos[contador]= Convert.ToInt32(dgvProductos.Rows[indexRow].Cells[0].Value.ToString());
+            
+                Vcantidad[contador] = cantidad;
+            
+                VDescuentos[contador] = descuento;
+
+                Vsubtotales[contador]= (Convert.ToDecimal(dgvProductos.Rows[indexRow].Cells[8].Value.ToString()) * cantidad) * (1 - descuento);
+                contador++;
+
+
+            //subtotal = (Convert.ToDecimal(dgvProductos.Rows[indexRow].Cells[8].Value.ToString()) * cantidad)* (1-descuento);
+            decimal iva_ = 0.15m;
+            int count = 0;
+            foreach (decimal i in Vsubtotales)
+            {
+                VIva[count]=i*iva_;
+              
+                
+            }
+
+            total = VIva.Sum() + Vsubtotales.Sum();
+
+            lblIva.Text = VIva.Sum().ToString();
+            lblTotal.Text = total.ToString();
+           
+
+
+            DataGridViewRow fila = new DataGridViewRow();
+            fila.CreateCells(dgvFacturados);
+            fila.Cells[2].Value = dgvProductos.Rows[indexRow].Cells[1].Value.ToString(); 
+            fila.Cells[3].Value = dgvProductos.Rows[indexRow].Cells[2].Value.ToString(); 
+            fila.Cells[4].Value = (Convert.ToDecimal(dgvProductos.Rows[indexRow].Cells[8].Value.ToString()) * cantidad) * (1 - descuento);
+
+
+
+
+            dgvFacturados.Rows.Add(fila);
+
+        }
+
+        private void lblFecha_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnFacturar_Click(object sender, EventArgs e)
+        {
+            DataTable dato;
+            dato = objNegocio.LastOrderID();
+            LastOrder = Convert.ToInt32(dato.Rows[0][0]);
+            ventas.FechaCompra1 = this.FechaCompra;
+            ventas.Id_Cliente1 = this.idCliente;
+            ventas.Id_Empleado1 = this.idEmpleado;
+
+            objNegocio.InsertarOrden(ventas);
+
+            for (int i = 0; i < dgvFacturados.Rows.Count; i++)
+            {
+                decimal price = Convert.ToDecimal((dgvFacturados.Rows[i].Cells[8].Value));
+                ventas.Precio1 = price;
+                ventas.Cantidad1 = Vcantidad[i];
+                ventas.Descuento1 = VDescuentos[i];
+                ventas.Id_Orden1 = LastOrder;
+                ventas.Id_Producto1 = idProductos[i];
+                objNegocio.InsertarDetalleOrden(ventas);
+            }
+
+            // @Precio decimal,
+            //@Cantidad int,
+            //@Descuento decimal,
+            //@IdOrden int,
+            //@IdProducto int
+
+
+
+
         }
     }
 }

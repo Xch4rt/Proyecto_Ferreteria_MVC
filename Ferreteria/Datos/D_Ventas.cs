@@ -46,10 +46,21 @@ namespace Datos
 
             return table;
         }
-        public void lastOrdenId(E_Ventas eVentas)
+        public DataTable lastOrdenId()
         {
+            DataTable table = new DataTable();
+            SqlDataReader leerFilas;
             SqlCommand cmd = new SqlCommand("SP_LastOrderID", conexion);
             cmd.CommandType = CommandType.Text;
+            conexion.Open();
+
+            leerFilas = cmd.ExecuteReader();
+            table.Load(leerFilas);
+
+            leerFilas.Close();
+            conexion.Close();
+
+            return table;
 
 
         }

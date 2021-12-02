@@ -24,9 +24,19 @@ namespace Negocios
             eProductos.Search1 = search;
             return objData.BuscarProductos(eProductos);
         }
-        public void LastOrderID(E_Ventas eVentas)
+        public DataTable LastOrderID()
         {
-            objData.lastOrdenId(eVentas);
+           return  objData.lastOrdenId();
         }
-    }
+
+        public void InsertarOrden(E_Ventas eVentas)
+        {
+            objData.InsertarOrden(eVentas);
+        }
+        public void InsertarDetalleOrden(E_Ventas eVentas)
+        {
+            objData.InsertarDetalleOrden(eVentas);
+        }
+    
+}
 }

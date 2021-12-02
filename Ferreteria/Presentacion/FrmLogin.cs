@@ -16,6 +16,7 @@ namespace Presentacion
     public partial class FrmLogin : Form
     {
         public string usernames;
+        public int idEmpleado;
         N_Usuario nUsuario = new N_Usuario();
         E_Usuario eUsuario = new E_Usuario();
         public FrmLogin()
@@ -51,9 +52,11 @@ namespace Presentacion
                     if (dato.Rows[0][0].ToString() == "Acceso Exitoso")
                     {
                         usernames = dato.Rows[0][1].ToString();
-                        
+                        idEmpleado = Convert.ToInt32(dato.Rows[0][3]);
+
+
                         MessageBox.Show("Bienvenido al Sistema "+ usernames, "Sistema de Reservas", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        FrmPrincipal frmPrincipal = new FrmPrincipal(usernames);
+                        FrmPrincipal frmPrincipal = new FrmPrincipal(usernames,idEmpleado);
                         this.Hide();
                         frmPrincipal.Show();
 

@@ -484,9 +484,12 @@ order by p.IdProveedor asc
 -- PROCEDIMIENTOS PARA FACTURAR
 
 alter procedure SP_LastOrderID -- Esto devolvera el codigo para la nueva factura
-as
-select top 1 ('OR'+RIGHT('00'+CONVERT(VARCHAR,IDORDEN+1),2)) from Ordenes order by CodigoOr desc
+AS
+select top 1 IdOrden + 1 from Ordenes order by IdOrden DESC
 
+CREATE PROC SP_LastCodID
+AS
+select top 1 ('OR'+RIGHT('00'+CONVERT(VARCHAR,IDORDEN+1),2)) from Ordenes order by CodigoOr desc
 
 create trigger ActualizarStock
 on DetalleOrden
@@ -538,8 +541,7 @@ inner join Productos p on
 p.IdProducto=do.IdProducto
 where do.IdOrden=@IdOrden
 
-exec Reporte_Detalle_Factura 11
-execute Reporte_Factura 11
+
 
 create proc SP_InsertarOrden
  @Fecha datetime,
@@ -558,3 +560,11 @@ as
 insert into DetalleOrden values (@Precio, @Cantidad, @Descuento, @IdOrden, @IdProducto)
 
 select * from Productos
+
+USE Mantenimiento_Productos
+GO
+EXEC Validar_Acceso
+	@usuario = Ariel,
+	@contraseña = ariel123
+	
+EXEC SP_LISTAREMPLEADOS
