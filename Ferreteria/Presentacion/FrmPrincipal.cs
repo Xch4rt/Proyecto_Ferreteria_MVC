@@ -16,11 +16,14 @@ namespace Presentacion
         E_Usuario eUsuario = new E_Usuario();
         string usernames;
         public int idEmpleado;
-        public FrmPrincipal(string nombreUsuario, int idEmpleado)
+        string rol;
+        public FrmPrincipal(string nombreUsuario, int idEmpleado, string rol)
         {
             InitializeComponent();
             this.usernames = nombreUsuario;
             this.idEmpleado = idEmpleado;
+            this.rol = rol;
+            SwitchRol(this.rol);
             userName.Text = nombreUsuario;
         }
 
@@ -30,13 +33,54 @@ namespace Presentacion
             this.Size = Screen.PrimaryScreen.WorkingArea.Size;
             this.Location = Screen.PrimaryScreen.WorkingArea.Location;
         }
-
+        
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
             Screen_();
         }
      
-
+        public void SwitchRol(string roles)
+        {
+            switch(roles)
+            {
+                case "Jefe":
+                    btnClientes.Enabled = true;
+                    btnDashboard.Enabled = true;
+                    btnVentas.Enabled = true;
+                    btnCompras.Enabled = true;
+                    btnTrabajadores.Enabled = true;
+                    btnProveedores.Enabled = true;
+                    btnProductos.Enabled = true; 
+                    break;
+                case "Administrador":
+                    btnProveedores.Enabled = true;
+                    btnTrabajadores.Enabled = true;
+                    btnClientes.Enabled = true;
+                    btnProductos.Enabled = true;
+                    btnDashboard.Enabled = false;
+                    btnVentas.Enabled = false;
+                    btnCompras.Enabled = false;
+                    break;
+                case "Bodega":;
+                    btnCompras.Enabled = true;
+                    btnProveedores.Enabled = true;
+                    btnProductos.Enabled = true;
+                    btnDashboard.Enabled = false;
+                    btnTrabajadores.Enabled = false;
+                    btnClientes.Enabled = false;
+                    btnVentas.Enabled = false;
+                    break;
+                case "Vendedor":
+                    btnClientes.Enabled = true;
+                    btnVentas.Enabled = true;
+                    btnCompras.Enabled = false;
+                    btnProveedores.Enabled = false;
+                    btnProductos.Enabled = false;
+                    btnDashboard.Enabled = false;
+                    btnTrabajadores.Enabled = false;
+                    break;
+            }
+        }
         private void BtnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();

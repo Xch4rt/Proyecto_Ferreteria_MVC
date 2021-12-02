@@ -17,6 +17,7 @@ namespace Presentacion
     {
         public string usernames;
         public int idEmpleado;
+        public string rol;
         N_Usuario nUsuario = new N_Usuario();
         E_Usuario eUsuario = new E_Usuario();
         public FrmLogin()
@@ -53,10 +54,10 @@ namespace Presentacion
                     {
                         usernames = dato.Rows[0][1].ToString();
                         idEmpleado = Convert.ToInt32(dato.Rows[0][3]);
-
+                        rol = dato.Rows[0][2].ToString();
 
                         MessageBox.Show("Bienvenido al Sistema "+ usernames, "Sistema de Reservas", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        FrmPrincipal frmPrincipal = new FrmPrincipal(usernames,idEmpleado);
+                        FrmPrincipal frmPrincipal = new FrmPrincipal(usernames,idEmpleado, rol);
                         this.Hide();
                         frmPrincipal.Show();
 
@@ -78,7 +79,7 @@ namespace Presentacion
         private void btnAcces_KeyPress(object sender, KeyPressEventArgs e)
         {
 
-            DataTable dato;
+            /*DataTable dato;
             dato = nUsuario.Validar_acceso(this.txtUsername.Text, this.txtPassword.Text);
 
 
@@ -90,10 +91,11 @@ namespace Presentacion
                     {
                         usernames = dato.Rows[0][1].ToString();
                         idEmpleado = Convert.ToInt32(dato.Rows[0][3]);
+                        rol = dato.Rows[0][4].ToString();
 
 
                         MessageBox.Show("Bienvenido al Sistema " + usernames, "Sistema de Reservas", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        FrmPrincipal frmPrincipal = new FrmPrincipal(usernames, idEmpleado);
+                        FrmPrincipal frmPrincipal = new FrmPrincipal(usernames, idEmpleado, rol);
                         this.Hide();
                         frmPrincipal.Show();
 
@@ -110,7 +112,8 @@ namespace Presentacion
             {
                 MessageBox.Show("No hay conexión al servidor " + (dato == null).ToString(), "Sistema de Reservas", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
+        */
+         }
     }
     }
 
