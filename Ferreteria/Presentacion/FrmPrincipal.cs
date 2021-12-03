@@ -47,7 +47,7 @@ namespace Presentacion
                     btnClientes.Enabled = true;
                     btnDashboard.Enabled = true;
                     btnVentas.Enabled = true;
-                    btnCompras.Enabled = true;
+                    //btnCompras.Enabled = true;
                     btnTrabajadores.Enabled = true;
                     btnProveedores.Enabled = true;
                     btnProductos.Enabled = true; 
@@ -59,10 +59,10 @@ namespace Presentacion
                     btnProductos.Enabled = true;
                     btnDashboard.Enabled = false;
                     btnVentas.Enabled = false;
-                    btnCompras.Enabled = false;
+                    //btnCompras.Enabled = false;
                     break;
                 case "Bodega":;
-                    btnCompras.Enabled = true;
+                   // btnCompras.Enabled = true;
                     btnProveedores.Enabled = true;
                     btnProductos.Enabled = true;
                     btnDashboard.Enabled = false;
@@ -73,7 +73,7 @@ namespace Presentacion
                 case "Vendedor":
                     btnClientes.Enabled = true;
                     btnVentas.Enabled = true;
-                    btnCompras.Enabled = false;
+                   // btnCompras.Enabled = false;
                     btnProveedores.Enabled = false;
                     btnProductos.Enabled = false;
                     btnDashboard.Enabled = false;

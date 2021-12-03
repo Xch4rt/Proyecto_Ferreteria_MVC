@@ -29,6 +29,7 @@ namespace Presentacion
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDashboard));
             this.label1 = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.label2 = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.label3 = new Bunifu.UI.WinForms.BunifuShadowPanel();
@@ -36,6 +37,9 @@ namespace Presentacion
             this.bunifuDatavizBasic2 = new Bunifu.Dataviz.WinForms.BunifuDatavizBasic();
             this.bunifuShadowPanel1 = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.bunifuDatavizBasic3 = new Bunifu.Dataviz.WinForms.BunifuDatavizBasic();
+            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
             this.label1.SuspendLayout();
             this.label2.SuspendLayout();
             this.label3.SuspendLayout();
@@ -47,6 +51,7 @@ namespace Presentacion
             this.label1.BorderColor = System.Drawing.Color.WhiteSmoke;
             this.label1.BorderRadius = 1;
             this.label1.BorderThickness = 1;
+            this.label1.Controls.Add(this.bunifuLabel1);
             this.label1.Controls.Add(this.bunifuDatavizBasic2);
             this.label1.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
             this.label1.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
@@ -69,6 +74,7 @@ namespace Presentacion
             this.label2.BorderColor = System.Drawing.Color.WhiteSmoke;
             this.label2.BorderRadius = 1;
             this.label2.BorderThickness = 1;
+            this.label2.Controls.Add(this.bunifuLabel2);
             this.label2.Controls.Add(this.bunifuDatavizBasic1);
             this.label2.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
             this.label2.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
@@ -91,6 +97,7 @@ namespace Presentacion
             this.label3.BorderColor = System.Drawing.Color.WhiteSmoke;
             this.label3.BorderRadius = 1;
             this.label3.BorderThickness = 1;
+            this.label3.Controls.Add(this.bunifuLabel3);
             this.label3.Controls.Add(this.bunifuDatavizBasic3);
             this.label3.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
             this.label3.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
@@ -206,6 +213,54 @@ namespace Presentacion
             this.bunifuDatavizBasic3.Theme = Bunifu.Dataviz.WinForms.BunifuDatavizBasic._theme.theme1;
             this.bunifuDatavizBasic3.Title = "";
             // 
+            // bunifuLabel1
+            // 
+            this.bunifuLabel1.AllowParentOverrides = false;
+            this.bunifuLabel1.AutoEllipsis = false;
+            this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel1.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.bunifuLabel1.ForeColor = System.Drawing.Color.DimGray;
+            this.bunifuLabel1.Location = new System.Drawing.Point(68, 21);
+            this.bunifuLabel1.Name = "bunifuLabel1";
+            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel1.Size = new System.Drawing.Size(111, 25);
+            this.bunifuLabel1.TabIndex = 1;
+            this.bunifuLabel1.Text = "En Inventario";
+            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // bunifuLabel2
+            // 
+            this.bunifuLabel2.AllowParentOverrides = false;
+            this.bunifuLabel2.AutoEllipsis = false;
+            this.bunifuLabel2.CursorType = null;
+            this.bunifuLabel2.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.bunifuLabel2.ForeColor = System.Drawing.Color.DimGray;
+            this.bunifuLabel2.Location = new System.Drawing.Point(295, 21);
+            this.bunifuLabel2.Name = "bunifuLabel2";
+            this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel2.Size = new System.Drawing.Size(167, 25);
+            this.bunifuLabel2.TabIndex = 2;
+            this.bunifuLabel2.Text = "Empleados - Ventas";
+            this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // bunifuLabel3
+            // 
+            this.bunifuLabel3.AllowParentOverrides = false;
+            this.bunifuLabel3.AutoEllipsis = false;
+            this.bunifuLabel3.CursorType = null;
+            this.bunifuLabel3.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.bunifuLabel3.ForeColor = System.Drawing.Color.DimGray;
+            this.bunifuLabel3.Location = new System.Drawing.Point(208, 29);
+            this.bunifuLabel3.Name = "bunifuLabel3";
+            this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel3.Size = new System.Drawing.Size(150, 25);
+            this.bunifuLabel3.TabIndex = 3;
+            this.bunifuLabel3.Text = "Productos Totales";
+            this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel3.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
             // FrmDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -219,8 +274,11 @@ namespace Presentacion
             this.Name = "FrmDashboard";
             this.Text = "FrmDashboard";
             this.label1.ResumeLayout(false);
+            this.label1.PerformLayout();
             this.label2.ResumeLayout(false);
+            this.label2.PerformLayout();
             this.label3.ResumeLayout(false);
+            this.label3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -234,5 +292,8 @@ namespace Presentacion
         private Bunifu.Dataviz.WinForms.BunifuDatavizBasic bunifuDatavizBasic2;
         private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel1;
         private Bunifu.Dataviz.WinForms.BunifuDatavizBasic bunifuDatavizBasic3;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel2;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel3;
     }
 }
