@@ -26,17 +26,7 @@ namespace Presentacion
             N_Empleado objEmpleado = new N_Empleado();
             dgvTrabajadores.DataSource = objEmpleado.ListarEmpleados();
         }
-        public void ShowTotal()
-        {
-            E_Empleado eEmp = new E_Empleado();
-            N_Empleado nEmp = new N_Empleado();
-            /*
-            nPro.ShowingTotales(ePro);
-            lblCantidEmpl.Text = ePro.TotalCategorias;
-            lblMarcas.Text = ePro.TotalMarcas;
-            lblProd.Text = ePro.TotalProductos;
-            lblTotales.Text = ePro.TotalStock;*/
-        }
+
         public void HidenMoveColumns()
         {
             //modificando los widths
@@ -111,6 +101,15 @@ namespace Presentacion
             FrmRoles frmRol = new FrmRoles();
             frmRol.ShowDialog();
             MostrarDatos();
+        }
+        public void ShowTotal()
+        {
+            E_Empleado eEmp = new E_Empleado();
+            N_Empleado nEmp = new N_Empleado();
+
+            nEmp.ShowingTotales(eEmp);
+            lblTotalEmpleados.Text = eEmp.TotalEmpleado1.ToString();
+  
         }
     }
 }

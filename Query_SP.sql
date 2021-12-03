@@ -586,8 +586,50 @@ EXEC SP_InsertarDetalleOrden
 	@Descuento = 0.05,
 	@IdOrden = 1,
 	@IdProducto = 3
-SELECT * FROM DetalleOrden AS do
+SELECT * FROM DetalleOrden where Descuento = 0.05
 	
 	SELECT * FROM Productos AS p
-	
-	
+select * from Rol
+select * from Operaciones
+select * from RolOperacion
+select * from Modulo
+
+select * from Empleados e
+inner join Usuario u
+on e.IdEmpleado = u.IdEmpleado
+inner join Rol r
+on r.IdRol = u.IdRol
+
+
+select * from Rol r
+inner join RolOperacion ro 
+on ro.IdRol = r.IdRol
+inner join Operaciones o
+on o.IdOperacion = ro.IdOperacion
+inner join Modulo m
+on m.IdModulo = o.IdModulo
+where r.Rol = 'Bodega'
+
+select * from Usuario
+select * from Empleados
+exec Validar_Acceso 'Fhernando','fhernando123'
+exec SP_InsertarUsuario 'Fhernando','fhernando123','Habilitado',4,4
+select * from Ordenes
+
+exec SP_LastCodID
+
+create proc summaryClients
+@totalClients int output
+as
+set @totalClients = (select count(IdCliente) as Clientes from Clientes)
+
+create proc summaryProveedores
+@totalProveedores int output
+as
+set @totalProveedores = (select count(IdProveedor) as Proveedor from Proveedor)
+
+create proc summaryEmpleados
+@totalEmpleados int output
+as 
+set @totalEmpleados = (select count(IdEmpleado) from Empleados)
+

@@ -39,7 +39,10 @@ namespace Negocios
         {
             objDato.EliminarEmpleado(id);
         }
-       
+        public void ShowingTotales(E_Empleado products)
+        {
+            objDato.ShowTotals(products);
+        }
 
     }
 }

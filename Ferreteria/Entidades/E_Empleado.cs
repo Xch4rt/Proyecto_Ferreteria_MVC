@@ -19,9 +19,9 @@ namespace Entidades
         private string Puesto;
         private int IdUsuario;
         private string Search;
-
+        private int totalEmpleados;
         
-
+        public int TotalEmpleado1 { get => totalEmpleados; set => totalEmpleados = value; }
         public int IdEmpleado1 { get => IdEmpleado; set => IdEmpleado = value; }
         public string CodigoEmpleado1 { get => CodigoEmpleado; set => CodigoEmpleado = value; }
         public string PNombre1 { get => PNombre; set => PNombre = value; }

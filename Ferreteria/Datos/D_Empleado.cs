@@ -117,6 +117,27 @@ namespace Datos
 
             return table;
         }
+        public void ShowTotals(E_Empleado empleado)
+        {
+            SqlCommand cmd = new SqlCommand("summaryEmpleados", conexion);
+            cmd.CommandType = CommandType.StoredProcedure;
 
+            SqlParameter totalCategorias = new SqlParameter("@totalEmpleados", 0);
+            totalCategorias.Direction = ParameterDirection.Output;
+
+          
+
+            cmd.Parameters.Add(totalCategorias);
+   
+            conexion.Open();
+
+            cmd.ExecuteNonQuery();
+
+            empleado.TotalEmpleado1 = Convert.ToInt32(cmd.Parameters["@totalEmpleados"].Value);
+           
+
+            conexion.Close();
+
+        }
     }
 }
