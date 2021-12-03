@@ -19,6 +19,7 @@ namespace Presentacion
         {
             InitializeComponent();
             MostrarDatos();
+            ShowTotal();
             HidenMoveColumns();
         }
         public void MostrarDatos()
@@ -59,7 +60,7 @@ namespace Presentacion
             frmEmpleado.ShowDialog();
             frmEmpleado.Updates = false;
             MostrarDatos(); // para que se refresque
-            //ShowTotal();
+            ShowTotal();
         }
 
         private void dgvEmpleados_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -70,6 +71,7 @@ namespace Presentacion
                 objEmpleado.EliminarEmpleado(indexDel);
 
                 MostrarDatos();
+                ShowTotal();
 
 
 
@@ -92,6 +94,7 @@ namespace Presentacion
 
                 frmE.ShowDialog();
                 MostrarDatos();
+                ShowTotal();
 
             }
         }
@@ -101,6 +104,7 @@ namespace Presentacion
             FrmRoles frmRol = new FrmRoles();
             frmRol.ShowDialog();
             MostrarDatos();
+            ShowTotal();
         }
         public void ShowTotal()
         {
