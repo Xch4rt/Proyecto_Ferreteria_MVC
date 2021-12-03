@@ -18,6 +18,7 @@ namespace Presentacion
         {
             InitializeComponent();
             MostrarDatos();
+            ShowTotal();
             HidenMoveColumns();
         }
         public void MostrarDatos()
@@ -55,6 +56,7 @@ namespace Presentacion
             frmProveedor.ShowDialog();
             frmProveedor.Updates = false;
             MostrarDatos(); // para que se refresque
+            ShowTotal();
         }
 
         private void dgvProveedores_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -65,7 +67,7 @@ namespace Presentacion
                 objProveedor.EliminarProveedores(indexDel);
 
                 MostrarDatos();
-
+                ShowTotal();
 
 
             }
@@ -85,7 +87,7 @@ namespace Presentacion
 
                 frmP.ShowDialog();
                 MostrarDatos();
-
+                ShowTotal();
             }
         }
 
@@ -100,7 +102,7 @@ namespace Presentacion
             N_Proveedor nPro = new N_Proveedor();
 
             nPro.ShowingTotales(ePro);
-            lblProd.Text = ePro.TotalProveedores1.ToString();
+            lblProd.Text = ePro.totalProveedor1.ToString();
 
         }
     }

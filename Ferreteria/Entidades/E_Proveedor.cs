@@ -14,7 +14,9 @@ namespace Entidades
         private int Telf;
         private int IdProveedor;
         private string Search;
+        private int totalProveedor;
 
+        public int totalProveedor1 { get => totalProveedor; set => totalProveedor = value; }
         public string Search1 { get => Search; set => Search = value; }
         public int IdProveedor1 { get => IdProveedor; set => IdProveedor = value; }
         public string NombreCompany1 { get => NombreCompany; set => NombreCompany = value; }
