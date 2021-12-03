@@ -37,6 +37,9 @@ namespace Negocios
         {
             objData.InsertarDetalleOrden(eVentas);
         }
-    
-}
+        public DataTable LastCodID()
+        {
+            return objData.LastCodID();
+        }
+    }
 }

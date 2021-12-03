@@ -16,7 +16,9 @@ namespace Entidades
         private string SApellido;
         private int NTelefono;
         private string Search;
+        private int totalClientes;
 
+        public int totalClientes1 { get => totalClientes; set => totalClientes = value; }
         public int IdCliente1 { get => IdCliente; set => IdCliente = value; }
         public string CodigoCliente1 { get => CodigoCliente; set => CodigoCliente = value; }
         public string PNombre1 { get => PNombre; set => PNombre = value; }

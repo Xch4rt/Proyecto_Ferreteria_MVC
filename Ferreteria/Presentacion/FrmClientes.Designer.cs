@@ -40,7 +40,7 @@ namespace Presentacion
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.bunifuLabel6 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lblTotalClients = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel7 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuSeparator4 = new Bunifu.UI.WinForms.BunifuSeparator();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -83,7 +83,7 @@ namespace Presentacion
             this.panel8.BackColor = System.Drawing.Color.Transparent;
             this.panel8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel8.BackgroundImage")));
             this.panel8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel8.Controls.Add(this.bunifuLabel6);
+            this.panel8.Controls.Add(this.lblTotalClients);
             this.panel8.Controls.Add(this.bunifuLabel7);
             this.panel8.Controls.Add(this.bunifuSeparator4);
             this.panel8.Controls.Add(this.pictureBox4);
@@ -92,20 +92,20 @@ namespace Presentacion
             this.panel8.Size = new System.Drawing.Size(232, 111);
             this.panel8.TabIndex = 1;
             // 
-            // bunifuLabel6
+            // lblTotalClients
             // 
-            this.bunifuLabel6.AllowParentOverrides = false;
-            this.bunifuLabel6.AutoEllipsis = false;
-            this.bunifuLabel6.AutoSize = false;
-            this.bunifuLabel6.CursorType = null;
-            this.bunifuLabel6.Font = new System.Drawing.Font("Segoe UI", 24F);
-            this.bunifuLabel6.Location = new System.Drawing.Point(149, 22);
-            this.bunifuLabel6.Name = "bunifuLabel6";
-            this.bunifuLabel6.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel6.Size = new System.Drawing.Size(55, 45);
-            this.bunifuLabel6.TabIndex = 3;
-            this.bunifuLabel6.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel6.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.lblTotalClients.AllowParentOverrides = false;
+            this.lblTotalClients.AutoEllipsis = false;
+            this.lblTotalClients.AutoSize = false;
+            this.lblTotalClients.CursorType = null;
+            this.lblTotalClients.Font = new System.Drawing.Font("Segoe UI", 24F);
+            this.lblTotalClients.Location = new System.Drawing.Point(149, 22);
+            this.lblTotalClients.Name = "lblTotalClients";
+            this.lblTotalClients.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblTotalClients.Size = new System.Drawing.Size(55, 45);
+            this.lblTotalClients.TabIndex = 3;
+            this.lblTotalClients.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lblTotalClients.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // bunifuLabel7
             // 
@@ -409,7 +409,7 @@ namespace Presentacion
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel8;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel6;
+        private Bunifu.UI.WinForms.BunifuLabel lblTotalClients;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel7;
         private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator4;
         private System.Windows.Forms.PictureBox pictureBox4;

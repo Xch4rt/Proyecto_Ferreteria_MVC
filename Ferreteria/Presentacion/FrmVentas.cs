@@ -16,7 +16,6 @@ namespace Presentacion
     {
         N_Ventas objNegocio = new N_Ventas();
         E_Ventas ventas = new E_Ventas();
-        List<E_Ventas> DetalleVenta;
         decimal price;
         string nombreCliente="Inserte nombre de cliente";
         int idCliente = 0;
@@ -39,14 +38,6 @@ namespace Presentacion
         int indexRow;
 
 
-
-
-
-
-
-
-
-
         public FrmVentas()
         {
             InitializeComponent();
@@ -54,6 +45,7 @@ namespace Presentacion
             HidenMoveColumns();
             LastOrderID();
             FillTableFacturados();
+            lblFecha.Text = DateTime.Now.ToString();
             // FillTableFacturados();
 
         }
@@ -107,11 +99,10 @@ namespace Presentacion
         }
         public void LastOrderID()
         {
-            E_Ventas eVen = new E_Ventas();
-            N_Ventas nVen = new N_Ventas();
+            DataTable dato;
+            dato = objNegocio.LastCodID();
+            lblIdOrden.Text = dato.Rows[0][0].ToString();
 
-            //nVen.LastOrderID(eVen);
-            //lblIdOrden.Text = eVen.CodOrden1;
         }
         public void FillTableFacturados()
         {
@@ -146,28 +137,8 @@ namespace Presentacion
         {
             price = Convert.ToDecimal(dgvProductos.Rows[e.RowIndex].Cells[4].Value.ToString());
         }
-        private void AddtoDgvFacturar()
-        {
-            DetalleVenta = new List<E_Ventas>();
-            E_Ventas Prod_agregar = new E_Ventas() { // Es solo un ejemplo
-                Precio1 = price,
-                Cantidad1 = Convert.ToInt32(txtCantidad.ToString()),
-                Descuento1 = Convert.ToDecimal(ddDiscount.SelectedValue.ToString()),
-                Id_Orden1 = 1,
-                Id_Producto1 = 1
-            };
-        }
 
-        private void bunifuPanel3_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void FrmVentas_Load(object sender, EventArgs e)
-        {
-            
-        }
-        
 
         private void btnAgregarProducto_Click(object sender, EventArgs e)
         {
@@ -238,10 +209,7 @@ namespace Presentacion
 
         }
 
-        private void lblFecha_Click(object sender, EventArgs e)
-        {
 
-        }
 
         private void btnFacturar_Click(object sender, EventArgs e)
         {
@@ -292,8 +260,7 @@ namespace Presentacion
                 frmReporteFactura.Show();
             }
             
-            //decimal price = 0;
-           
+
 
         }
 

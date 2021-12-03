@@ -98,6 +98,30 @@ namespace Datos
             return table;
         }
 
+        public void ShowTotals(E_Cliente cliente)
+        {
+            SqlCommand cmd = new SqlCommand("summaryClients", conexion);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            SqlParameter totalClientes = new SqlParameter("@totalClients", 0);
+            totalClientes.Direction = ParameterDirection.Output;
+
+            
+
+            cmd.Parameters.Add(totalClientes);
+
+
+            conexion.Open();
+
+            cmd.ExecuteNonQuery();
+
+            cliente.totalClientes1 = Convert.ToInt32(cmd.Parameters["@totalClients"].Value);
+           
+
+            conexion.Close();
+
+        }
+
     }
 }
 

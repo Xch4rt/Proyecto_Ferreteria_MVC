@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Negocios;
+using Entidades;
 namespace Presentacion
 {
     public partial class FrmProveedores : Form
@@ -91,6 +92,16 @@ namespace Presentacion
         private void txtSearch_TextChange(object sender, EventArgs e)
         {
             BuscarProveedor(txtSearch.Text);
+        }
+
+        public void ShowTotal()
+        {
+            E_Proveedor ePro = new E_Proveedor();
+            N_Proveedor nPro = new N_Proveedor();
+
+            nPro.ShowingTotales(ePro);
+            lblProd.Text = ePro.TotalProveedores1.ToString();
+
         }
     }
 }

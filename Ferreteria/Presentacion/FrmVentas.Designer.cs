@@ -398,7 +398,6 @@ namespace Presentacion
             this.bunifuPanel3.ShowBorders = true;
             this.bunifuPanel3.Size = new System.Drawing.Size(1044, 70);
             this.bunifuPanel3.TabIndex = 1;
-            this.bunifuPanel3.Click += new System.EventHandler(this.bunifuPanel3_Click);
             // 
             // bunifuSeparator2
             // 
@@ -808,7 +807,6 @@ namespace Presentacion
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmVentas";
             this.Text = "FrmVentas";
-            this.Load += new System.EventHandler(this.FrmVentas_Load);
             this.pnlInfoFactura.ResumeLayout(false);
             this.pnlInfoFactura.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFacturados)).EndInit();

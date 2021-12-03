@@ -36,5 +36,9 @@ namespace Negocios
         {
             objDato.EliminarCliente(id);
         }
+        public void ShowingTotales(E_Cliente cliente)
+        {
+            objDato.ShowTotals(cliente);
+        }
     }
 }

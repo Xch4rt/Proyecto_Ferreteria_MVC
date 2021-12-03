@@ -99,6 +99,21 @@ namespace Datos
             conexion.Close();
         }
 
+        public DataTable LastCodID()
+        {
+            DataTable table = new DataTable();
+            SqlDataReader leerFilas;
+            SqlCommand cmd = new SqlCommand("SP_LastCodID", conexion);
+            cmd.CommandType = CommandType.Text;
+            conexion.Open();
 
+            leerFilas = cmd.ExecuteReader();
+            table.Load(leerFilas);
+
+            leerFilas.Close();
+            conexion.Close();
+
+            return table;
+        }
     }
 }

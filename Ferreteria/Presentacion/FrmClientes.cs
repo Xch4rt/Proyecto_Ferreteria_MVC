@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using Entidades;
 namespace Presentacion
 {
     public partial class FrmClientes : Form
@@ -19,6 +20,7 @@ namespace Presentacion
         {
             InitializeComponent();
             MostrarDatos();
+            ShowTotal();
             HidenMoveColumns();
         }
 
@@ -66,7 +68,7 @@ namespace Presentacion
             frmCliente.ShowDialog();
             frmCliente.Updates = false;
             MostrarDatos(); // para que se refresque
-
+            ShowTotal();
         }
 
         private void dgvClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -77,9 +79,10 @@ namespace Presentacion
                 objCliente.EliminarCliente(indexDel);
 
                 MostrarDatos();
-                
+                ShowTotal();
 
-               
+
+
             }
             else if (dgvClientes.Rows[e.RowIndex].Cells["EDITAR"].Selected)
             {
@@ -95,8 +98,17 @@ namespace Presentacion
 
                 frmC.ShowDialog();
                 MostrarDatos();
-                
+                ShowTotal();
             }
+        }
+        public void ShowTotal()
+        {
+            E_Cliente eCli = new E_Cliente();
+            N_Cliente nCli = new N_Cliente();
+
+            nCli.ShowingTotales(eCli);
+            lblTotalClients.Text = eCli.totalClientes1.ToString();
+
         }
     }
 }

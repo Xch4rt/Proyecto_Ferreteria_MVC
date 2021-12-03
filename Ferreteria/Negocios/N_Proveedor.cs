@@ -36,5 +36,9 @@ namespace Negocios
         {
             objDato.EliminarProveedor(id);
         }
+        public void ShowingTotales(E_Proveedor proveedor)
+        {
+            objDato.ShowTotals(proveedor);
+        }
     }
 }
