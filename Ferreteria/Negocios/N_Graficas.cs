@@ -26,5 +26,17 @@ namespace Negocios
 
             return objDato.GraficaLineal();
         }
+        public void ShowingTotales(E_Grafica grafica)
+        {
+            objDato.SummaryTotals(grafica);
+        }
+        public DataTable GrafProductosPreferidos()
+        {
+            return objDato.GrafProductosPreferidos();
+        }
+        public DataTable GrafCategorias()
+        {
+            return objDato.GrafCategorias();
+        }
     }
 }

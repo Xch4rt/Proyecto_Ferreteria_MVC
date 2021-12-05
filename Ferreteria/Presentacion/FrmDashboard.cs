@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -9,7 +10,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Negocios;
 using Entidades;
-
+using System.Collections;
+using Entidades;
+using Negocios;
 namespace Presentacion
 {
     public partial class FrmDashboard : Form
@@ -19,90 +22,57 @@ namespace Presentacion
         public FrmDashboard()
         {
             InitializeComponent();
-            chartwlabel2();
-            chartwlabel1();
-            chartwlabel3();
-        }
-        private void chartwlabel2() // linear
-        {
-            data = new Bunifu.Dataviz.WinForms.BunifuDatavizBasic.DataPoint(Bunifu.Dataviz.WinForms.BunifuDatavizBasic._type.Bunifu_line);
-            Bunifu.Dataviz.WinForms.BunifuDatavizBasic.Canvas canvas = new Bunifu.Dataviz.WinForms.BunifuDatavizBasic.Canvas();
+            chartVentasEmpleados();
+            chartCantidadInventario();
+            ShowTotal();
 
+        }
+        private void chartVentasEmpleados()
+        {
             DataTable dato;
             dato = nGrafica.GraficaLineal();
 
-            string[] productos = new string[dato.Rows.Count]; //{ "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
-            int[] cantidades = new int[dato.Rows.Count];//{
-            for (int j = 0; j < dato.Rows.Count; j++)
-            {
-                productos[j] = dato.Rows[j][1].ToString();
-                cantidades[j] = Convert.ToInt32(dato.Rows[j][0]);
-            }
+            ArrayList Cantidad = new ArrayList();
+            ArrayList Nombres = new ArrayList();
+
             for (int i = 0; i < dato.Rows.Count; i++)
             {
-                data.addLabely(productos[i], cantidades[i].ToString());
+                Nombres.Add(dato.Rows[i][1].ToString());
+                Cantidad.Add(Convert.ToInt32(dato.Rows[i][0]));
             }
-            canvas.addData(data);
-            bunifuDatavizBasic1.Render(canvas);
+
+            VentasEmpleados.Series[0].Points.DataBindXY(Nombres, Cantidad);
         }
-        private void chartwlabel1()
+        private void chartCantidadInventario()
         {
-            data = new Bunifu.Dataviz.WinForms.BunifuDatavizBasic.DataPoint(Bunifu.Dataviz.WinForms.BunifuDatavizBasic._type.Bunifu_pie);
-            Bunifu.Dataviz.WinForms.BunifuDatavizBasic.Canvas canvas = new Bunifu.Dataviz.WinForms.BunifuDatavizBasic.Canvas();
-            
             DataTable dato;
             dato = nGrafica.GraficaPastel();
 
-            string[] productos = new string[dato.Rows.Count]; //{ "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
-            int[] cantidades = new int[dato.Rows.Count];//{ 1, 2, 3, 4, 5, 6, 7 };
+            ArrayList Porcentajes = new ArrayList();
+            ArrayList Nombre = new ArrayList();
 
-            for (int j = 0; j < dato.Rows.Count; j++)
-            {
-                productos[j] = dato.Rows[j][1].ToString();
-                cantidades[j] = Convert.ToInt32(dato.Rows[j][0]);
-            }
             for (int i = 0; i < dato.Rows.Count; i++)
             {
-                data.addLabely(productos[i], cantidades[i].ToString());
+                Porcentajes.Add(Convert.ToDecimal(dato.Rows[i][0]));
+                Nombre.Add(dato.Rows[i][1].ToString());
             }
 
-            canvas.addData(data);
-            bunifuDatavizBasic2.Render(canvas);
+            chartPie.Series[0].Points.DataBindXY(Nombre, Porcentajes);
         }
-        private void chartwlabel3()
+
+        public void ShowTotal()
         {
-            DataTable dato;
-            dato = nGrafica.GraficaBarra();
+            E_Grafica eGra = new E_Grafica();
+            N_Graficas nGra = new N_Graficas();
 
-            data = new Bunifu.Dataviz.WinForms.BunifuDatavizBasic.DataPoint(Bunifu.Dataviz.WinForms.BunifuDatavizBasic._type.Bunifu_column);
-            Bunifu.Dataviz.WinForms.BunifuDatavizBasic.Canvas canvas = new Bunifu.Dataviz.WinForms.BunifuDatavizBasic.Canvas();
-            
-            string[] productos = new string[dato.Rows.Count]; //{ "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
-            int[] cantidades = new int[dato.Rows.Count];//{ 1, 2, 3, 4, 5, 6, 7 };
-
-            for (int j = 0; j < dato.Rows.Count; j++)
-            {
-                productos[j] = dato.Rows[j][1].ToString();
-                cantidades[j] = Convert.ToInt32(dato.Rows[j][0]);
-            }
-
-            for (int i = 0; i < dato.Rows.Count; i++)
-            {
-                data.addLabely(productos[i], cantidades[i].ToString());
-            }
-            
-            /*
-            data.addLabely("MON", random.Next(0, 50).ToString());
-            data.addLabely("TUE", random.Next(0, 50).ToString());
-            data.addLabely("WED", random.Next(0, 50).ToString());
-            data.addLabely("THU", random.Next(0, 50).ToString());
-            data.addLabely("FRI", random.Next(0, 50).ToString());
-            data.addLabely("SAT", random.Next(0, 50).ToString());
-            data.addLabely("SUN", random.Next(0, 50).ToString());
-            */
-
-            canvas.addData(data);
-            bunifuDatavizBasic3.Render(canvas);
+            nGra.ShowingTotales(eGra);
+            cantCategorias.Text = eGra.TotalCategorias;
+            cantMarcas.Text = eGra.TotalMarcas;
+            cantProductos.Text = eGra.TotalProductos;
+            cantVentas.Text = eGra.TotalVentas;
+            cantEmpleados.Text = eGra.TotalEmpleados;
+            cantProveedores.Text = eGra.TotalProveedores;
+            cantClientes.Text = eGra.TotalClientes;
         }
     }
 }
