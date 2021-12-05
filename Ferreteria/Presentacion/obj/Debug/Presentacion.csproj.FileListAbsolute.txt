@@ -782,3 +782,4 @@ C:\Users\Pablo\Desktop\Bases_De_Datos\Proyecto_Ferreteria_MVC\Ferreteria\Present
 C:\Users\Pablo\Desktop\Bases_De_Datos\Proyecto_Ferreteria_MVC\Ferreteria\Presentacion\bin\Debug\es\Microsoft.VisualStudio.Data.Services.resources.dll
 C:\Users\Pablo\Desktop\Bases_De_Datos\Proyecto_Ferreteria_MVC\Ferreteria\Presentacion\bin\Debug\es\Microsoft.VisualStudio.Data.Core.resources.dll
 C:\Users\Pablo\Desktop\Bases_De_Datos\Proyecto_Ferreteria_MVC\Ferreteria\Presentacion\bin\Debug\es\Microsoft.VisualStudio.GraphModel.resources.dll
+C:\Users\Pablo\Desktop\Bases_De_Datos\Proyecto_Ferreteria_MVC\Ferreteria\Presentacion\obj\Debug\Presentacion.FrmBtnDashboard.resources

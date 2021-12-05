@@ -70,6 +70,7 @@ namespace Datos
             return table;
         }
 
+
         public DataTable GrafProductosPreferidos()
         {
             DataTable table = new DataTable();
