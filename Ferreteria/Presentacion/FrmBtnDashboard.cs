@@ -85,7 +85,7 @@ namespace Presentacion
             cantCategorias.Text = eGra.TotalCategorias;
             cantMarcas.Text = eGra.TotalMarcas;
             cantProductos.Text = eGra.TotalProductos;
-            cantVentas.Text = eGra.TotalVentas;
+            cantVentas.Text = eGra.TotalVentas+"$";
             cantEmpleados.Text = eGra.TotalEmpleados;
             cantProveedores.Text = eGra.TotalProveedores;
             cantClientes.Text = eGra.TotalClientes;

@@ -465,7 +465,6 @@ D:\Ariel\Base de datos I\Trabajo duo\Proyecto_Ferreteria_MVC\Ferreteria\Presenta
 C:\Users\Pablo\Desktop\Bases_De_Datos\Proyecto_Ferreteria_MVC\Ferreteria\Presentacion\bin\Debug\Presentacion.exe.config
 C:\Users\Pablo\Desktop\Bases_De_Datos\Proyecto_Ferreteria_MVC\Ferreteria\Presentacion\bin\Debug\Presentacion.exe
 C:\Users\Pablo\Desktop\Bases_De_Datos\Proyecto_Ferreteria_MVC\Ferreteria\Presentacion\bin\Debug\Presentacion.pdb
-C:\Users\Pablo\Desktop\Bases_De_Datos\Proyecto_Ferreteria_MVC\Ferreteria\Presentacion\bin\Debug\Bunifu.Charts.WinForms.dll
 C:\Users\Pablo\Desktop\Bases_De_Datos\Proyecto_Ferreteria_MVC\Ferreteria\Presentacion\bin\Debug\Bunifu.Dataviz.WinForms.dll
 C:\Users\Pablo\Desktop\Bases_De_Datos\Proyecto_Ferreteria_MVC\Ferreteria\Presentacion\bin\Debug\Bunifu.Licensing.dll
 C:\Users\Pablo\Desktop\Bases_De_Datos\Proyecto_Ferreteria_MVC\Ferreteria\Presentacion\bin\Debug\Bunifu.UI.WinForms.1.5.3.dll
@@ -535,7 +534,6 @@ C:\Users\Pablo\Desktop\Bases_De_Datos\Proyecto_Ferreteria_MVC\Ferreteria\Present
 C:\Users\Pablo\Desktop\Bases_De_Datos\Proyecto_Ferreteria_MVC\Ferreteria\Presentacion\bin\Debug\Datos.dll
 C:\Users\Pablo\Desktop\Bases_De_Datos\Proyecto_Ferreteria_MVC\Ferreteria\Presentacion\bin\Debug\Entidades.pdb
 C:\Users\Pablo\Desktop\Bases_De_Datos\Proyecto_Ferreteria_MVC\Ferreteria\Presentacion\bin\Debug\Negocios.pdb
-C:\Users\Pablo\Desktop\Bases_De_Datos\Proyecto_Ferreteria_MVC\Ferreteria\Presentacion\bin\Debug\Bunifu.Charts.WinForms.xml
 C:\Users\Pablo\Desktop\Bases_De_Datos\Proyecto_Ferreteria_MVC\Ferreteria\Presentacion\bin\Debug\Bunifu.Dataviz.WinForms.xml
 C:\Users\Pablo\Desktop\Bases_De_Datos\Proyecto_Ferreteria_MVC\Ferreteria\Presentacion\bin\Debug\Bunifu.UI.WinForms.1.5.3.xml
 C:\Users\Pablo\Desktop\Bases_De_Datos\Proyecto_Ferreteria_MVC\Ferreteria\Presentacion\bin\Debug\Bunifu.UI.WinForms.BunifuButton.xml
@@ -741,8 +739,6 @@ C:\Users\Pablo\Desktop\Bases_De_Datos\Proyecto_Ferreteria_MVC\Ferreteria\Present
 C:\Users\Pablo\Desktop\Bases_De_Datos\Proyecto_Ferreteria_MVC\Ferreteria\Presentacion\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
 C:\Users\Pablo\Desktop\Bases_De_Datos\Proyecto_Ferreteria_MVC\Ferreteria\Presentacion\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
 C:\Users\Pablo\Desktop\Bases_De_Datos\Proyecto_Ferreteria_MVC\Ferreteria\Presentacion\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
-C:\Users\Pablo\Desktop\Bases_De_Datos\Proyecto_Ferreteria_MVC\Ferreteria\Presentacion\bin\Debug\zh-HANS\Microsoft.ReportViewer.Common.resources.dll
-C:\Users\Pablo\Desktop\Bases_De_Datos\Proyecto_Ferreteria_MVC\Ferreteria\Presentacion\bin\Debug\zh-HANT\Microsoft.ReportViewer.Common.resources.dll
 C:\Users\Pablo\Desktop\Bases_De_Datos\Proyecto_Ferreteria_MVC\Ferreteria\Presentacion\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
 C:\Users\Pablo\Desktop\Bases_De_Datos\Proyecto_Ferreteria_MVC\Ferreteria\Presentacion\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
 C:\Users\Pablo\Desktop\Bases_De_Datos\Proyecto_Ferreteria_MVC\Ferreteria\Presentacion\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
@@ -753,8 +749,6 @@ C:\Users\Pablo\Desktop\Bases_De_Datos\Proyecto_Ferreteria_MVC\Ferreteria\Present
 C:\Users\Pablo\Desktop\Bases_De_Datos\Proyecto_Ferreteria_MVC\Ferreteria\Presentacion\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
 C:\Users\Pablo\Desktop\Bases_De_Datos\Proyecto_Ferreteria_MVC\Ferreteria\Presentacion\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
 C:\Users\Pablo\Desktop\Bases_De_Datos\Proyecto_Ferreteria_MVC\Ferreteria\Presentacion\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
-C:\Users\Pablo\Desktop\Bases_De_Datos\Proyecto_Ferreteria_MVC\Ferreteria\Presentacion\bin\Debug\zh-HANS\Microsoft.ReportViewer.DataVisualization.resources.dll
-C:\Users\Pablo\Desktop\Bases_De_Datos\Proyecto_Ferreteria_MVC\Ferreteria\Presentacion\bin\Debug\zh-HANT\Microsoft.ReportViewer.DataVisualization.resources.dll
 C:\Users\Pablo\Desktop\Bases_De_Datos\Proyecto_Ferreteria_MVC\Ferreteria\Presentacion\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
 C:\Users\Pablo\Desktop\Bases_De_Datos\Proyecto_Ferreteria_MVC\Ferreteria\Presentacion\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
 C:\Users\Pablo\Desktop\Bases_De_Datos\Proyecto_Ferreteria_MVC\Ferreteria\Presentacion\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
@@ -765,8 +759,6 @@ C:\Users\Pablo\Desktop\Bases_De_Datos\Proyecto_Ferreteria_MVC\Ferreteria\Present
 C:\Users\Pablo\Desktop\Bases_De_Datos\Proyecto_Ferreteria_MVC\Ferreteria\Presentacion\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
 C:\Users\Pablo\Desktop\Bases_De_Datos\Proyecto_Ferreteria_MVC\Ferreteria\Presentacion\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
 C:\Users\Pablo\Desktop\Bases_De_Datos\Proyecto_Ferreteria_MVC\Ferreteria\Presentacion\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
-C:\Users\Pablo\Desktop\Bases_De_Datos\Proyecto_Ferreteria_MVC\Ferreteria\Presentacion\bin\Debug\zh-HANS\Microsoft.ReportViewer.Design.resources.dll
-C:\Users\Pablo\Desktop\Bases_De_Datos\Proyecto_Ferreteria_MVC\Ferreteria\Presentacion\bin\Debug\zh-HANT\Microsoft.ReportViewer.Design.resources.dll
 C:\Users\Pablo\Desktop\Bases_De_Datos\Proyecto_Ferreteria_MVC\Ferreteria\Presentacion\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\Pablo\Desktop\Bases_De_Datos\Proyecto_Ferreteria_MVC\Ferreteria\Presentacion\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\Pablo\Desktop\Bases_De_Datos\Proyecto_Ferreteria_MVC\Ferreteria\Presentacion\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
@@ -777,8 +769,6 @@ C:\Users\Pablo\Desktop\Bases_De_Datos\Proyecto_Ferreteria_MVC\Ferreteria\Present
 C:\Users\Pablo\Desktop\Bases_De_Datos\Proyecto_Ferreteria_MVC\Ferreteria\Presentacion\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\Pablo\Desktop\Bases_De_Datos\Proyecto_Ferreteria_MVC\Ferreteria\Presentacion\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\Pablo\Desktop\Bases_De_Datos\Proyecto_Ferreteria_MVC\Ferreteria\Presentacion\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
-C:\Users\Pablo\Desktop\Bases_De_Datos\Proyecto_Ferreteria_MVC\Ferreteria\Presentacion\bin\Debug\zh-HANS\Microsoft.ReportViewer.WinForms.resources.dll
-C:\Users\Pablo\Desktop\Bases_De_Datos\Proyecto_Ferreteria_MVC\Ferreteria\Presentacion\bin\Debug\zh-HANT\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\Pablo\Desktop\Bases_De_Datos\Proyecto_Ferreteria_MVC\Ferreteria\Presentacion\bin\Debug\es\Microsoft.VisualStudio.Data.Services.resources.dll
 C:\Users\Pablo\Desktop\Bases_De_Datos\Proyecto_Ferreteria_MVC\Ferreteria\Presentacion\bin\Debug\es\Microsoft.VisualStudio.Data.Core.resources.dll
 C:\Users\Pablo\Desktop\Bases_De_Datos\Proyecto_Ferreteria_MVC\Ferreteria\Presentacion\bin\Debug\es\Microsoft.VisualStudio.GraphModel.resources.dll

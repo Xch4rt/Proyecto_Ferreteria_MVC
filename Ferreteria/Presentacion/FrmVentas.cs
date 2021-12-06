@@ -254,10 +254,10 @@ namespace Presentacion
                     objNegocio.InsertarDetalleOrden(ventas);
                 }
 
-                FrmReporteFactura frmReporteFactura = new FrmReporteFactura(LastOrder);
-                
-                this.Close();
-                frmReporteFactura.Show();
+                //FrmReporteFactura frmReporteFactura = new FrmReporteFactura(LastOrder);
+                MessageBox.Show(LastOrder.ToString());
+                //this.Close();
+                //frmReporteFactura.Show();
             }
             
 
