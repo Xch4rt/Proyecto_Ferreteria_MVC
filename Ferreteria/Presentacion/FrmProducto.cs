@@ -19,6 +19,7 @@ namespace Presentacion
         E_Productos eProducto = new E_Productos();
         N_Productos nProducto = new N_Productos();
         public int id;
+        public int idProveedor;
         public FrmProducto()
         {
             InitializeComponent();
@@ -66,7 +67,7 @@ namespace Presentacion
                     eProducto.Stock1 = Convert.ToInt32(txtStock.Text);
                     eProducto.IdCategoria1 = Convert.ToInt32(cmbCategory.SelectedValue);
                     eProducto.IdMarca1 = Convert.ToInt32(cmbBrand.SelectedValue);
-
+                    eProducto.IdProveedor = idProveedor;
                     nProducto.CrearProducto(eProducto);
                     Close();
 
@@ -87,7 +88,7 @@ namespace Presentacion
                     eProducto.Stock1 = Convert.ToInt32(txtStock.Text);
                     eProducto.IdCategoria1 = Convert.ToInt32(cmbCategory.SelectedValue);
                     eProducto.IdMarca1 = Convert.ToInt32(cmbBrand.SelectedValue);
-
+                    eProducto.IdProveedor = idProveedor;
                     nProducto.ActualizarProducto(eProducto);
                     MessageBox.Show("Se ha actualizado el producto correctamente ");
 
@@ -97,6 +98,15 @@ namespace Presentacion
                     MessageBox.Show("No se pudo guardar la categoria " + ex);
                 }
             }
+        }
+
+        private void btnProveedor_Click(object sender, EventArgs e)
+        {
+            FrmGanancias frmBClientes = new FrmGanancias();
+            frmBClientes.ShowDialog();
+            
+            idProveedor = frmBClientes.getIdProveedor();
+            
         }
     }
 }

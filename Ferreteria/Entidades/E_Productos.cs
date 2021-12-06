@@ -17,12 +17,14 @@ namespace Entidades
         private decimal PrecioVenta;
         private int Stock;
         private string Search;
+        private int idProvedor;
 
         private string totalCategorias;
         private string totalMarcas;
         private string totalProductos;
         private string totalStock;
 
+        public int IdProveedor { get => idProvedor; set => idProvedor = value; }
         public int IdProducto1 { get => IdProducto; set => IdProducto = value; }
         public string CodigoProducto1 { get => CodigoProducto; set => CodigoProducto = value; }
         public string Producto1 { get => Producto; set => Producto = value; }

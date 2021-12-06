@@ -73,7 +73,7 @@ namespace Datos
             cmd.Parameters.AddWithValue("@Stock", product.Stock1);
             cmd.Parameters.AddWithValue("@IdCategoria", product.IdCategoria1);
             cmd.Parameters.AddWithValue("@IdMarca", product.IdMarca1);
-
+            cmd.Parameters.AddWithValue("@IdProveedor", product.IdProveedor);
             cmd.ExecuteNonQuery();
             conexion.Close();
         }
@@ -90,6 +90,7 @@ namespace Datos
             cmd.Parameters.AddWithValue("@Stock", product.Stock1);
             cmd.Parameters.AddWithValue("@IdCategoria", product.IdCategoria1);
             cmd.Parameters.AddWithValue("@IdMarca", product.IdMarca1);
+            cmd.Parameters.AddWithValue("@IdProveedor", product.IdProveedor);
 
             cmd.ExecuteNonQuery();
             conexion.Close();
